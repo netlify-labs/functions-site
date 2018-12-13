@@ -1,3 +1,48 @@
-.test {
-  color: blue;
+.wrapper {
+  min-height: 100vh;
+  background: #fff;
+  position: relative;
+  display: flex;
+  padding-top: 0px;
+  justify-content: flex-start;
+}
+.sidebar {
+  width: 23%;
+  min-width: 23%;
+  border-right: 1px solid #e3e3e3;
+  user-select: none;
+}
+.sidebarFixed {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  width: 77%;
+  min-width: 77%;
+  h1:first-of-type {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .content, .sidebar {
+    width: 100%;
+  }
+  .sidebarFixed {
+    position: inherit;
+    height: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .sidebar {
+    border-right: none;
+  }
 }

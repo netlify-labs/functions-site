@@ -6,7 +6,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const postNodes = []
 
-console.log(process.env.NODE_ENV)
+// Fetching remote data https://github.com/gatsbyjs/gatsby/blob/5a08b7640c2db2c65696be56d81afee83b2ca9ec/examples/using-unstructured-data/gatsby-node.js
 
 function addSiblingNodes(createNodeField) {
   postNodes.sort(
