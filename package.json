@@ -1,0 +1,106 @@
+{
+  "name": "netlify-functions",
+  "description": "Netlify functions site",
+  "version": "0.0.1",
+  "private": true,
+  "keywords": [
+    "gatsby"
+  ],
+  "author": "David Wells <david.wells@netlify.com>",
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "develop": "gatsby develop",
+    "dev": "npm run develop",
+    "start": "npm run dev",
+    "serve": "gatsby serve",
+    "build": "gatsby build",
+    "clean": "rm -rf public && rm -rf .cache",
+    "lint:js": "eslint --ext .js,.jsx .",
+    "lint:md": "remark content/posts/",
+    "write-good": "write-good $(glob 'content/posts/**/*.md')"
+  },
+  "dependencies": {
+    "gatsby": "2.0.40",
+    "gatsby-image": "2.0.19",
+    "gatsby-plugin-catch-links": "2.0.6",
+    "gatsby-plugin-feed": "2.0.9",
+    "gatsby-plugin-google-analytics": "2.0.7",
+    "gatsby-plugin-lodash": "3.0.2",
+    "gatsby-plugin-manifest": "2.0.7",
+    "gatsby-plugin-nprogress": "2.0.6",
+    "gatsby-plugin-offline": "2.0.12",
+    "gatsby-plugin-react-helmet": "3.0.1",
+    "gatsby-plugin-sharp": "2.0.12",
+    "gatsby-plugin-sitemap": "2.0.2",
+    "gatsby-plugin-twitter": "2.0.7",
+    "gatsby-remark-autolink-headers": "2.0.10",
+    "gatsby-remark-copy-linked-files": "2.0.6",
+    "gatsby-remark-images": "2.0.6",
+    "gatsby-remark-prismjs": "3.0.3",
+    "gatsby-remark-responsive-iframe": "2.0.6",
+    "gatsby-source-filesystem": "2.0.7",
+    "gatsby-transformer-remark": "2.1.11",
+    "gatsby-transformer-sharp": "2.1.8",
+    "lodash": "^4.17.4",
+    "moment": "^2.22.2",
+    "prismjs": "^1.15.0",
+    "react": "^16.6.0",
+    "react-disqus-comments": "^1.4.0",
+    "react-dom": "^16.6.0",
+    "react-helmet": "^5.2.0",
+    "url-join": "^4.0.0"
+  },
+  "devDependencies": {
+    "cli-glob": "^0.1.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.6.1",
+    "prettier": "^1.14.3",
+    "remark-cli": "^6.0.0",
+    "remark-preset-lint-recommended": "^3.0.1",
+    "stylefmt": "^6.0.3",
+    "stylelint": "^9.7.1",
+    "stylelint-config-standard": "^18.0.0",
+    "write-good": "^0.13.1"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
+  },
+  "eslintIgnore": ["public", "static", ".cache", "content"],
+  "esLintConfig": {
+    "extends": ["airbnb", "prettier"],
+    "plugins": ["react", "jsx-a11y", "import"],
+    "rules": {
+      "quotes": [2, "single", { "avoidEscape": true }],
+      "react/prefer-stateless-function": "off",
+      "react/prop-types": "off",
+      "react/no-danger": "off",
+      "jsx-a11y/anchor-is-valid": [ "error", {
+        "components": [ "Link" ],
+        "specialLink": [ "hrefLeft", "hrefRight", "to" ],
+        "aspects": [ "noHref", "invalidHref", "preferButton" ]
+      }]
+    },
+    "settings": {
+      "import/core-modules": []
+    },
+    "env": {
+      "browser": true
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "indentation": 4
+    }
+  },
+  "browserslist": [
+    "Last 2 versions"
+  ]
+}
