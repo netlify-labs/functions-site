@@ -1,5 +1,20 @@
 const urljoin = require('url-join')
 const config = require('./_site-config')
+const isDevelopment = process.env.NODE_ENV !== `production`
+
+/* hot module reloading for CSS variables */
+const postcssFile = require.resolve("./postcss.config.js")
+const postcssPlugins = (webpackInstance) => {
+  const varFile = require.resolve("./src/_variables.js")
+  const varFileContents = () => {
+    webpackInstance.addDependency(varFile)
+    delete require.cache[varFile]
+    return require(varFile)
+  }
+  webpackInstance.addDependency(postcssFile)
+  delete require.cache[postcssFile]
+  return require(postcssFile)({}, varFileContents())
+}
 
 module.exports = {
   pathPrefix: config.pathPrefix,
@@ -18,6 +33,20 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-lodash',
+    // https://github.com/gatsbyjs/gatsby/pull/8496/files
+    // {
+    //   resolve: `gatsby-plugin-react-css-modules`,
+    //   options: {
+    //     generateScopedName: isDevelopment ? `[name]--[local]--[hash:base64:5]` : `[hash:base64:5]`,
+    //   },
+    // },
+    {
+      resolve: 'gatsby-better-postcss',
+      options: {
+        cssMatch: 'hi',
+        postCssPlugins: postcssPlugins,
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

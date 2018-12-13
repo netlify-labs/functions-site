@@ -1,12 +1,72 @@
-* {
-    box-sizing: border-box;
+
+/* Using global sytles is not recommended, prefer local styles via CSS Modules */
+
+
+/* html is set to 62.5% so that all the REM measurements 
+throughout are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+	font-size: 62.5%;
+	height: 100%;
+	/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	box-sizing: border-box; 
 }
 
-html {
-    height: 100%;
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+::selection { background: yellow; }
+
+/*
+* kill document defaults margin & padding. We all do that all the time, right ?
+*/
+html,
+body {
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 20px;
+	font-size: 14px;
 }
+
+/*
+* page styles
+*/
+html {
+	min-height: 100%;
+	background: #fff;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+body {
+	font-size: $fontSize;
+	line-height: 1.9;
+	/* system font https://medium.com/designing-medium/system-shock-6b1dc6d6596f */
+	font-family: 'proxima-nova', 'Helvetica', sans-serif;
+}
+
+/**
+* Typography
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+}
+h1 { font-size: 3.0rem; line-height: 1.2; letter-spacing: -.05rem;}
+h2 { font-size: 2.5rem; line-height: 1.25; letter-spacing: -.03rem; }
+h3 { font-size: 2.0rem; line-height: 1.3;  letter-spacing: -.025rem; }
+h4 { font-size: 1.8rem; line-height: 1.35; letter-spacing: -.02rem; }
+h5 { font-size: 1.6rem; line-height: 1.5;  letter-spacing: -.02rem; }
+h6 { font-size: 1.2rem; line-height: 1.6;  letter-spacing: 0; }
+p {  letter-spacing: 0; }

@@ -7,7 +7,7 @@ import PostTags from '../components/PostTags/PostTags'
 import SEO from '../components/SEO/SEO'
 import config from '../../_site-config'
 import './b16-tomorrow-dark.css'
-import './post.css'
+import './post.global.css'
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -22,7 +22,7 @@ export default class PostTemplate extends React.Component {
     }
     return (
       <Layout>
-        <div>
+        <div className='lol'>
           <Helmet>
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>

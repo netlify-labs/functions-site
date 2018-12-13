@@ -6,6 +6,8 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const postNodes = []
 
+console.log(process.env.NODE_ENV)
+
 function addSiblingNodes(createNodeField) {
   postNodes.sort(
     ({ frontmatter: { date: date1 } }, { frontmatter: { date: date2 } }) => {
@@ -108,9 +110,9 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const postPage = path.resolve('src/templates/post.js')
-    const tagPage = path.resolve('src/templates/tag.js')
-    const categoryPage = path.resolve('src/templates/category.js')
+    const postPage = path.resolve('src/templates/Post.js')
+    const tagPage = path.resolve('src/templates/Tag.js')
+    const categoryPage = path.resolve('src/templates/Category.js')
     resolve(
       graphql(
         `
@@ -184,3 +186,59 @@ exports.createPages = ({ graphql, actions }) => {
     )
   })
 }
+
+/* Shrink CSS class names in prod */
+const cssLoaderRe = /\/css-loader\//;
+const targetFile = '.css';
+
+const processRule = rule => {
+  console.log('rule', rule)
+  if (rule.oneOf) {
+    return {
+      ...rule,
+      oneOf: rule.oneOf.map(processRule),
+    };
+  }
+
+  if (!rule.test.test(targetFile)) {
+    return rule;
+  }
+
+  if (Array.isArray(rule.use)) {
+    return {
+      ...rule,
+      use: rule.use.map(use => {
+        if (!cssLoaderRe.test(use.loader)) {
+          return use;
+        }
+        // console.log('use', use)
+        // Adjust css-loader options
+        return {
+          ...use,
+          options: {
+            ...use.options,
+            localIdentName:
+              process.env.NODE_ENV === 'production'
+                ? '[hash:base64:5]'
+                : '[name]_[local]_[hash:base64:4]',
+          },
+        };
+      }),
+    };
+  }
+
+  return rule;
+};
+
+exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
+  const config = getConfig();
+
+  const newConfig = {
+    ...config,
+    module: {
+      ...config.module,
+      rules: config.module.rules.map(processRule),
+    },
+  };
+  actions.replaceWebpackConfig(newConfig);
+};
