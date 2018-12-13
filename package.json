@@ -72,20 +72,51 @@
       "remark-preset-lint-recommended"
     ]
   },
-  "eslintIgnore": ["public", "static", ".cache", "content"],
+  "eslintIgnore": [
+    "public",
+    "static",
+    ".cache",
+    "content"
+  ],
   "esLintConfig": {
-    "extends": ["airbnb", "prettier"],
-    "plugins": ["react", "jsx-a11y", "import"],
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
+    "plugins": [
+      "react",
+      "jsx-a11y",
+      "import"
+    ],
     "rules": {
-      "quotes": [2, "single", { "avoidEscape": true }],
+      "quotes": [
+        2,
+        "single",
+        {
+          "avoidEscape": true
+        }
+      ],
       "react/prefer-stateless-function": "off",
       "react/prop-types": "off",
       "react/no-danger": "off",
-      "jsx-a11y/anchor-is-valid": [ "error", {
-        "components": [ "Link" ],
-        "specialLink": [ "hrefLeft", "hrefRight", "to" ],
-        "aspects": [ "noHref", "invalidHref", "preferButton" ]
-      }]
+      "jsx-a11y/anchor-is-valid": [
+        "error",
+        {
+          "components": [
+            "Link"
+          ],
+          "specialLink": [
+            "hrefLeft",
+            "hrefRight",
+            "to"
+          ],
+          "aspects": [
+            "noHref",
+            "invalidHref",
+            "preferButton"
+          ]
+        }
+      ]
     },
     "settings": {
       "import/core-modules": []
@@ -97,7 +128,7 @@
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {
-        "indentation": 4
+      "indentation": 4
     }
   },
   "browserslist": [
