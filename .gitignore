@@ -4,6 +4,9 @@ logs
 *.log
 npm-debug.log*
 
+### Netlify ###
+.netlify
+
 # Runtime data
 pids
 *.pid
