@@ -31,6 +31,13 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      resolve: 'gatsby-route-plugin',
+      options: {
+        one: 'hi',
+        two: 'hi',
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-lodash',
     // https://github.com/gatsbyjs/gatsby/pull/8496/files
