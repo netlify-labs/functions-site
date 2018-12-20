@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
 import config from '../../_site-config'
+import Logo from '../components/Logo'
 import styles from './Default.css'
 import './index.css'
 
@@ -16,9 +17,11 @@ export default class MainLayout extends React.Component {
         <div className={styles.wrapper}>
           <div className={styles.sidebar}>
             <div className={styles.sidebarFixed}>
-              <Link to='/'>
-                <h1>Netlify Functions</h1>
-              </Link>
+              <div className={styles.sidebarInner}>
+                <Link to='/'>
+                  <Logo />
+                </Link>
+              </div>
             </div>
           </div>
           <div className={styles.content}>

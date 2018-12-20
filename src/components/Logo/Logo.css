@@ -1,0 +1,18 @@
+.logo {
+  display: flex;
+  align-items: center;
+  color: rgb(14, 30, 37);
+  svg {
+    width: 130px;
+    height: 35px;
+  }
+}
+
+.word {
+  margin-left: 5px;
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: -1px;
+  color: #9a9a9a;
+  margin-bottom: 1px;
+}

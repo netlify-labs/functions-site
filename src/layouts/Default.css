@@ -21,7 +21,9 @@
     text-decoration: none;
   }
 }
-
+.sidebarInner {
+  padding: 20px;
+}
 .content {
   flex-grow: 1;
   width: 77%;

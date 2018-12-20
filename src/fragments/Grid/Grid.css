@@ -54,7 +54,23 @@
   display: flex;
   align-items: center;
 }
-.itemProvider {
+.itemTags {
   font-size: 12px;
   color: #838282;
+}
+
+@media (max-width: 1120px) {
+  .item {
+    width: 33%;
+  }
+}
+@media (max-width: 768px) {
+  .item {
+    width: 50%;
+  }
+}
+@media (max-width: 620px) {
+  .item {
+    width: 100%;
+  }
 }
