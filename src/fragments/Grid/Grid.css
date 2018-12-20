@@ -1,0 +1,60 @@
+.grid {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.gridWrapper {
+  display: flex;
+}
+.gridContent {
+  flex-grow: 1;
+}
+.item {
+  width: 23%;
+}
+.itemInner {
+  padding: 20px;
+  border-radius: 2px;
+  background: white;
+  box-shadow: 0 2px 1px rgba(170, 170, 170, 0.25);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  transition: .1s ease-out;
+  position: relative;
+  &:hover {
+    box-shadow: 0 2px 1px rgba(170, 170, 170, 0.45);
+    transform: scale(1.05);
+    transition: .1s ease-out;
+  }
+}
+.itemMeta {
+  position: absolute;
+  font-size: 10px;
+  right: 8px;
+  top: 5px;
+  color: #838282;
+}
+.itemTitle {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  font-size: 16px;
+  a {
+    text-decoration: none;
+  }
+}
+.itemDescription {
+  font-size: 12px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.itemProvider {
+  font-size: 12px;
+  color: #838282;
+}

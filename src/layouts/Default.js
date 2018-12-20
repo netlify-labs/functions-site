@@ -17,7 +17,7 @@ export default class MainLayout extends React.Component {
           <div className={styles.sidebar}>
             <div className={styles.sidebarFixed}>
               <Link to='/'>
-                <h1>Home</h1>
+                <h1>Netlify Functions</h1>
               </Link>
             </div>
           </div>

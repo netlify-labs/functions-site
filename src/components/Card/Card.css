@@ -1,0 +1,22 @@
+.card {
+  padding: 10px;
+  display: flex;
+  cursor: pointer;
+}
+.card-inner {
+  padding: 20px;
+  border-radius: 2px;
+  background: white;
+  box-shadow: 0 2px 1px rgba(170, 170, 170, 0.25);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  transition: .1s ease-out;
+  position: relative;
+}
+.card-inner:hover {
+  box-shadow: 0 2px 1px rgba(170, 170, 170, 0.45);
+  transform: scale(1.05);
+  transition: .1s ease-out;
+}
