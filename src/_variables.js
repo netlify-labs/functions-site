@@ -8,7 +8,8 @@ function formatFont(modifier) {
 }
 
 module.exports = {
-  primary: 'red',
+  primary: '#00ad9f',
+  secondary: '#f5f8f9',
   // -- Fonts
   fontSize: baseFontSize,
   fontSizeTiny: formatFont(1.2),

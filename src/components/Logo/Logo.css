@@ -16,3 +16,16 @@
   color: #9a9a9a;
   margin-bottom: 1px;
 }
+
+
+@media (max-width: 1245px) {
+  .logo {
+    svg {
+      width: 85px;
+      height: 30px;
+    }
+  }
+  .word {
+    font-size: 19px;
+  }
+}

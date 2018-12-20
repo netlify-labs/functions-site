@@ -7,13 +7,14 @@ import SEO from '../components/SEO/SEO'
 import Grid from '../fragments/Grid'
 import data from '../data.json'
 import config from '../../_site-config'
+import styles from './Home.css'
 
 export default class Index extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges
     return (
       <Layout>
-        <div className="index-container">
+        <div className={styles.wrapper}>
           <Helmet title={config.siteTitle} />
           <SEO />
           <h1>Netlify Functions</h1>
@@ -51,7 +52,7 @@ export default class Index extends React.Component {
             You would want to use Functions if you want to deploy scripts that can be run on-demand and return results just like an API, that run on high-powered servers for low latency, that can be written in Go or JavaScript, and that keeps the underlying code (and any secrets inside) hidden from the world.
           </p>
           <h2>Examples</h2>
-          <div style={{paddingBottom: 300, paddingLeft: 30}}>
+          <div style={{paddingBottom: 300 }}>
             <Grid data={data} />
           </div>
         </div>

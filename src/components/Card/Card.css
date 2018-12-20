@@ -3,7 +3,7 @@
   display: flex;
   cursor: pointer;
 }
-.card-inner {
+.cardInner {
   padding: 20px;
   border-radius: 2px;
   background: white;
@@ -14,9 +14,9 @@
   width: 100%;
   transition: .1s ease-out;
   position: relative;
-}
-.card-inner:hover {
-  box-shadow: 0 2px 1px rgba(170, 170, 170, 0.45);
-  transform: scale(1.05);
-  transition: .1s ease-out;
+  &:hover {
+    box-shadow: 0 2px 1px rgba(170, 170, 170, 0.45);
+    transform: scale(1.05);
+    transition: .1s ease-out;
+  }
 }

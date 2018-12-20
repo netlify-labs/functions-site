@@ -1,0 +1,12 @@
+.wrapper {
+  padding-left: 40px;
+  padding-top: 30px;
+  background: $secondary;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

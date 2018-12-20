@@ -68,6 +68,9 @@
   .item {
     width: 50%;
   }
+  .itemInner {
+    padding: 0px;
+  }
 }
 @media (max-width: 620px) {
   .item {

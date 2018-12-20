@@ -19,6 +19,8 @@
   height: 100vh;
   a {
     text-decoration: none;
+    color: #8b8b8b;
+    font-weight: 300;
   }
 }
 .sidebarInner {
