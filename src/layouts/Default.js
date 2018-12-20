@@ -22,9 +22,9 @@ export default class MainLayout extends React.Component {
                   <Logo />
                 </Link>
                 <br/>
-                <Link to='https://www.netlify.com/docs/functions/'>
+                <a href='https://www.netlify.com/docs/functions/'>
                   Read the docs
-                </Link>
+                </a>
               </div>
             </div>
           </div>
