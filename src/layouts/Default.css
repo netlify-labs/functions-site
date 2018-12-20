@@ -26,6 +26,13 @@
 .sidebarInner {
   padding: 20px;
 }
+.links {
+  margin-top: 10px;
+  a {
+    display: block;
+    padding: 5px 0px;
+  }
+}
 .content {
   flex-grow: 1;
   width: 77%;
