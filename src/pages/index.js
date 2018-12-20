@@ -51,7 +51,9 @@ export default class Index extends React.Component {
             You would want to use Functions if you want to deploy scripts that can be run on-demand and return results just like an API, that run on high-powered servers for low latency, that can be written in Go or JavaScript, and that keeps the underlying code (and any secrets inside) hidden from the world.
           </p>
           <h2>Examples</h2>
-          <Grid data={data} />
+          <div style={{paddingBottom: 300}}>
+            <Grid data={data} />
+          </div>
         </div>
       </Layout>
     )
