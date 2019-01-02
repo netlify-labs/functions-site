@@ -9,7 +9,7 @@
   background: white;
   box-shadow: 0 2px 1px rgba(170, 170, 170, 0.25);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   width: 100%;
   transition: .1s ease-out;

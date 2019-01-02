@@ -3,6 +3,10 @@
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
+  margin-left: -10px;
+  a {
+    color: $primary;
+  }
 }
 .gridWrapper {
   display: flex;
@@ -11,7 +15,7 @@
   flex-grow: 1;
 }
 .item {
-  width: 23%;
+  width: 32%;
 }
 .itemInner {
   padding: 20px;
@@ -42,13 +46,13 @@
   color: #000;
   margin-bottom: 15px;
   margin-top: 5px;
-  font-size: 16px;
+  font-size: 18px;
   a {
     text-decoration: none;
   }
 }
 .itemDescription {
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 20px;
   flex-grow: 1;
   display: flex;

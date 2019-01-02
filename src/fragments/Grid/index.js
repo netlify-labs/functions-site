@@ -90,17 +90,17 @@ export default class Grid extends React.Component {
 }
 
 function matchText(search, text) {
-  if (!text) {
+  if (!text || !search) {
     return false
   }
-  return text.toLowerCase().indexOf(search) > -1
+  return text.toLowerCase().indexOf(search.toLowerCase()) > -1
 }
 
 function matchTags(search, tags) {
-  if (!tags) {
+  if (!tags || !search) {
     return false
   }
   return tags.some((tag) => {
-    return tag.toLowerCase().indexOf(search) > -1
+    return tag.toLowerCase().indexOf(search.toLowerCase()) > -1
   })
 }
