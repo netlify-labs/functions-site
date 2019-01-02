@@ -44,7 +44,7 @@ export default class Grid extends React.Component {
       return (
         <Card key={i} className={styles.item}>
           <div className={styles.itemTitle}>
-            <a to={example.code}>
+            <a href={example.code} target='_blank' rel='noopener noreferrer'>
               {example.name}
             </a>
           </div>
