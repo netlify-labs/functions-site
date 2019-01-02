@@ -3,17 +3,35 @@ import SearchBox from '../../components/SearchBox'
 import Card from '../../components/Card'
 import styles from './Grid.css'
 
+const searchInputId = 'example-search'
+
 export default class Grid extends React.Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
-      filterText: ''
+      filterText: props.tag
     }
   }
   handleFilterInput = e => {
     this.setState({
       filterText: e.target.value
     })
+  }
+  setSearch = (value) => {
+    this.setState({
+      filterText: value
+    })
+    document.getElementById(searchInputId).value = value
+  }
+  componentDidUpdate (prevProps, prevState) {
+    if (prevProps.tag !== this.props.tag) {
+      this.setSearch(this.props.tag)
+    }
+  }
+  handleChange = () => {
+    if (this.props.onChange) {
+      this.props.onChange()
+    }
   }
   renderTags(tags) {
     return (
@@ -58,12 +76,19 @@ export default class Grid extends React.Component {
 
     if (!renderExamples.length) {
       renderExamples = (
-        <div>
-          <h2>
-             No "{search}" examples found
-          </h2>
+        <div className={styles.noResults}>
+          <h3>
+            No "{search}" examples found. Clear your search and try again.
+          </h3>
           <div>
-             Clear your search and try again
+            Checkout some popular queries:
+            <ul>
+              <li onClick={() => { this.setSearch('graphql') }}>graphql</li>
+              <li onClick={() => { this.setSearch('database') }}>databases</li>
+              <li onClick={() => { this.setSearch('auth') }}>authenication</li>
+              <li onClick={() => { this.setSearch('ecommerce') }}>ecommerce</li>
+              <li onClick={() => { this.setSearch('email') }}>email</li>
+            </ul>
           </div>
         </div>
       )
@@ -75,6 +100,7 @@ export default class Grid extends React.Component {
           <div className={styles.gridContent}>
             <div style={{ marginBottom: 10 }}>
               <SearchBox
+                id={searchInputId}
                 placeholder='Search examples'
                 onChange={this.handleFilterInput}
               />

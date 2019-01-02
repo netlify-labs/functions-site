@@ -6,6 +6,7 @@ const SearchBox = (props) => {
     <div className={styles.searchBox}>
       <div className={styles.icon}></div>
       <input
+        id={props.id}
         onChange={props.onChange}
         placeholder={props.placeholder}
       />

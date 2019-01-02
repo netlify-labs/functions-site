@@ -3,10 +3,26 @@
   background: $secondary;
 }
 .content {
-  padding-left: 70px;
+  padding-left: 30px;
   p, ul {
     max-width: 720px;
   }
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+}
+.tag {
+  padding: 5px;
+  cursor: pointer;
+  color: $grey;
+  font-weight: 300;
+  font-size: 16px;
+}
+.current {
+  color: black;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {

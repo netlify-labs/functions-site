@@ -338,6 +338,13 @@
     "code": "https://github.com/mrozilla/mrozilla.cz/blob/fddf0687b30c1615fccdd085fc7acca0948d8a15/src/lambda/emoji.js"
   },
   {
+    "name": "lambda-jwt-auth",
+    "description": "An auth service powered by lambda functions & MongoDB",
+    "repo": "https://github.com/mrozilla/lambda-jwt-auth-demo",
+    "code": "https://github.com/mrozilla/lambda-jwt-auth-demo/tree/master/src/lambda",
+    "tags": ["database", "mongo", "auth", "jwt"]
+  },
+  {
     "name": "Meetup Raffle",
     "description": "Draw raffle winners at your Meetup event via meetup.com API",
     "repo": "https://github.com/wKovacs64/meetup-raffle",

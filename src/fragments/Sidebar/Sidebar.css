@@ -1,0 +1,48 @@
+$sidebarWidth: 23%;
+
+.sidebar {
+  width: $sidebarWidth;
+  min-width: $sidebarWidth;
+  border-right: 1px solid #e3e3e3;
+  user-select: none;
+}
+.sidebarFixed {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: $sidebarWidth;
+  min-width: $sidebarWidth;
+  a {
+    text-decoration: none;
+    color: #8b8b8b;
+    font-weight: 300;
+  }
+}
+.sidebarInner {
+  padding: 20px;
+  padding-left: 30px;
+}
+.links {
+  margin-top: 10px;
+  a {
+    display: block;
+    padding: 5px 0px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar, .sidebarFixed {
+    width: 100%;
+  }
+  .sidebarFixed {
+    position: inherit;
+    height: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .sidebar {
+    border-right: none;
+  }
+}

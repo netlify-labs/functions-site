@@ -30,7 +30,7 @@
   position: relative;
   &:hover {
     box-shadow: 0 2px 1px rgba(170, 170, 170, 0.45);
-    transform: scale(1.05);
+    transform: scale(1.03);
     transition: .1s ease-out;
   }
 }
@@ -61,6 +61,13 @@
 .itemTags {
   font-size: 12px;
   color: #838282;
+}
+
+.noResults {
+  padding-left: 20px;
+  li {
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 1120px) {
