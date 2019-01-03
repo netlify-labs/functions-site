@@ -7,8 +7,11 @@ import netlifyIdentity from 'netlify-identity-widget'
 import './index.css'
 
 
-// You must run this once before trying to interact with the widget
-netlifyIdentity.init()
+// SSR wrap
+if (typeof window !== 'undefined') {
+  // You must run this once before trying to interact with the widget
+  netlifyIdentity.init()
+}
 
 function scrollTo (element) {
   if (typeof window !== 'undefined') {

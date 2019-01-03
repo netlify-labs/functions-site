@@ -1,12 +1,10 @@
 import React from "react"
 import netlifyIdentity from 'netlify-identity-widget'
 
-// You must run this once before trying to interact with the widget
-
 export default class Admin extends React.Component {
   constructor (props, context) {
     super(props, context)
-    netlifyIdentity.init()
+
     this.state = {
       loggedIn: false,
       token: null
