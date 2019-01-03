@@ -50,6 +50,7 @@
     "gatsby-transformer-sharp": "2.1.9",
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
+    "netlify-identity-widget": "^1.5.2",
     "postcss-cssnext": "^3.1.0",
     "postcss-nested": "^4.1.0",
     "postcss-simple-vars": "^5.0.1",
