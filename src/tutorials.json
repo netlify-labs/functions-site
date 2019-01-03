@@ -1,0 +1,10 @@
+[{
+  "title": "NETLIFY LAMBDA FUNCTIONS TUTORIAL",
+  "description": "How to use Netlify Lambda Functions and add dynamic processing to JAMstack sites",
+  "url": "https://flaviocopes.com/netlify-functions/"
+},
+{
+  "title": "Building Serverless CRUD apps with Netlify Functions & FaunaDB",
+  "description": "This tutorial demonstrates how to build a CRUD backend using Netlify serverless functions and FaunaDB as the datastore.",
+  "url": "https://www.netlify.com/blog/2018/07/09/building-serverless-crud-apps-with-netlify-functions--faunadb/"
+}]

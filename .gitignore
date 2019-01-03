@@ -63,3 +63,7 @@ public/
 
 # Bundle stats
 bundle-stats.json
+
+# Netlify files
+.netlify
+functions-build
