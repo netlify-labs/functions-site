@@ -1,0 +1,12 @@
+.adminWrapper {
+  padding: 20px;
+  padding-top: 0px;
+  position: relative;
+  max-width: 650px;
+}
+.fieldSet {
+  margin-bottom: 10px;
+}
+.logOut {
+  position: absolute;
+}

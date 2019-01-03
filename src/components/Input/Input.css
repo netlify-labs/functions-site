@@ -1,0 +1,17 @@
+.input {
+  height: 35px;
+  border-radius: 2px;
+  border: none;
+  font-size: 16px;
+  padding: 11px 15px;
+  min-width: 300px;
+  display: inline-block;
+  box-shadow: 0px 0px 0px 2px rgba(120, 130, 152, 0.25);
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  &:hover, &:active, &:focus {
+    box-shadow: 0px 0px 0px 2px rgb(43, 190, 185);
+    box-shadow: 0px 0px 0px 2px $primary;
+  }
+}

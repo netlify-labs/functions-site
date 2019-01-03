@@ -48,6 +48,7 @@
     "gatsby-source-filesystem": "2.0.12",
     "gatsby-transformer-remark": "2.1.15",
     "gatsby-transformer-sharp": "2.1.9",
+    "get-form-data": "^2.0.0",
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
     "netlify-identity-widget": "^1.5.2",

@@ -12,6 +12,30 @@ const fileToChange = 'form-schema.json'
 
 /* export our lambda function as named "handler" export */
 exports.handler = (event, context, callback) => {
+  console.log('protected function!')
+  // Reading the context.clientContext will give us the current user
+  const claims = context.clientContext && context.clientContext.user
+  console.log('claims', claims)
+  if (!claims) {
+    console.log('No claims! Begone!')
+    return callback(null, {
+      statusCode: 401,
+      body: JSON.stringify({
+        data: 'NOT ALLOWED'
+      })
+    })
+  }
+
+  const body = JSON.parse(event.body)
+  if (!body || !body.name) {
+    return callback(null, {
+      statusCode: 401,
+      body: JSON.stringify({
+        data: 'request malformed'
+      })
+    })
+  }
+
   octokit.repos.getContents({
     owner,
     repo,
@@ -32,7 +56,7 @@ exports.handler = (event, context, callback) => {
 
     const c = parseFile(fileToChange, content)
 
-    c['new-thing-two'] = 'wowowowowowow'
+    c['new-thing-two'] = `cool here is timestamp ${new Date().getTime()}`
 
     const newContent = JSON.stringify(c, null, 2)
     console.log('newContent', newContent)
@@ -41,10 +65,10 @@ exports.handler = (event, context, callback) => {
     octokit.createPullRequest({
       owner,
       repo,
-      title: 'pull request title',
-      body: 'pull request description',
+      title: `add ${body.url}`,
+      body: `Add ${body.name} at ${body.url}`,
       base: 'master', /* optional: defaults to default branch */
-      head: 'pull-request-branch-name-seven',
+      head: `pull-request-branch-name-${new Date().getTime()}`,
       changes: {
         files: {
           [`${fileToChange}`]: newContent,
