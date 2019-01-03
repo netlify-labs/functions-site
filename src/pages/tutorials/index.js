@@ -2,14 +2,18 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../../layouts/Default'
 import tutorials from '../../tutorials.json'
+import styles from './Tutorials.css'
 
 export default class Tutorials extends Component {
   renderTutorials = () => {
     return tutorials.map((tut, i) => {
       return (
-        <div key={i}>
-          <a href={tut.url}>{tut.title}</a>
-        </div>
+        <a key={i} className={styles.link} href={tut.url} target='_blank' rel='noopener noreferrer'>
+          <span>{tut.title}</span>
+          <span className={styles.date}>
+            {tut.date}
+          </span>
+        </a>
       )
     })
   }

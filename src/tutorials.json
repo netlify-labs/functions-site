@@ -15,7 +15,7 @@
     "title": "Building Serverless CRUD apps with Netlify Functions & FaunaDB",
     "description": "This tutorial demonstrates how to build a CRUD backend using Netlify serverless functions and FaunaDB as the datastore.",
     "url": "https://www.netlify.com/blog/2018/07/09/building-serverless-crud-apps-with-netlify-functions--faunadb/",
-    "date": "2018/07/09"
+    "date": "July 7, 2018"
   },
   {
     "title": "Build and Deploy a Serverless Function to Netlify",
