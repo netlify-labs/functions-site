@@ -1,10 +1,92 @@
-[{
-  "title": "NETLIFY LAMBDA FUNCTIONS TUTORIAL",
-  "description": "How to use Netlify Lambda Functions and add dynamic processing to JAMstack sites",
-  "url": "https://flaviocopes.com/netlify-functions/"
-},
-{
-  "title": "Building Serverless CRUD apps with Netlify Functions & FaunaDB",
-  "description": "This tutorial demonstrates how to build a CRUD backend using Netlify serverless functions and FaunaDB as the datastore.",
-  "url": "https://www.netlify.com/blog/2018/07/09/building-serverless-crud-apps-with-netlify-functions--faunadb/"
-}]
+[
+  {
+    "title": "Netlify Lambda Functions tutorial",
+    "description": "How to use Netlify Lambda Functions and add dynamic processing to JAMstack sites",
+    "url": "https://flaviocopes.com/netlify-functions/",
+    "date": "Dec 28, 2018"
+  },
+  {
+    "title": "Write and Deploy Your First Serverless Function in 10 Minutes, or Less",
+    "description": "I heard about Netlify supports lambda functions, and decided to give it a try. Surprisingly, the process was super simple, and my serverless function was up and running within minutes!",
+    "url": "https://codeburst.io/write-and-deploy-your-first-serverless-function-within-10-minutes-or-less-d7552fcd6550",
+    "date": "Jan 2, 2019"
+  },
+  {
+    "title": "Building Serverless CRUD apps with Netlify Functions & FaunaDB",
+    "description": "This tutorial demonstrates how to build a CRUD backend using Netlify serverless functions and FaunaDB as the datastore.",
+    "url": "https://www.netlify.com/blog/2018/07/09/building-serverless-crud-apps-with-netlify-functions--faunadb/",
+    "date": "2018/07/09"
+  },
+  {
+    "title": "Build and Deploy a Serverless Function to Netlify",
+    "description": "Recently, Netlify has become one of the most popular hosts in Web Development. Netlify offers an incredible variety of features like serverless (lambda) functions",
+    "url": "https://scotch.io/tutorials/build-and-deploy-a-serverless-function-to-netlify",
+    "date": "October 31, 2018"
+  },
+  {
+    "title": "Building a Lambda Function with Netlify",
+    "description": "Process payments via Stripe + serverless functions",
+    "url": "https://macarthur.me/posts/building-a-lambda-function-with-netlify",
+    "date": "February 12, 2018"
+  },
+  {
+    "title": "Forms, Auth and Serverless Functions on Gatsby and Netlify",
+    "description": "Abstracting infrastructure is in our DNA. Roads, schools, water supply networks&mdash;you get the idea. Web development is no exception: serverless",
+    "url": "https://css-tricks.com/forms-auth-and-serverless-functions-on-gatsby-and-netlify/",
+    "date": "May 31, 2018"
+  },
+  {
+    "title": "Netlify Lambdas - As simple as possible",
+    "description": "A minimal approach to successfully deploy an AWS Lambda on Netlify",
+    "url": "https://luetkemj.github.io/180505/netlify-lambdas-as-simple-as-possible",
+    "date": "May 5, 2018"
+  },
+  {
+    "title": "How to submit forms on a static website with VueJS and Netlify functions",
+    "description": "How you could submit forms, like a contact form, on that serverless architecture",
+    "url": "https://medium.com/@marcmintel/how-to-submit-forms-on-a-static-website-with-vuejs-and-netlify-functions-b901f40f0627",
+    "date": "Sep 12, 2018"
+  },
+  {
+    "title": "Building a Serverless Comment System with Netlify Functions, Storyblok and Vue.js",
+    "description": "Build a Serverless comment system powered by Netlify Functions and we’ll use the headless CMS Storyblok as a database",
+    "url": "https://markus.oberlehner.net/blog/building-a-serverless-comment-system-with-netlify-functions-storyblok-and-vue/",
+    "date": "August 5, 2018"
+  },
+  {
+    "title": "Deploy a fullstack Apollo app with Netlify",
+    "description": "How to run your API using Netlify Functions on AWS Lambda",
+    "url": "https://blog.apollographql.com/deploy-a-fullstack-apollo-app-with-netlify-45a7dfd51b0b",
+    "date": "Sep 13, 2018"
+  },
+  {
+    "title": "Telegram Bot on Netlify Functions",
+    "description": "Building a simple telegram echo bot built using golang and Netlify Functions",
+    "url": "https://zede.solutions/blog/telegram-bot-on-netlify-functions/",
+    "date": "April 7, 2018"
+  },
+  {
+    "title": "Get Data from MongoDB with Netlify Functions Lambda",
+    "description": "Learn how to query a database instance and return data without a backend server",
+    "url": "https://www.edwardbeazer.com/get-data-from-mongodb-with-netlify-functions-lambda/",
+    "date": "July 31, 2018"
+  },
+  {
+    "title": "Express.js on Netlify",
+    "description": "How to run express via Netlify functions",
+    "url": "https://blog.neverendingqs.com/2018/09/08/expressjs-on-netlify.html",
+    "date": "Sep 8, 2018"
+  },
+  {
+    "title": "Sending WebSub notifications from static sites using Netlify functions",
+    "description": "How to send notifications through protocols like WebSub with serverless functions",
+    "url": "https://matienzo.org/2018/websub-static/",
+    "date": "February 13, 2018"
+  },
+  {
+    "title": "Making the static dynamic: Instagram Importer",
+    "description": "Automatically rebuild static sites when a new instagram post is found",
+    "url": "https://www.trysmudford.com/blog/making-the-static-dynamic-instagram-importer/",
+    "date": "February 12, 2018"
+  }
+]

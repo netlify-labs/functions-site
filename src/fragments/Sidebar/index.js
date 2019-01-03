@@ -11,6 +11,9 @@ const defaultSidebar = (
     <Link to='examples'>
       Examples
     </Link>
+    <Link to='tutorials'>
+      Tutorials
+    </Link>
     <a href='https://www.netlify.com/docs/functions/' target='_blank' rel='noopener noreferrer'>
       Read the docs
     </a>
