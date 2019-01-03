@@ -110,6 +110,7 @@ export default class Admin extends React.Component {
             </button>
           </Form>
         </div>
+        <a href='javascript:(function()%7BThisLater%3Dwindow.open("https://functions.netlify.com/admin%3Furl%3D"%2BencodeURIComponent(location.href)%2B"%26title%3D"%2B((document.title)%3Fescape(encodeURI(document.title)):"") %2B "%26api%3DIdbvF6muT9RZvJrFfL5urzCBxCxCoC","ThisLater","width%3D800,height%3D540,location,status,scrollbars,resizable,dependent%3Dyes")%3BsetTimeout("ThisLater.focus()",100)%3B%7D)()'>bookmarklet</a>
       </div>
     )
   }
