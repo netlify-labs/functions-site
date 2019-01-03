@@ -3,15 +3,8 @@ import Helmet from 'react-helmet'
 import config from '../../_site-config'
 import styles from './Default.css'
 import Sidebar from '../fragments/Sidebar'
-import netlifyIdentity from 'netlify-identity-widget'
 import './index.css'
 
-
-// SSR wrap
-if (typeof window !== 'undefined') {
-  // You must run this once before trying to interact with the widget
-  netlifyIdentity.init()
-}
 
 function scrollTo (element) {
   if (typeof window !== 'undefined') {

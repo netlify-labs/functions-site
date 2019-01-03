@@ -41,6 +41,7 @@ export default class Admin extends React.Component {
     }
   }
   componentDidMount() {
+    netlifyIdentity.init()
     /* Register listeners on identity widget events */
     netlifyIdentity.on('login', () => {
       /* Close netlify identity modal on login */
