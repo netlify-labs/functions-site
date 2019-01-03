@@ -94,5 +94,14 @@
     "description": "Share data from iOS Shortcuts to my Netlify site",
     "url": "https://bryanlrobinson.com/blog/2018/11/12/ios-shortcuts-pushing-data-to-netlify-static-site/",
     "date": "Nov 12, 2018"
+  },
+  {
+    "name": "testing",
+    "url": "https://functions.netlify.com",
+    "code": "https://functions.netlify.com",
+    "tags": [
+      "email",
+      "payment"
+    ]
   }
 ]
