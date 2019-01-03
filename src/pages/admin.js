@@ -36,13 +36,15 @@ async function saveItem(item) {
 export default class Admin extends React.Component {
   constructor (props, context) {
     super(props, context)
+    if (typeof window !== 'undefined') {
+      netlifyIdentity.init()
+    }
     const user = netlifyIdentity.currentUser()
     this.state = {
       loggedIn: user || false,
     }
   }
   componentDidMount() {
-    netlifyIdentity.init()
     /* Register listeners on identity widget events */
     netlifyIdentity.on('login', () => {
       /* Close netlify identity modal on login */
@@ -103,7 +105,7 @@ export default class Admin extends React.Component {
             <div className={styles.fieldSet}>
               <Input placeholder="Code" name='code' />
             </div>
-            <button onClick={saveItem}>
+            <button>
               save item
             </button>
           </Form>
