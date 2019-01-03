@@ -31,7 +31,7 @@
   },
   {
     "title": "Forms, Auth and Serverless Functions on Gatsby and Netlify",
-    "description": "Abstracting infrastructure is in our DNA. Roads, schools, water supply networks&mdash;you get the idea. Web development is no exception: serverless",
+    "description": "Authenicated functions and Gatsby",
     "url": "https://css-tricks.com/forms-auth-and-serverless-functions-on-gatsby-and-netlify/",
     "date": "May 31, 2018"
   },

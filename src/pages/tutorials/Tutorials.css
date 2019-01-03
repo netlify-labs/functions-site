@@ -17,6 +17,13 @@
     color: $primary;
   }
 }
+.title {
+  font-weight: 600;
+}
+.description {
+  font-size: 13px;
+  color: #000;
+}
 .date {
   font-size: 14px;
   color: $grey;
