@@ -36,8 +36,9 @@ async function saveItem(item) {
 export default class Admin extends React.Component {
   constructor (props, context) {
     super(props, context)
+    const user = netlifyIdentity.currentUser()
     this.state = {
-      loggedIn: false,
+      loggedIn: user || false,
     }
   }
   componentDidMount() {
@@ -52,11 +53,11 @@ export default class Admin extends React.Component {
       this.setState({
         loggedIn: false
       })
-      // window.location.href = window.location.href
+      window.location.href = window.location.href
     })
     netlifyIdentity.on('logout', () => {
       this.setState({ loggedIn: false })
-      // window.location.href = window.location.href
+      window.location.href = window.location.href
     })
   }
   handleLogIn = () => {
@@ -67,11 +68,11 @@ export default class Admin extends React.Component {
   }
   handleSubmit = (e, data) => {
     e.preventDefault()
-    console.log(data)
+    console.log('send data', data)
     saveItem(data).then((response) => {
-
+      console.log('response', response)
     }).catch((e) => {
-
+      console.log('err', e)
     })
   }
   renderButton() {

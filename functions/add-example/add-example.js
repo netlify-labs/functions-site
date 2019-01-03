@@ -27,6 +27,7 @@ exports.handler = (event, context, callback) => {
   }
 
   const body = JSON.parse(event.body)
+  console.log('body', body)
   if (!body || !body.name) {
     return callback(null, {
       statusCode: 401,
