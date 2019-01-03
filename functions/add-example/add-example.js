@@ -1,3 +1,4 @@
+const url = require('url')
 const Octokit = require('@octokit/rest').plugin(require('./createPullRequest'))
 
 const octokit = new Octokit()
@@ -6,18 +7,16 @@ octokit.authenticate({
   token: process.env.GITHUB_TOKEN
 })
 
-const repo = 'visiJAM'
+const repo = 'functions-site'
 const owner = 'davidwells'
-const fileToChange = 'form-schema.json'
+const fileToChange = 'src/tutorials.json'
 
 /* export our lambda function as named "handler" export */
 exports.handler = (event, context, callback) => {
-  console.log('protected function!')
-  // Reading the context.clientContext will give us the current user
-  const claims = context.clientContext && context.clientContext.user
+  const { clientContext } = context
+  const claims = clientContext && clientContext.user
   console.log('claims', claims)
   if (!claims) {
-    console.log('No claims! Begone!')
     return callback(null, {
       statusCode: 401,
       body: JSON.stringify({
@@ -52,21 +51,34 @@ exports.handler = (event, context, callback) => {
         })
       })
     }
+
     // content will be base64 encoded
     const content = Buffer.from(result.data.content, 'base64').toString()
 
-    const c = parseFile(fileToChange, content)
+    console.log('content', content)
+    const allData = parseFile(fileToChange, content)
+    console.log('allData.length', allData.length)
 
-    c['new-thing-two'] = `cool here is timestamp ${new Date().getTime()}`
+    if (alreadyHasUri(body, allData)) {
+      console.log(`${body.url} already is in the list!`)
+      return callback(null, {
+        statusCode: 422,
+        body: JSON.stringify({
+          message: `${body.url} already is in the list!`
+        })
+      })
+    }
 
-    const newContent = JSON.stringify(c, null, 2)
+    const newData = allData.concat(body)
+
+    const newContent = JSON.stringify(newData, null, 2)
     console.log('newContent', newContent)
     // const newContent = `${content}wowowoow`
 
     octokit.createPullRequest({
       owner,
       repo,
-      title: `add ${body.url}`,
+      title: `Add ${body.url}`,
       body: `Add ${body.name} at ${body.url}`,
       base: 'master', /* optional: defaults to default branch */
       head: `pull-request-branch-name-${new Date().getTime()}`,
@@ -98,6 +110,21 @@ exports.handler = (event, context, callback) => {
       }
     })
   })
+}
+
+/**
+ * Check if array already has URL
+ * @return {Boolean}
+ */
+function alreadyHasUri(newItem, allData) {
+  return allData.some((item) => {
+    return niceUrl(item.url) === niceUrl(newItem.url)
+  })
+}
+
+function niceUrl(href) {
+  const { host, pathname } = url.parse(href)
+  return `${host}${pathname}`
 }
 
 /**
