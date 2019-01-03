@@ -45,4 +45,7 @@ $sidebarWidth: 23%;
   .sidebar {
     border-right: none;
   }
+  .sidebarInner {
+    padding-bottom: 10px;
+  }
 }

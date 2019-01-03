@@ -51,9 +51,11 @@ export default class Examples extends React.Component {
             Back home
           </Link>
         </nav>
-        <h3>Browse by tag</h3>
-        <div className={styles.tags}>
-          { this.renderTags() }
+        <div className={styles.tagWrapper}>
+          <h3>Browse by tag</h3>
+          <div className={styles.tags}>
+            { this.renderTags() }
+          </div>
         </div>
       </div>
     )
@@ -67,9 +69,8 @@ export default class Examples extends React.Component {
           <Helmet title={'Netlify Function Examples'} />
           <SEO />
           <div className={styles.content}>
-            <h1>Function Examples</h1>
             <div style={{ paddingBottom: 300 }}>
-              <Grid data={data} tag={theTag} />
+              <Grid data={data} tag={theTag} title='Function Examples' />
             </div>
           </div>
         </div>

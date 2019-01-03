@@ -3,10 +3,10 @@
   display: flex;
   align-items: center;
   input {
-    height: 30px;
-    border-radius: 5px;
+    height: 35px;
+    border-radius: 2px;
     border: none;
-    font-size: 14px;
+    font-size: 16px;
     padding: 11px 15px;
     padding-left: 40px;
     min-width: 300px;
@@ -24,13 +24,13 @@
 
 .icon {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   border: 2px solid #717171;
   position: relative;
   border-radius: 100%;
   position: absolute;
-  top: 34%;
+  top: 30%;
   left: 12px;
   &:before {
     content: "";

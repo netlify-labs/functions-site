@@ -40,6 +40,19 @@ export default class Grid extends React.Component {
       </div>
     )
   }
+  renderTitle = (matchCount) => {
+    const { title } = this.props
+    if (title) {
+      return (
+        <div className={styles.gridTitle}>
+          <h1>
+            {title}
+            <span className={styles.count}>({matchCount})</span>
+          </h1>
+        </div>
+      )
+    }
+  }
   render() {
     const { data } = this.props
     const search = this.state.filterText
@@ -96,6 +109,7 @@ export default class Grid extends React.Component {
 
     return (
       <div style={{ marginBottom: 60 }}>
+        {this.renderTitle(renderExamples.length)}
         <div className={styles.gridWrapper}>
           <div className={styles.gridContent}>
             <div style={{ marginBottom: 10 }}>

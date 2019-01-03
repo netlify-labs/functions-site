@@ -8,6 +8,7 @@
     max-width: 720px;
   }
 }
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -27,10 +28,16 @@
 
 @media (max-width: 768px) {
   .wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .content {
-    padding-left: 20px;
+    padding-left: 10px;
+    h1 {
+      font-size: 16px;
+    }
+  }
+  .tagWrapper {
+    display: none;
   }
 }
