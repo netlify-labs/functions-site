@@ -1,10 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Layout from '../layouts/Default'
-import SEO from '../components/SEO/SEO'
-import Grid from '../fragments/Grid'
-import data from '../data.json'
-import config from '../../_site-config'
+import Layout from '../../layouts/Default'
+import SEO from '../../components/SEO/SEO'
+import Grid from '../../fragments/Grid'
+import data from '../../data.json'
 import styles from './Examples.css'
 import { Link } from 'gatsby'
 
@@ -31,13 +30,13 @@ export default class Examples extends React.Component {
   }
   renderTags = () => {
     const { tag } = this.state
-    return ['all'].concat(Array.from(uniqueTags)).map((name) => {
+    return ['all'].concat(Array.from(uniqueTags)).map((name, i) => {
       let classes = styles.tag
       if ((!tag && name === 'all') || tag === name) {
         classes = `${styles.current} ${styles.tag}`
       }
       return (
-        <span className={classes} onClick={this.changeTag}>
+        <span key={i} className={classes} onClick={this.changeTag}>
           {name}
         </span>
       )

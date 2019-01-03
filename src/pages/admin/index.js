@@ -1,6 +1,6 @@
-import React from "react"
-import Form from '../components/Form'
-import Input from '../components/Input'
+import React from 'react'
+import Form from '../../components/Form'
+import Input from '../../components/Input'
 import netlifyIdentity from 'netlify-identity-widget'
 import styles from './Admin.css'
 

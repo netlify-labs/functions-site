@@ -5,22 +5,7 @@ import styles from './Default.css'
 import Sidebar from '../fragments/Sidebar'
 import './index.css'
 
-
-function scrollTo (element) {
-  if (typeof window !== 'undefined') {
-    window.scroll({
-      behavior: 'smooth',
-      left: 0,
-      top: element.offsetTop
-    })
-  }
-}
-
 export default class MainLayout extends React.Component {
-  doScroll = () => {
-    const element = document.getElementById('examples')
-    scrollTo(element)
-  }
   render() {
     const { children, sidebar } = this.props
     return (
