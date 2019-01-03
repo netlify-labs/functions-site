@@ -60,6 +60,7 @@
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
+    "react-select": "^2.2.0",
     "url-join": "^4.0.0"
   },
   "devDependencies": {

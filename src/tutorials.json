@@ -88,5 +88,11 @@
     "description": "Automatically rebuild static sites when a new instagram post is found",
     "url": "https://www.trysmudford.com/blog/making-the-static-dynamic-instagram-importer/",
     "date": "February 12, 2018"
+  },
+  {
+    "title": "Dynamic Static Sites with Netlify Functions & iOS Shortcuts",
+    "description": "Share data from iOS Shortcuts to my Netlify site",
+    "url": "https://bryanlrobinson.com/blog/2018/11/12/ios-shortcuts-pushing-data-to-netlify-static-site/",
+    "date": "Nov 12, 2018"
   }
 ]

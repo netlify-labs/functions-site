@@ -145,3 +145,11 @@ pre > code.highlight {
     outline: 0.4em solid #c66;
     outline-offset: 0.4em;
 }
+.select__menu-list.select__menu-list--is-multi {
+  display: flex;
+  flex-wrap: wrap;
+}
+.select__option {
+  display: inline-block;
+  width: auto;
+}

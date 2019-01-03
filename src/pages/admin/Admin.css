@@ -6,6 +6,9 @@
 }
 .fieldSet {
   margin-bottom: 10px;
+  input {
+    width: 100%;
+  }
 }
 .logOut {
   position: absolute;

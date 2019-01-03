@@ -27,6 +27,7 @@ exports.handler = (event, context, callback) => {
 
   const body = JSON.parse(event.body)
   console.log('body', body)
+
   if (!body || !body.name) {
     return callback(null, {
       statusCode: 401,
@@ -36,6 +37,7 @@ exports.handler = (event, context, callback) => {
     })
   }
 
+  // Get repo file contents
   octokit.repos.getContents({
     owner,
     repo,
@@ -55,7 +57,6 @@ exports.handler = (event, context, callback) => {
     // content will be base64 encoded
     const content = Buffer.from(result.data.content, 'base64').toString()
 
-    console.log('content', content)
     const allData = parseFile(fileToChange, content)
     console.log('allData.length', allData.length)
 
@@ -70,10 +71,7 @@ exports.handler = (event, context, callback) => {
     }
 
     const newData = allData.concat(body)
-
     const newContent = JSON.stringify(newData, null, 2)
-    console.log('newContent', newContent)
-    // const newContent = `${content}wowowoow`
 
     octokit.createPullRequest({
       owner,
@@ -89,7 +87,7 @@ exports.handler = (event, context, callback) => {
         commit: `updating ${fileToChange}`
       }
     }).then((response) => {
-      console.log('data', response)
+      console.log('data', response.data)
       return callback(null, {
         statusCode: 200,
         body: JSON.stringify({
