@@ -14,7 +14,7 @@ export default class MainLayout extends React.Component {
           <meta name="description" content={config.siteDescription} />
         </Helmet>
         <div className={styles.wrapper}>
-          <Sidebar children={sidebar} />
+          <Sidebar children={sidebar} path={this.props.children._owner.key} />
           <div className={styles.content}>
             {children}
           </div>

@@ -3,24 +3,44 @@ import styles from './Sidebar.css'
 import { Link } from 'gatsby'
 import Logo from '../../components/Logo'
 
-const defaultSidebar = (
-  <>
-    <Link to='/'>
-      What are functions?
-    </Link>
-    <Link to='examples'>
-      Examples
-    </Link>
-    <Link to='tutorials'>
-      Tutorials
-    </Link>
-    <a href='https://www.netlify.com/docs/functions/' target='_blank' rel='noopener noreferrer'>
-      Read the docs
-    </a>
-  </>
-)
+const defaultSidebar = (path) => {
+  const cleanPath = (path === '/') ? '//' : path
+  const links = [
+    {
+      url: '/',
+      text: 'What are functions?'
+    },
+    {
+      url: '/examples',
+      text: 'Examples'
+    },
+    {
+      url: '/tutorials',
+      text: 'Tutorials'
+    },
+    {
+      url: 'https://www.netlify.com/docs/functions/',
+      text: 'Read the docs'
+    }]
 
-const Sidebar = (props) => {
+  return links.map((x, key) => {
+    const classes = (cleanPath.replace(/\/$/, '') === x.url) ? styles.active : ''
+    if (x.url.match((/^http/))) {
+      return (
+        <a href={x.url} target='_blank' rel='noopener noreferrer' key={key}>
+          {x.text}
+        </a>
+      )
+    }
+    return (
+      <Link to={x.url} className={classes} key={key}>
+        {x.text}
+      </Link>
+    )
+  })
+}
+
+const Sidebar = ({ path, children }) => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.sidebarFixed}>
@@ -29,7 +49,7 @@ const Sidebar = (props) => {
             <Logo />
           </Link>
           <nav className={styles.links}>
-            {props.children || defaultSidebar}
+            {children || defaultSidebar(path)}
           </nav>
         </div>
       </div>

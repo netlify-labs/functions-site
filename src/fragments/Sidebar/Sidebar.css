@@ -21,15 +21,26 @@ $sidebarWidth: 23%;
 }
 .sidebarInner {
   padding: 20px;
-  padding-left: 30px;
+  padding-left: 25px;
 }
 .links {
   margin-top: 10px;
+  font-size: 18px;
   a {
     display: block;
     padding: 5px 0px;
+    &.active {
+      color: #000;
+      &:hover {
+        color: #000;
+      }
+    }
+    &:hover {
+      color: #2a2a2a;
+    }
   }
 }
+
 
 @media (max-width: 900px) {
   .sidebar, .sidebarFixed {

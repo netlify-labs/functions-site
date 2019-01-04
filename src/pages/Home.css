@@ -4,6 +4,7 @@
 }
 .content {
   padding-left: 70px;
+  padding-bottom: 200px;
   p, ul {
     max-width: 720px;
   }
