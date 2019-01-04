@@ -13,8 +13,10 @@
   text-decoration: none;
   color: #000;
   &:hover {
-    box-shadow: 0 2px 1px rgba(170, 170, 170, 0.45);
+    box-shadow: 0 2px 1px rgba(170, 170, 170, 0.65);
     color: $primary;
+    transform: scale(1.005);
+    transition: .1s ease-out;
   }
 }
 .title {
