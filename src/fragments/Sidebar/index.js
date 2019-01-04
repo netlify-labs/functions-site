@@ -3,8 +3,12 @@ import styles from './Sidebar.css'
 import { Link } from 'gatsby'
 import Logo from '../../components/Logo'
 
-const defaultSidebar = (path) => {
-  const cleanPath = (path === '/') ? '//' : path
+const defaultSidebar = () => {
+  let path = ''
+  if (typeof window !== 'undefined') {
+    path = (window.location.pathname === '/') ? '//' : window.location.pathname
+  }
+
   const links = [
     {
       url: '/',
@@ -24,7 +28,7 @@ const defaultSidebar = (path) => {
     }]
 
   return links.map((x, key) => {
-    const classes = (cleanPath.replace(/\/$/, '') === x.url) ? styles.active : ''
+    const classes = (path.replace(/\/$/, '') === x.url) ? styles.active : ''
     if (x.url.match((/^http/))) {
       return (
         <a href={x.url} target='_blank' rel='noopener noreferrer' key={key}>
@@ -40,7 +44,7 @@ const defaultSidebar = (path) => {
   })
 }
 
-const Sidebar = ({ path, children }) => {
+const Sidebar = ({ children }) => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.sidebarFixed}>
@@ -49,7 +53,7 @@ const Sidebar = ({ path, children }) => {
             <Logo />
           </Link>
           <nav className={styles.links}>
-            {children || defaultSidebar(path)}
+            {children || defaultSidebar()}
           </nav>
         </div>
       </div>
