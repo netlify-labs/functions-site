@@ -1,4 +1,5 @@
 import React from 'react'
+import { paramsParse } from 'analytics-utils'
 import Base from '../../layouts/Base'
 import Form from '../../components/Form'
 import Input from '../../components/Input'
@@ -12,7 +13,7 @@ import styles from './Admin.css'
 import './Admin.global.css'
 
 const url = (typeof window !== 'undefined') ? `${window.location.origin}/admin` : 'https://functions.netlify.com/admin'
-const bookmarklet = `javascript:(function()%7BThisLater%3Dwindow.open("${url}%3Furl%3D"%2BencodeURIComponent(location.href)%2B"%26title%3D"%2B((document.title)%3Fescape(encodeURI(document.title)):"") %2B "%26api%3DIdbvF6muT9RZvJrFfL5urzCBxCxCoC","ThisLater","width%3D800,height%3D540,location,status,scrollbars,resizable,dependent%3Dyes")%3BsetTimeout("ThisLater.focus()",100)%3B%7D)()`
+const bookmarklet = `javascript:(function()%7BNetlifyFunctions%3Dwindow.open("${url}%3Furl%3D"%2BencodeURIComponent(location.href)%2B"%26title%3D"%2B((document.title)%3Fescape(encodeURI(document.title)):"") %2B "%26api%3DIdbvF6muT9RZvJrFfL5urzCBxCxCoC","NetlifyFunctions","width%3D800,height%3D540,location,status,scrollbars,resizable,dependent%3Dyes")%3BsetTimeout("NetlifyFunctions.focus()",100)%3B%7D)()`
 
 // Get JWT token of current user
 function generateHeaders(user) {
@@ -72,6 +73,8 @@ export default class Admin extends React.Component {
     }
   }
   componentDidMount() {
+    const params = paramsParse()
+
     Icon.loadSprite()
     /* Register listeners on identity widget events */
     netlifyIdentity.on('login', () => {
@@ -89,6 +92,15 @@ export default class Admin extends React.Component {
       this.setState({ loggedIn: false })
       window.location.href = window.location.href
     })
+
+    if (params.url) {
+      const url = (document.getElementsByName('url') || [{value: ''}])[0]
+      url.value = params.url
+    }
+    if (params.title) {
+      const title = (document.getElementsByName('name') || [{value: ''}])[0]
+      title.value = decodeURI(params.title)
+    }
   }
   handleLogIn = () => {
     netlifyIdentity.open()
