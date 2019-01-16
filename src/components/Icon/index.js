@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import sprite from '../../icons/sprite'
-import addSVGtoDOM from './utils/addSVGToDOM'
+import addSVGtoDOM from './utils/addSvgToDom'
 import variables from '../../_variables'
 import styles from './Icon.css'
 
