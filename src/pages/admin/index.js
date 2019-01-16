@@ -1,13 +1,19 @@
 import React from 'react'
+import Base from '../../layouts/Base'
 import Form from '../../components/Form'
 import Input from '../../components/Input'
 import Button from '../../components/Button'
-import Select from 'react-select'
-import CreatableSelect from 'react-select/lib/Creatable';
+import Modal from '../../components/Modal'
+import Icon from '../../components/Icon'
+import CreatableSelect from 'react-select/lib/Creatable'
 import netlifyIdentity from 'netlify-identity-widget'
 import { uniqueTags } from '../../utils/data'
 import styles from './Admin.css'
 import './Admin.global.css'
+
+const url = (typeof window !== 'undefined') ? `${window.location.origin}/admin` : 'https://functions.netlify.com/admin'
+const bookmarklet = `javascript:(function()%7BThisLater%3Dwindow.open("${url}%3Furl%3D"%2BencodeURIComponent(location.href)%2B"%26title%3D"%2B((document.title)%3Fescape(encodeURI(document.title)):"") %2B "%26api%3DIdbvF6muT9RZvJrFfL5urzCBxCxCoC","ThisLater","width%3D800,height%3D540,location,status,scrollbars,resizable,dependent%3Dyes")%3BsetTimeout("ThisLater.focus()",100)%3B%7D)()`
+
 // Get JWT token of current user
 function generateHeaders(user) {
   const headers = { 'Content-Type': 'application/json' }
@@ -62,9 +68,11 @@ export default class Admin extends React.Component {
     const user = netlifyIdentity.currentUser()
     this.state = {
       loggedIn: user || false,
+      settingsOpen: false
     }
   }
   componentDidMount() {
+    Icon.loadSprite()
     /* Register listeners on identity widget events */
     netlifyIdentity.on('login', () => {
       /* Close netlify identity modal on login */
@@ -97,7 +105,18 @@ export default class Admin extends React.Component {
       console.log('err', e)
     })
   }
+  handleSettingsClick = () => {
+    this.setState({
+      settingsOpen: true
+    })
+  }
+  handleModalClose = () => {
+    this.setState({
+      settingsOpen: false
+    })
+  }
   renderButton() {
+    const { settingsOpen } = this.state
     const user = netlifyIdentity.currentUser()
     console.log('user', user)
     if (!user) {
@@ -115,13 +134,18 @@ export default class Admin extends React.Component {
     })
     return (
       <div>
-        {/*<div>
-          <button onClick={this.handleLogOut}>
-            Log out { user.email }
-          </button>
-        </div>*/}
         <div>
-          <a href='javascript:(function()%7BThisLater%3Dwindow.open("https://functions.netlify.com/admin%3Furl%3D"%2BencodeURIComponent(location.href)%2B"%26title%3D"%2B((document.title)%3Fescape(encodeURI(document.title)):"") %2B "%26api%3DIdbvF6muT9RZvJrFfL5urzCBxCxCoC","ThisLater","width%3D800,height%3D540,location,status,scrollbars,resizable,dependent%3Dyes")%3BsetTimeout("ThisLater.focus()",100)%3B%7D)()'>bookmarklet</a>
+          <Modal showMenu={settingsOpen} handleModalClose={this.handleModalClose}>
+            <h2>Settings</h2>
+            <div>
+              <a href={bookmarklet}>bookmarklet</a>
+              <div>
+                <button onClick={this.handleLogOut}>
+                  Log out { user.email }
+                </button>
+              </div>
+            </div>
+          </Modal>
           <Form name='what' onSubmit={this.handleSubmit}>
             <div className={styles.fieldSet}>
               <Input placeholder="Example name" name='name' required />
@@ -143,21 +167,29 @@ export default class Admin extends React.Component {
                 classNamePrefix="select"
               />
             </div>
-            <Button>
-              Add item
-            </Button>
+            <div className={styles.submit}>
+              <Button>
+                {'Add function example'}
+              </Button>
+            </div>
           </Form>
         </div>
       </div>
     )
   }
   render() {
-    console.log(this.state)
     return (
-      <div className={styles.adminWrapper}>
-        <h1>Add an example</h1>
+      <Base className={styles.adminWrapper}>
+        <h1>
+          Add an example
+          <Icon
+            name='settings'
+            size={28}
+            fill='#808080'
+            onClick={this.handleSettingsClick} />
+        </h1>
         {this.renderButton()}
-      </div>
+      </Base>
     )
   }
 }

@@ -27,7 +27,10 @@
 .select__multi-value__label {
   color: #fff !important;
 }
-.select__multi-value__remove, .select__option--is-focused, .select__dropdown-indicator {
+.select__multi-value__remove,
+.select__option--is-focused,
+.select__dropdown-indicator,
+.select__clear-indicator {
   cursor: pointer !important;
 }
 .select__multi-value__remove {

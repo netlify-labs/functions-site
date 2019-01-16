@@ -1,11 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { Link } from 'gatsby'
 import Layout from '../../layouts/Default'
 import SEO from '../../components/SEO/SEO'
 import Grid from '../../fragments/Grid'
 import data from '../../data.json'
+import { paramsParse } from 'analytics-utils'
 import styles from './Examples.css'
-import { Link } from 'gatsby'
 
 const tags = data.reduce((acc, curr) => {
   if (curr.tags) {
@@ -18,12 +19,13 @@ const uniqueTags = new Set(tags)
 export default class Examples extends React.Component {
   constructor (props, context) {
     super(props, context)
+    const params = paramsParse()
+    const search = (!params.search || params.search === true) ? '' : params.search
     this.state = {
-      tag: ''
+      tag: search
     }
   }
   changeTag = (e) => {
-    console.log('e.target.innerText', e.target.innerText)
     this.setState({
       tag: e.target.innerText
     })
@@ -69,7 +71,31 @@ export default class Examples extends React.Component {
           <SEO />
           <div className={styles.content}>
             <div style={{ paddingBottom: 300 }}>
-              <Grid data={data} tag={theTag} title='Function Examples' />
+              <Grid
+                data={data}
+                tag={theTag}
+                title={(count) => {
+                  let countRender
+                  if (count) {
+                    countRender = (
+                      <span className={styles.count}>
+                        ({ count })
+                      </span>
+                    )
+                  }
+                  return (
+                    <div className={styles.title}>
+                      <h1>
+                        Function Examples
+                        {countRender}
+                      </h1>
+                      {/*<Link to='/add'>
+                        Add an example
+                      </Link>*/}
+                    </div>
+                  )
+                }}
+              />
             </div>
           </div>
         </div>

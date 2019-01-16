@@ -5,6 +5,40 @@ import styles from './Grid.css'
 
 const searchInputId = 'example-search'
 
+function updateQueryStringParam(key, value) {
+  if (typeof window === 'undefined') {
+    return
+  }
+  const { location, history } = window
+  const { search, protocol, host, pathname } = location
+  const baseUrl = `${protocol}//${host}${pathname}`
+
+  const newParam = `${key}=${value}`
+
+  var params = '?' + newParam
+  // If the "search" string exists, then build params from it
+  if (search) {
+    var updateRegex = new RegExp(`([\?&])${key}[^&]*`)
+
+    if (typeof value === 'undefined' || value == null || value === '') {
+      const removeRegex = new RegExp(`([\?&])${key}=[^&;]+[&;]?`)
+      params = search.replace(removeRegex, '$1')
+      params = params.replace(/[&;]$/, '')
+    } else if (search.match(updateRegex) !== null) {
+      // If param exists already, update it
+      params = search.replace(updateRegex, '$1' + newParam)
+    } else {
+      // Otherwise, add it to end of query string
+      params = search + '&' + newParam
+    }
+  }
+
+  // no parameter was set so we don't need the question mark
+  params = params == '?' ? '' : params
+
+  history.replaceState({}, '', baseUrl + params)
+}
+
 export default class Grid extends React.Component {
   constructor(props, context) {
     super(props, context)
@@ -22,10 +56,22 @@ export default class Grid extends React.Component {
       filterText: value
     })
     document.getElementById(searchInputId).value = value
+    if (value) {
+      updateQueryStringParam('search', value)
+    }
+  }
+  componentDidMount() {
+    this.setSearch(this.props.tag)
   }
   componentDidUpdate (prevProps, prevState) {
     if (prevProps.tag !== this.props.tag) {
       this.setSearch(this.props.tag)
+    }
+    // Update the search query on typing
+    if (this.state.filterText) {
+      updateQueryStringParam('search', this.state.filterText)
+    } else if (!this.state.filterText && window.location.search) {
+      updateQueryStringParam('search')
     }
   }
   handleChange = () => {
@@ -40,21 +86,27 @@ export default class Grid extends React.Component {
       </div>
     )
   }
-  renderTitle = (matchCount) => {
+  defaultTitle = (matchCount) => {
     const { title } = this.props
-    if (title) {
+    if (title && typeof title === 'string') {
+      let count
+      if (matchCount) {
+        count = (
+          <span className={styles.count}>({matchCount})</span>
+        )
+      }
       return (
         <div className={styles.gridTitle}>
           <h1>
             {title}
-            <span className={styles.count}>({matchCount})</span>
+            {count}
           </h1>
         </div>
       )
     }
   }
   render() {
-    const { data } = this.props
+    const { data, title } = this.props
     const search = this.state.filterText
     let renderExamples = data.filter(example => {
       // No search query. Show all
@@ -66,7 +118,8 @@ export default class Grid extends React.Component {
       if (
         matchText(search, name) ||
         matchText(search, description) ||
-        matchTags(search, tags)) {
+        matchTags(search, tags)
+      ) {
         return true
       }
       // no match!
@@ -107,9 +160,13 @@ export default class Grid extends React.Component {
       )
     }
 
+    const titleRender = (typeof title === 'string')
+      ? this.defaultTitle(renderExamples.length)
+      : title(renderExamples.length)
+
     return (
       <div style={{ marginBottom: 60 }}>
-        {this.renderTitle(renderExamples.length)}
+        {titleRender}
         <div className={styles.gridWrapper}>
           <div className={styles.gridContent}>
             <div style={{ marginBottom: 10 }}>

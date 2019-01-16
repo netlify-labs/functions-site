@@ -1,15 +1,15 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import config from '../../_site-config'
+import config from '../../../_site-config'
 import styles from './Default.css'
-import Sidebar from '../fragments/Sidebar'
-import './index.css'
+import Base from '../Base'
+import Sidebar from '../../fragments/Sidebar'
 
 export default class MainLayout extends React.Component {
   render() {
     const { children, sidebar } = this.props
     return (
-      <div className={styles.test}>
+      <Base className={styles.test}>
         <Helmet>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
@@ -19,7 +19,7 @@ export default class MainLayout extends React.Component {
             {children}
           </div>
         </div>
-      </div>
+      </Base>
     )
   }
 }

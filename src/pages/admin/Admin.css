@@ -3,12 +3,20 @@
   padding-top: 0px;
   position: relative;
   max-width: 650px;
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 .fieldSet {
   margin-bottom: 10px;
   input {
     width: 100%;
   }
+}
+.submit {
+  margin-top: 15px;
 }
 .logOut {
   position: absolute;

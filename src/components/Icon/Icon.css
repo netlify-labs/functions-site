@@ -1,0 +1,23 @@
+
+.wrapper {
+  display: inline-block;
+  fill: inherit;
+  position: relative;
+}
+.icon {
+  display: flex;
+  width: $iconDefault;
+  height: $iconDefault;
+  &.spinning {
+    animation: spin 1s infinite linear;
+  }
+}
+.hasClick {
+  cursor: pointer;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

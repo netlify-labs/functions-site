@@ -26,6 +26,25 @@
   font-weight: 500;
 }
 
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  h1 {
+    margin-bottom: 0px;
+  }
+  a {
+    text-decoration: none;
+    margin-left: 20px;
+  }
+}
+.count {
+  font-size: 14px;
+  padding-left: 5px;
+  color: $grey;
+  font-weight: 300;
+}
+
 @media (max-width: 768px) {
   .wrapper {
     padding-left: 15px;

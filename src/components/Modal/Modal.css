@@ -1,0 +1,46 @@
+.wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(95, 95, 95, 0.50);
+  font-size: 13px;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding: 1.5em 3em;
+  padding-bottom: 3em;
+  background: #fff;
+  color: rgba(14,30,37,0.54);
+  border-radius: 8px;
+  box-shadow: 0 1px 6px 0 rgba(14,30,37,0.12);
+  position: relative;
+  h2 {
+    color: #000;
+  }
+}
+.close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .close {
+    top: 15px;
+    right: 20px;
+    font-size: 18px;
+  }
+}

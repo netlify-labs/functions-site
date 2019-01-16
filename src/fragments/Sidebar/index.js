@@ -27,18 +27,19 @@ const defaultSidebar = () => {
       text: 'Read the docs'
     }]
 
-  return links.map((x, key) => {
-    const classes = (path.replace(/\/$/, '') === x.url) ? styles.active : ''
-    if (x.url.match((/^http/))) {
+  return links.map((link, key) => {
+    const { url, text } = link
+    const classes = (path.replace(/\/$/, '') === url) ? styles.active : ''
+    if (url.match((/^http/))) {
       return (
-        <a href={x.url} target='_blank' rel='noopener noreferrer' key={key}>
-          {x.text}
+        <a href={url} target='_blank' rel='noopener noreferrer' key={key}>
+          {text}
         </a>
       )
     }
     return (
-      <Link to={x.url} className={classes} key={key}>
-        {x.text}
+      <Link to={url} className={classes} key={key}>
+        {text}
       </Link>
     )
   })

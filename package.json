@@ -25,6 +25,7 @@
     "write-good": "write-good $(glob 'content/posts/**/*.md')"
   },
   "dependencies": {
+    "analytics-utils": "0.0.13",
     "classnames": "^2.2.6",
     "cssnano": "^4.1.7",
     "gatsby": "2.0.67",
@@ -49,6 +50,7 @@
     "gatsby-transformer-remark": "2.1.15",
     "gatsby-transformer-sharp": "2.1.9",
     "get-form-data": "^2.0.0",
+    "icon-pipeline": "0.0.3",
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
     "netlify-identity-widget": "^1.5.2",
@@ -56,6 +58,7 @@
     "postcss-nested": "^4.1.0",
     "postcss-simple-vars": "^5.0.1",
     "prismjs": "^1.15.0",
+    "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.6.3",

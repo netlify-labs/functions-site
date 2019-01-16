@@ -27,7 +27,7 @@ export default class Tutorials extends Component {
   render() {
     return (
       <Layout>
-        <div className="about-container" style={{ padding: 30 }}>
+        <div style={{ padding: 30 }}>
           <Helmet title={`Tutorials`} />
           <h2>
             Function Tutorials
