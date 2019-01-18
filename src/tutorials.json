@@ -94,5 +94,11 @@
     "description": "Share data from iOS Shortcuts to my Netlify site",
     "url": "https://bryanlrobinson.com/blog/2018/11/12/ios-shortcuts-pushing-data-to-netlify-static-site/",
     "date": "Nov 12, 2018"
+  },
+  {
+    "title": "Syndicating Content with Netlify functions",
+    "description": "How to automatically publish content from a static site on Twitter, using Eleventy and Netlify's lambda functions",
+    "url": "https://mxb.at/blog/syndicating-content-to-twitter-with-netlify-functions/",
+    "date": "Jan 06, 2019"
   }
 ]
