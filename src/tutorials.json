@@ -100,5 +100,11 @@
     "description": "How to automatically publish content from a static site on Twitter, using Eleventy and Netlify's lambda functions",
     "url": "https://mxb.at/blog/syndicating-content-to-twitter-with-netlify-functions/",
     "date": "Jan 06, 2019"
+  },
+  {
+    "title": "Adding Emotional Tone Analysis to Your Contact Form",
+    "description": "How to use  IBM Watson Tone Analyzer & Netlify functions for sentiment analysis on forms",
+    "url": "https://www.raymondcamden.com/2019/01/18/adding-emotional-tone-analysis-to-your-contact-form",
+    "date": "Jan 18, 2019"
   }
 ]
