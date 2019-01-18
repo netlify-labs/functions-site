@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import styles from './FieldSet.css'
+import styles from './Fieldset.css'
 
 const propTypes = {
   /** Custom CSS Classes */
