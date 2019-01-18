@@ -21,10 +21,14 @@ const unit = 'rem'
 const baseFontSize = (baseValue * 1.6) + unit
 
 module.exports = {
+  textSelection: '#80cbbf',
   // -- Colors
   primary: '#00ad9f',
+  primaryHover: '#00c2b2',
   secondary: '#f5f8f9',
   grey: '#8b8b8b',
+  danger: '#fb6d77',
+  dangerHover: '#fa3d4a',
   // -- Icon sizes
   iconDefault: '35px',
   // -- Fonts
