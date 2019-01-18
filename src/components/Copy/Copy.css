@@ -1,0 +1,33 @@
+.copy {
+  &:after {
+    opacity: .4;
+    visibility: hidden;
+    position: absolute;
+    content: "copy link";
+    text-align: center;
+    height: 20px;
+    transform: none;
+    width: 55px;
+    font-size: 11px;
+    padding: 3px 5px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: white;
+    background-color: #191919;
+    top: 85%;
+    left: 8px;
+    border-radius: 3px;
+    transition: .25s ease-in-out 0s;
+  }
+  &:active:after {
+    content: "copied!";
+    background-color: #787878;
+  }
+  &:hover:after {
+    visibility: visible;
+  }
+}

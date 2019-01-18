@@ -9,7 +9,7 @@ export default class Tutorials extends Component {
     return tutorials.map((tut, i) => {
       return (
         <a key={i} className={styles.link} href={tut.url} target='_blank' rel='noopener noreferrer'>
-          <span>
+          <span className={styles.tutorial}>
             <div className={styles.title}>
               {tut.title}
             </div>

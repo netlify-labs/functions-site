@@ -1,11 +1,14 @@
-
 .button {
-  padding: 7px 15px;
+  cursor: pointer;
+  background-color: #424242;
   font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
+  border: none;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 18px;
+  font-size: 15px;
   border: 1px solid #e9ebeb;
   border-bottom: 1px solid #e1e3e3;
   border-radius: 4px;
@@ -15,26 +18,56 @@
   transition: all .2s ease;
   transition-property: background-color,color,border,box-shadow;
   outline: 0;
-  cursor: pointer;
-  margin-bottom: 3px;
-}
-
-.button:focus, .button:hover {
-  background-color: #f5f5f5;
-  color: rgba(14,30,37,.87);
-  box-shadow: 0 8px 12px 0 rgba(233,235,235,.16), 0 2px 8px 0 rgba(0,0,0,.08);
-  text-decoration: none;
-}
-
-
-.btn-danger {
-  background-color: #fb6d77;
-  border-color: #fb6d77;
-  border-bottom-color: #e6636b;
-  color: #fff;
-}
-.btn-danger:focus, .btn-danger:hover {
-    background-color: #fa3b49;
-    border-color: #fa3b49;
+  font-weight: 500;
+  &.hasIcon {
+    .buttonText {
+      padding-top: 3px;
+    }
+  }
+  &:hover, &:focus {
+    box-shadow: 0 8px 12px 0 rgba(233,235,235,.16), 0 2px 8px 0 rgba(0,0,0,.08);
+    text-decoration: none;
+  }
+  /* kind styles */
+  &.primary {
+    background: $primary;
     color: #fff;
+    border-color: transparent;
+    &:hover, &:focus {
+      background: $primaryHover;
+    }
+  }
+  &.secondary {
+    background: #424242;
+    color: #fff;
+  }
+  &.tertiary {
+    background: #fff;
+    color: rgba(14,30,37,.87);
+    &:hover, &:focus {
+      background-color: #f5f5f5;
+      color: rgba(14,30,37,.87);
+    }
+  }
+  &.danger {
+    background: $danger;
+    color: #fff;
+    &:hover, &:focus {
+      background: $dangerHover;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+a.button {
+  display: inline-flex;
+  text-decoration: none;
+  color: #fff;
+  border: none !important;
+}
+.icon {
+  margin-right: 10px;
+  fill: #fff;
 }

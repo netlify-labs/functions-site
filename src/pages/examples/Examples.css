@@ -13,13 +13,14 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: -5px;
+  max-width: 95%;
 }
 .tag {
   padding: 5px;
   cursor: pointer;
   color: $grey;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
 }
 .current {
   color: black;

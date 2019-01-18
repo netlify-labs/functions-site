@@ -1,0 +1,23 @@
+.fieldSet {
+  display: flex;
+  margin-bottom: 20px;
+  label {
+    user-select: none;
+  }
+}
+.horizontal {
+  align-items: center;
+  :global(.component-label) {
+    margin-bottom: 0px;
+  }
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.labelWrapper {
+  font-size: 12px;
+  font-weight: 500;
+  color: #9e9e9e;
+}

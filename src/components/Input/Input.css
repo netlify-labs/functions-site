@@ -1,16 +1,119 @@
+
+.inputWrapper {
+  position: relative;
+
+  &:hover {
+    .copyIcon {
+      opacity: 1;
+    }
+  }
+}
+.inputWrapper, .input {
+  width: 100%;
+}
+
 .input {
-  border-radius: 2px;
-  border: none;
   font-size: 16px;
-  padding: 11px 15px;
-  min-width: 300px;
-  display: inline-block;
-  box-shadow: 0px 0px 0px 2px rgba(120, 130, 152, 0.25);
-  border: none;
-  outline: none;
-  transition: all 0.3s ease;
-  &:hover, &:active, &:focus {
-    box-shadow: 0px 0px 0px 2px rgb(43, 190, 185);
-    box-shadow: 0px 0px 0px 2px $primary;
+  padding: 10px;
+  border: 1px solid #949494;
+  &:focus {
+    border: 1px solid #000;
+    outline: none;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background: #e6e6e6;
+  }
+  &:read-only {
+    cursor: pointer;
+  }
+  &.hasIcon {
+    padding-left: 30px;
+  }
+  /* Kinds */
+  &.transparent {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+  &.default {
+    border-radius: 2px;
+    border: none;
+    font-size: 16px;
+    padding: 11px 15px;
+    min-width: 300px;
+    display: inline-block;
+    box-shadow: 0px 0px 0px 2px rgba(120, 130, 152, 0.25);
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    &.valid {
+      color: $primary;
+    }
+    &:hover, &:active, &:focus {
+      box-shadow: 0px 0px 0px 2px $primary;
+    }
+    &.invalid {
+      box-shadow: 0px 0px 0px 2px rgba(216, 0, 50, 0.54);
+    }
+    /* Placeholder color. Must be separated ¯\_(ツ)_/¯ */
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $grey;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $grey;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $grey;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $grey;
+    }
+  }
+  &.otherFormKind {
+    color: #000;
+  }
+}
+
+textarea.input {
+  padding: 13px 10px;
+}
+
+.iconWrapper {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.icon {}
+
+.validation {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  top: -33px;
+  font-size: 1.3rem;
+  user-select: none;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.copyIcon {
+  position: absolute;
+  opacity: 0.2;
+  cursor: pointer;
+  user-select: none;
+  right: -2em;
+  top: 0.5em;
+  transition: opacity 500ms;
+}
+
+@media (max-width: 768px) {
+  .validation {
+    font-size: 11px;
   }
 }

@@ -33,6 +33,10 @@
 .select__clear-indicator {
   cursor: pointer !important;
 }
+.select__menu {
+  box-shadow: 0 0 0 2px rgba(120,130,152,.35) !important;
+  width: 102% !important;
+}
 .select__multi-value__remove {
   &:hover {
     background-color: $primary !important;

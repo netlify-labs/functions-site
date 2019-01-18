@@ -21,6 +21,9 @@
     /*transition: transform .1s ease-out, box-shadow .1s ease-out;*/
   }
 }
+.tutorial {
+  max-width: 80%;
+}
 .title {
   font-weight: 600;
 }
@@ -34,6 +37,9 @@
 }
 
 @media (max-width: 768px) {
+  .tutorial {
+    max-width: 100%;
+  }
   .link {
     flex-direction: column;
     align-items: flex-start;

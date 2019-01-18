@@ -2,7 +2,9 @@ import React from 'react'
 import { paramsParse } from 'analytics-utils'
 import Base from '../../layouts/Base'
 import Form from '../../components/Form'
+import FieldSet from '../../components/FieldSet'
 import Input from '../../components/Input'
+import TextArea from '../../components/TextArea'
 import Button from '../../components/Button'
 import Modal from '../../components/Modal'
 import Icon from '../../components/Icon'
@@ -13,7 +15,9 @@ import styles from './Admin.css'
 import './Admin.global.css'
 
 const url = (typeof window !== 'undefined') ? `${window.location.origin}/admin` : 'https://functions.netlify.com/admin'
-const bookmarklet = `javascript:(function()%7BNetlifyFunctions%3Dwindow.open("${url}%3Furl%3D"%2BencodeURIComponent(location.href)%2B"%26title%3D"%2B((document.title)%3Fescape(encodeURI(document.title)):"") %2B "%26api%3DIdbvF6muT9RZvJrFfL5urzCBxCxCoC","NetlifyFunctions","width%3D800,height%3D540,location,status,scrollbars,resizable,dependent%3Dyes")%3BsetTimeout("NetlifyFunctions.focus()",100)%3B%7D)()`
+const width = 665
+const height = 739
+const bookmarklet = `javascript:(function()%7BNetlifyFunctions%3Dwindow.open("${url}%3Furl%3D"%2BencodeURIComponent(location.href)%2B"%26title%3D"%2B((document.title)%3Fescape(encodeURI(document.title)):"") %2B "%26api%3DIdbvF6muT9RZvJrFfL5urzCBxCxCoC","NetlifyFunctions","width%3D${width},height%3D${height},location,status,scrollbars,resizable,dependent%3Dyes")%3BsetTimeout("NetlifyFunctions.focus()",100)%3B%7D)()`
 
 // Get JWT token of current user
 function generateHeaders(user) {
@@ -28,10 +32,9 @@ function generateHeaders(user) {
 
 async function saveItem(item) {
   const user = netlifyIdentity.currentUser()
-  const authHeaders = await generateHeaders(user)
-  console.log('item', item)
+  const headers = await generateHeaders(user)
 
-  const cleanItem = Object.keys(item).reduce((acc, thing) => {
+  const payload = Object.keys(item).reduce((acc, thing) => {
     if (thing.match(/react-select/)) {
       return acc
     }
@@ -44,8 +47,8 @@ async function saveItem(item) {
     acc[thing] = item[thing]
     return acc
   }, {})
-  console.log('cleanItem', cleanItem)
-  // return false
+
+  console.log('send payload', payload)
   // const payload = {
   //   ...item,
   //   userName: `${(user.user_metadata && user.user_metadata.full_name) ? user.user_metadata.full_name : 'Anon'}`
@@ -53,8 +56,8 @@ async function saveItem(item) {
   // console.log('payload', payload)
   return fetch(`/.netlify/functions/add-example/`, {
     method: 'POST',
-    headers: authHeaders,
-    body: JSON.stringify(cleanItem),
+    headers: headers,
+    body: JSON.stringify(payload),
   }).then(response => {
     return response.json()
   })
@@ -82,14 +85,15 @@ export default class Admin extends React.Component {
       netlifyIdentity.close()
       /* Grab user data */
       const user = netlifyIdentity.currentUser()
-      console.log('login complete', user)
       this.setState({
         loggedIn: false
       })
       window.location.href = window.location.href
     })
     netlifyIdentity.on('logout', () => {
-      this.setState({ loggedIn: false })
+      this.setState({
+        loggedIn: false
+      })
       window.location.href = window.location.href
     })
 
@@ -110,12 +114,14 @@ export default class Admin extends React.Component {
   }
   handleSubmit = (e, data) => {
     e.preventDefault()
-    console.log('send data', data)
-    saveItem(data).then((response) => {
-      console.log('response', response)
-    }).catch((e) => {
-      console.log('err', e)
-    })
+    // Ping API
+    saveItem(data)
+      .then(response => response.json())
+      .then((response) => {
+        console.log('response', response)
+      }).catch((e) => {
+        console.log('err', e)
+      })
   }
   handleSettingsClick = () => {
     this.setState({
@@ -131,13 +137,13 @@ export default class Admin extends React.Component {
     const { settingsOpen } = this.state
     const user = netlifyIdentity.currentUser()
     console.log('user', user)
-    if (!user) {
-      return (
-        <a href="#" onClick={ this.handleLogIn }>
-          Sign up | Log in
-        </a>
-      )
-    }
+    // if (!user) {
+    //   return (
+    //     <a href="#" onClick={ this.handleLogIn }>
+    //       Sign up | Log in
+    //     </a>
+    //   )
+    // }
     const options = uniqueTags.map((item) => {
       return {
         value: item,
@@ -146,46 +152,67 @@ export default class Admin extends React.Component {
     })
     return (
       <div>
-        <div>
-          <Modal showMenu={settingsOpen} handleModalClose={this.handleModalClose}>
-            <h2>Settings</h2>
-            <div>
-              <a href={bookmarklet}>bookmarklet</a>
-              <div>
-                <button onClick={this.handleLogOut}>
-                  Log out { user.email }
-                </button>
-              </div>
-            </div>
-          </Modal>
-          <Form name='what' onSubmit={this.handleSubmit}>
-            <div className={styles.fieldSet}>
-              <Input placeholder="Example name" name='name' required />
-            </div>
-            <div className={styles.fieldSet}>
-              <Input placeholder="Repo Url" name='url' type='url' />
-            </div>
-            <div className={styles.fieldSet}>
-              <Input placeholder="Direct link to code" name='code' type='url' />
-            </div>
-            <div className={styles.fieldSet}>
-              <CreatableSelect
-                isMulti
-                placeholder='(Optional) Choose or Create tags'
-                name="tags"
-                // defaultMenuIsOpen
-                options={options}
-                className="basic-multi-select"
-                classNamePrefix="select"
-              />
-            </div>
-            <div className={styles.submit}>
-              <Button>
-                {'Add function example'}
-              </Button>
-            </div>
-          </Form>
-        </div>
+        <Modal showMenu={settingsOpen} handleModalClose={this.handleModalClose}>
+          <h2>Settings</h2>
+          <div>
+            <a href={bookmarklet}>
+              Drag this bookmarklet to your bookmarks bar for easier contributions
+            </a>
+            {/*<div>
+              <button onClick={this.handleLogOut}>
+                Log out { user.email }
+              </button>
+            </div>*/}
+          </div>
+        </Modal>
+        <Form name='what' onSubmit={this.handleSubmit}>
+          <FieldSet className={styles.fieldSet}>
+            <label htmlFor='name'>Name</label>
+            <Input
+              placeholder="Example name"
+              name='name'
+              required
+            />
+          </FieldSet>
+          <FieldSet className={styles.fieldSet}>
+            <label htmlFor='url'>Repository URL</label>
+            <Input
+              placeholder="https://github.com/repo/name"
+              name='url'
+              validation='isURL'
+              type='url'
+              required
+            />
+          </FieldSet>
+          <FieldSet className={styles.fieldSet}>
+            <label htmlFor='code'>Direct link to code <i>(optional)</i></label>
+            <Input placeholder="https://link-to-code" name='code' type='url' />
+          </FieldSet>
+          <FieldSet className={styles.fieldSet}>
+            <label htmlFor='tags'>Tags <i>(optional)</i></label>
+            <CreatableSelect
+              isMulti
+              placeholder='Choose or Create tags'
+              name="tags"
+              // defaultMenuIsOpen
+              options={options}
+              className="basic-multi-select"
+              classNamePrefix="select"
+            />
+          </FieldSet>
+          <FieldSet className={styles.fieldSet}>
+            <label htmlFor='description'>Description <i>(optional)</i></label>
+            <TextArea
+              placeholder='Add a brief desription of the example'
+              name="description"
+            />
+          </FieldSet>
+          <div className={styles.submit}>
+            <Button>
+              {'Add function example'}
+            </Button>
+          </div>
+        </Form>
       </div>
     )
   }

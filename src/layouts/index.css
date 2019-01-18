@@ -2,13 +2,13 @@
 /* Using global sytles is not recommended, prefer local styles via CSS Modules */
 
 
-/* html is set to 62.5% so that all the REM measurements 
+/* html is set to 62.5% so that all the REM measurements
 throughout are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
 	font-size: 62.5%;
 	height: 100%;
 	/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-	box-sizing: border-box; 
+	box-sizing: border-box;
 }
 
 *,
@@ -17,7 +17,9 @@ html {
 	box-sizing: inherit;
 }
 
-::selection { background: yellow; }
+::selection {
+	background: $textSelection;
+}
 
 /*
 * kill document defaults margin & padding. We all do that all the time, right ?
@@ -52,7 +54,8 @@ body {
 	font-size: $fontSize;
 	line-height: 1.9;
 	/* system font https://medium.com/designing-medium/system-shock-6b1dc6d6596f */
-	font-family: 'proxima-nova', 'Helvetica', sans-serif;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	/*font-family: 'proxima-nova', 'Helvetica', sans-serif;*/
 }
 
 /**

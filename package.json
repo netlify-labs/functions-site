@@ -28,6 +28,7 @@
     "analytics-utils": "0.0.13",
     "classnames": "^2.2.6",
     "cssnano": "^4.1.7",
+    "clipboard": "^1.5.16",
     "gatsby": "2.0.67",
     "gatsby-image": "2.0.25",
     "gatsby-plugin-catch-links": "2.0.9",

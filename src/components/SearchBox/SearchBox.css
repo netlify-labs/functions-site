@@ -3,7 +3,8 @@
   display: flex;
   align-items: center;
   input {
-    padding-left: 40px;
+    padding-left: 40px !important;
+    max-width: 200px;
   }
 }
 
@@ -17,6 +18,7 @@
   position: absolute;
   top: 30%;
   left: 12px;
+  z-index: $zIndexHigh;
   &:before {
     content: "";
     display: inline-block;
