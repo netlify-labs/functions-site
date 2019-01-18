@@ -240,20 +240,30 @@ export default class Admin extends React.Component {
   }
   render() {
     const { response } = this.state
+    // const response = {
+    //   url: 'http://a.com'
+    // }
     if (response.url) {
       return (
         <Base className={styles.adminWrapper}>
           <h1>
-            Example added!
+            You rock 🎉
           </h1>
           <p>
-            Thanks for your submission it has been added here:
+            Thanks for your submission!
           </p>
           <p>
-            <a href={response.url}>
+            <a href={response.url} target='_blank' rel='noopener noreferrer'>
               {response.url}
             </a>
           </p>
+          {/*
+            <p>
+              <Button href={window.location.href}>
+                Submit another!
+              </Button>
+            </p>
+          */}
         </Base>
       )
     }

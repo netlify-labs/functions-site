@@ -74,7 +74,7 @@ export default function Button({
     return (
       <a
         className={classes}
-        to={href}
+        href={href}
         target={target}
         onClick={onClick}
         style={style}

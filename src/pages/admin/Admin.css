@@ -8,6 +8,9 @@
     align-items: center;
     justify-content: space-between;
   }
+  a {
+    color: $primary;
+  }
 }
 .fieldSet {
   margin-bottom: 10px;
