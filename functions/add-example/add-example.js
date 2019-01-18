@@ -16,14 +16,14 @@ exports.handler = (event, context, callback) => {
   const { clientContext } = context
   const claims = clientContext && clientContext.user
   console.log('claims', claims)
-  if (!claims) {
-    return callback(null, {
-      statusCode: 401,
-      body: JSON.stringify({
-        data: 'NOT ALLOWED'
-      })
-    })
-  }
+  // if (!claims) {
+  //   return callback(null, {
+  //     statusCode: 401,
+  //     body: JSON.stringify({
+  //       data: 'NOT ALLOWED'
+  //     })
+  //   })
+  // }
 
   const body = JSON.parse(event.body)
   console.log('body', body)
