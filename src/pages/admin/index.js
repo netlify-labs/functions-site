@@ -72,7 +72,9 @@ export default class Admin extends React.Component {
     const user = netlifyIdentity.currentUser()
     this.state = {
       loggedIn: user || false,
-      settingsOpen: false
+      settingsOpen: false,
+      loading: false,
+      response: {}
     }
   }
   componentDidMount() {
@@ -114,13 +116,20 @@ export default class Admin extends React.Component {
   }
   handleSubmit = (e, data) => {
     e.preventDefault()
+    this.setState({
+      loading: true
+    })
     // Ping API
     saveItem(data)
-      .then(response => response.json())
       .then((response) => {
+        // {"message":"pr created!","url":"https://github.com/DavidWells/functions-site/pull/5"}
         console.log('response', response)
+        this.setState({
+          loading: false,
+          response: response
+        })
       }).catch((e) => {
-        console.log('err', e)
+        console.log('response err', e)
       })
   }
   handleSettingsClick = () => {
@@ -134,9 +143,8 @@ export default class Admin extends React.Component {
     })
   }
   renderButton() {
-    const { settingsOpen } = this.state
+    const { settingsOpen, loading } = this.state
     const user = netlifyIdentity.currentUser()
-    console.log('user', user)
     // if (!user) {
     //   return (
     //     <a href="#" onClick={ this.handleLogIn }>
@@ -150,6 +158,22 @@ export default class Admin extends React.Component {
         label: item
       }
     })
+
+    let handler = (!loading) ? this.handleSubmit : (e) => { e.preventDefault(); console.log('noop') }
+    let button = (
+      <Button>
+        {'Add function example'}
+      </Button>
+    )
+
+    if (loading) {
+      button = (
+        <Button>
+          {'Submitting...'}
+        </Button>
+      )
+    }
+
     return (
       <div>
         <Modal showMenu={settingsOpen} handleModalClose={this.handleModalClose}>
@@ -165,7 +189,7 @@ export default class Admin extends React.Component {
             </div>*/}
           </div>
         </Modal>
-        <Form name='what' onSubmit={this.handleSubmit}>
+        <Form name='what' onSubmit={handler}>
           <FieldSet className={styles.fieldSet}>
             <label htmlFor='name'>Name</label>
             <Input
@@ -208,15 +232,31 @@ export default class Admin extends React.Component {
             />
           </FieldSet>
           <div className={styles.submit}>
-            <Button>
-              {'Add function example'}
-            </Button>
+            {button}
           </div>
         </Form>
       </div>
     )
   }
   render() {
+    const { response } = this.state
+    if (response.url) {
+      return (
+        <Base className={styles.adminWrapper}>
+          <h1>
+            Example added!
+          </h1>
+          <p>
+            Thanks for your submission it has been added here:
+          </p>
+          <p>
+            <a href={response.url}>
+              {response.url}
+            </a>
+          </p>
+        </Base>
+      )
+    }
     return (
       <Base className={styles.adminWrapper}>
         <h1>
