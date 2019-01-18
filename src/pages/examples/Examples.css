@@ -27,6 +27,11 @@
   font-weight: 500;
 }
 
+.actions, .actions a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .title {
   display: flex;
   align-items: center;
@@ -61,6 +66,9 @@
   }
   .title {
     margin-right: 5px;
+  }
+  .actions {
+    display: none;
   }
   .tagWrapper {
     display: none;

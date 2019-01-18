@@ -79,8 +79,6 @@ export default class Admin extends React.Component {
   }
   componentDidMount() {
     const params = paramsParse()
-
-    Icon.loadSprite()
     /* Register listeners on identity widget events */
     netlifyIdentity.on('login', () => {
       /* Close netlify identity modal on login */

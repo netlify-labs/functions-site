@@ -7,6 +7,7 @@ import Grid from '../../fragments/Grid'
 import data from '../../data.json'
 import { paramsParse } from 'analytics-utils'
 import Button from '../../components/Button'
+import Icon from '../../components/Icon'
 import styles from './Examples.css'
 
 const tags = data.reduce((acc, curr) => {
@@ -90,10 +91,13 @@ export default class Examples extends React.Component {
                         Function Examples
                         {countRender}
                       </h1>
-                      <div>
+                      <div className={styles.actions}>
                         <Button to='/add'>
                           Add an example
                         </Button>
+                        <a href='https://github.com/DavidWells/functions-site/' title='View the repo'>
+                          <Icon name='github' />
+                        </a>
                       </div>
                     </div>
                   )
