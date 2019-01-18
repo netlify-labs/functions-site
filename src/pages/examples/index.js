@@ -6,6 +6,7 @@ import SEO from '../../components/SEO/SEO'
 import Grid from '../../fragments/Grid'
 import data from '../../data.json'
 import { paramsParse } from 'analytics-utils'
+import Button from '../../components/Button'
 import styles from './Examples.css'
 
 const tags = data.reduce((acc, curr) => {
@@ -89,9 +90,11 @@ export default class Examples extends React.Component {
                         Function Examples
                         {countRender}
                       </h1>
-                      {/*<Link to='/add'>
-                        Add an example
-                      </Link>*/}
+                      <div>
+                        <Button to='/add'>
+                          Add an example
+                        </Button>
+                      </div>
                     </div>
                   )
                 }}

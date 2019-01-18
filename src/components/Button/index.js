@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import { Link } from 'gatsby'
 import Icon from '../Icon'
 import styles from './Button.css'
 
@@ -46,6 +47,7 @@ export default function Button({
   kind,
   style,
   href,
+  to,
   target,
   icon,
   iconSize,
@@ -82,6 +84,20 @@ export default function Button({
         {iconRender}
         <span className={styles.buttonText}>{text}</span>
       </a>
+    )
+  }
+  if (to) {
+    return (
+      <Link
+        className={classes}
+        to={to}
+        target={target}
+        onClick={onClick}
+        style={style}
+      >
+        {iconRender}
+        <span className={styles.buttonText}>{text}</span>
+      </Link>
     )
   }
 
