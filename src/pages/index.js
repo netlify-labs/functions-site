@@ -19,25 +19,25 @@ export default class Index extends React.Component {
           <SEO />
           <div className={styles.content}>
             <h1>Netlify Functions</h1>
-            <h2>{`//`}&nbsp;&nbsp;&nbsp;{`the problem`}</h2>
+            <h2>{`//`}&nbsp;&nbsp;{`the problem`}</h2>
             <p>
-              When you build and deploy sites on netlify, you can interact with third-party services and APIs with javascript places directly in your site. for example, you can have a script that sends event data to google analytics, or adds someone to a mailchimp list, or sends a request to a zapier webhook.
+              When you build and deploy sites on netlify, you can interact with third-party services and APIs with javascript places directly in your site. For example, you can have a script that sends event data to google analytics, or adds someone to a mailchimp list, or sends a request to a zapier webhook.
             </p>
             <p>
-              But what if you want to write scripts with something other than javascript? Or if you want to do run more complex scripts like resize images or query a database? Or if you have sensitive information in your script such as API tokens that you don’t want embedded on your site and visible to all? Or if there is no service or API that does what you need?
+              But what if you want to write scripts with something other than javascript? Or if you want to do more complex things like resize images or query a database? Or if you have sensitive information in your script such as API tokens that you don’t want embedded on your site and visible to all? Or if there is no service or API that does what you need?
             </p>
             <p>
               <strong>That’s where Netlify Functions come in.</strong>
             </p>
-            <h2>{`//`}&nbsp;&nbsp;&nbsp;{`what is it?`}</h2>
+            <h2>{`//`}&nbsp;&nbsp;{`what is it?`}</h2>
             <p>
               Functions are scripts that you write and deploy with Netlify. The function’s code is hidden from the public, but you can interact with it just like any other API service. Just as with your site code, Netlify takes care of deploying your scripts into functions.
             </p>
-            <h2>{`//`}&nbsp;&nbsp;&nbsp;{`who’s it useful for?`}</h2>
+            <h2>{`//`}&nbsp;&nbsp;{`who’s it useful for?`}</h2>
             <p>
               This is useful for developers who want to add more functionality to their sites and don’t want to or can’t rely entirely on third-party APIs, or want to use a language other than JavaScript, or don’t want to expose their scripts to site visitors.
             </p>
-            <h2>{`//`}&nbsp;&nbsp;&nbsp;{`why use it?`}</h2>
+            <h2>{`//`}&nbsp;&nbsp;{`why use it?`}</h2>
             <p>
               Despite all the benefits of serverless sites, there were many things you couldn’t do with just client-side JavaScript:
             </p>
