@@ -55,6 +55,7 @@ yarn.lock
 
 
 # Build Files
+misc
 public/
 .cache/
 
