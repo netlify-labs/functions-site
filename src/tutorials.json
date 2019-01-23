@@ -106,5 +106,11 @@
     "description": "How to use  IBM Watson Tone Analyzer & Netlify functions for sentiment analysis on forms",
     "url": "https://www.raymondcamden.com/2019/01/18/adding-emotional-tone-analysis-to-your-contact-form",
     "date": "Jan 18, 2019"
+  },
+  {
+    "title": "Building a Serverless JAMStack app with FaunaDB Cloud: Part 1",
+    "description": "How to use FaunaDB & Netlify functions & identity for CRUD applications",
+    "url": "https://fauna.com/blog/building-a-serverless-jamstack-app-with-faunadb-cloud-part-1",
+    "date": "Jan 23, 2019"
   }
 ]
