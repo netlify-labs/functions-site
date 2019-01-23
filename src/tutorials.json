@@ -106,5 +106,14 @@
     "description": "How to use  IBM Watson Tone Analyzer & Netlify functions for sentiment analysis on forms",
     "url": "https://www.raymondcamden.com/2019/01/18/adding-emotional-tone-analysis-to-your-contact-form",
     "date": "Jan 18, 2019"
+  },
+  {
+    "name": "hi",
+    "url": "https://functions.netlify.com",
+    "code": "",
+    "tags": [
+      "auth"
+    ],
+    "description": "this is cool"
   }
 ]
