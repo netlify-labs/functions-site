@@ -112,5 +112,15 @@
     "description": "How to use FaunaDB & Netlify functions & identity for CRUD applications",
     "url": "https://fauna.com/blog/building-a-serverless-jamstack-app-with-faunadb-cloud-part-1",
     "date": "Jan 23, 2019"
+  },
+  {
+    "name": "form-to-function-to-sanity.io",
+    "url": "https://github.com/kmelve/netlify-form-sanity",
+    "code": "https://github.com/kmelve/netlify-form-sanity/blob/master/functions/submission-created.js",
+    "tags": [
+      "forms",
+      "sanity.io"
+    ],
+    "description": "This is a simple example of how you can use Forms and Functions in Netlify to submit data to your Sanity.io project."
   }
 ]
