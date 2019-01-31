@@ -112,5 +112,12 @@
     "description": "How to use FaunaDB & Netlify functions & identity for CRUD applications",
     "url": "https://fauna.com/blog/building-a-serverless-jamstack-app-with-faunadb-cloud-part-1",
     "date": "Jan 23, 2019"
+  },
+  
+  {
+    "title": "Debugging Netlify Function Errors with Sentry",
+    "description": "How to set up, debug and monitor Netlify Functions with Sentry.io",
+    "url": "https://httptoolkit.tech/blog/netlify-function-error-reporting-with-sentry/",
+    "date": "Jan 23, 2019"
   }
 ]
