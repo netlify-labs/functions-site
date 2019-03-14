@@ -113,11 +113,22 @@
     "url": "https://fauna.com/blog/building-a-serverless-jamstack-app-with-faunadb-cloud-part-1",
     "date": "Jan 23, 2019"
   },
-  
   {
     "title": "Debugging Netlify Function Errors with Sentry",
     "description": "How to set up, debug and monitor Netlify Functions with Sentry.io",
     "url": "https://httptoolkit.tech/blog/netlify-function-error-reporting-with-sentry/",
     "date": "Jan 23, 2019"
+  },
+  {
+    "name": "gatsby-starter-netlify-cms",
+    "url": "https://github.com/netlify-templates/gatsby-starter-netlify-cms",
+    "code": "https://github.com/netlify-templates/gatsby-starter-netlify-cms/tree/master/lambda",
+    "tags": [
+      "starter",
+      "gatsby",
+      "netlify-cms",
+      "react"
+    ],
+    "description": "This repo contains an example business website that is built with Gatsby, and Netlify CMS, this starter also has a basic setup to work with netlify functions."
   }
 ]
