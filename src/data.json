@@ -498,5 +498,11 @@
     "description": "Create Identity accounts programatically by hitting the admin endpoint",
     "code": "https://auspicus.io/post/using-netlify-identity-in-a-production-application/#abilitytocreateaccountsprogrammatically",
     "tags": ["auth", "identity"]
+  },
+  {
+    "name": "super-simple-start-serverless",
+    "description": "A Super simple start to serverless from Kent C. Dodds",
+    "code": "https://kentcdodds.com/blog/super-simple-start-to-serverless/",
+    "tags": ["functions", "serverless"]
   }
 ]
