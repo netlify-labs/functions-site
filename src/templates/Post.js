@@ -54,14 +54,6 @@ export const pageQuery = graphql`
         category
         tags
       }
-      fields {
-        nextTitle
-        nextSlug
-        prevTitle
-        prevSlug
-        slug
-        date
-      }
     }
   }
 `
