@@ -31,17 +31,10 @@ class Disqus extends Component {
     const url = urljoin(
       config.siteUrl,
       config.pathPrefix,
-      postNode.fields.slug
+      // postNode.fields.slug
     )
     return (
-      <ReactDisqusComments
-        shortname={config.disqusShortname}
-        identifier={post.title}
-        title={post.title}
-        url={url}
-        category_id={post.category_id}
-        onNewComment={this.notifyAboutComment}
-      />
+      null
     )
   }
 }
