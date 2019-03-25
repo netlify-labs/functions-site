@@ -128,5 +128,16 @@
     "description": "How to set up, debug and monitor Netlify Functions with Sentry.io",
     "url": "https://httptoolkit.tech/blog/netlify-function-error-reporting-with-sentry/",
     "date": "Jan 23, 2019"
+  },
+  {
+    "name": "nuxt-netlify-functions-example",
+    "url": "https://github.com/wearelucid/nuxt-netlify-functions-example",
+    "code": "",
+    "tags": [
+      "mailgun",
+      "nuxt",
+      "vuejs"
+    ],
+    "description": "Nuxt.js example for running Netlify functions locally in a dev environment and as a generated static site deployed to Netlify."
   }
 ]
