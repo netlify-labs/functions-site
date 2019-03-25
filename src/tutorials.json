@@ -121,7 +121,7 @@
     "tags": [
       "forms",
       "sanity.io"
-    ],
+    ]
   },
   {
     "title": "Debugging Netlify Function Errors with Sentry",
