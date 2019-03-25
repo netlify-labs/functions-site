@@ -130,6 +130,18 @@
     "date": "Jan 23, 2019"
   },
   {
+    "name": "gatsby-starter-netlify-cms",
+    "url": "https://github.com/netlify-templates/gatsby-starter-netlify-cms",
+    "code": "https://github.com/netlify-templates/gatsby-starter-netlify-cms/tree/master/lambda",
+    "tags": [
+      "starter",
+      "gatsby",
+      "netlify-cms",
+      "react"
+    ],
+    "description": "This repo contains an example business website that is built with Gatsby, and Netlify CMS, this starter also has a basic setup to work with netlify functions."
+  },
+  {
     "name": "nuxt-netlify-functions-example",
     "url": "https://github.com/wearelucid/nuxt-netlify-functions-example",
     "code": "",
