@@ -128,5 +128,11 @@
     "description": "How to set up, debug and monitor Netlify Functions with Sentry.io",
     "url": "https://httptoolkit.tech/blog/netlify-function-error-reporting-with-sentry/",
     "date": "Jan 23, 2019"
+  },
+  {
+    "title": "How to send text messages from your static site using Netlify, Twilio and serverless functions",
+    "description": "In this article, I want to share how you can create and deploy a scalable static site on Netlify and how you can use serverless functions to send text messages using Twilio.",
+    "url": "https://dev.to/twilio/how-to-send-text-messages-from-your-static-site-using-netlify-twilio-and-serverless-functions-24ci/",
+    "date": "April 01, 2019"
   }
 ]
