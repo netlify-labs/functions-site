@@ -134,5 +134,14 @@
     "description": "In this article, I want to share how you can create and deploy a scalable static site on Netlify and how you can use serverless functions to send text messages using Twilio.",
     "url": "https://dev.to/twilio/how-to-send-text-messages-from-your-static-site-using-netlify-twilio-and-serverless-functions-24ci/",
     "date": "April 01, 2019"
+  },
+  {
+    "name": "fixed",
+    "url": "https://functions.netlify.com/add",
+    "code": "https://functions.netlify.com/add",
+    "tags": [
+      "starter"
+    ],
+    "description": "is it fixed?"
   }
 ]
