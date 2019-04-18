@@ -757,5 +757,14 @@
       "api"
     ],
     "description": "Using functions for GraphQL APIs"
+  },
+  {
+    "name": "Using functions for dynamic redirects",
+    "url": "https://github.com/DavidWells/netlify-functions-workshop/tree/master/lessons-code-complete/use-cases/3-redirects",
+    "code": "https://github.com/DavidWells/netlify-functions-workshop/blob/master/lessons-code-complete/use-cases/3-redirects/functions/redirect.js",
+    "tags": [
+      "redirect"
+    ],
+    "description": "Handle dynamic redirects with serverless functions"
   }
 ]
