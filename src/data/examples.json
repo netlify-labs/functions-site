@@ -1,62 +1,87 @@
-[{
+[
+  {
     "name": "create-react-app-lambda",
     "description": "Create React App with baked in Netlify functions support",
     "code": "https://github.com/netlify/create-react-app-lambda",
-    "tags": ["react", "starter"]
+    "tags": [
+      "react",
+      "starter"
+    ]
   },
   {
     "name": "serverless-auth-strategies",
     "description": "How to protected & scoped down functions to specific users",
     "code": "https://github.com/DavidWells/serverless-auth-strategies",
-    "tags": ["auth"]
+    "tags": [
+      "auth"
+    ]
   },
   {
     "name": "verify-okta",
     "description": "Verify an Okta token with Go",
     "code": "https://github.com/netlify/verify-okta",
-    "tags": ["auth"]
+    "tags": [
+      "auth"
+    ]
   },
   {
     "name": "send-email-via-aws-sns",
     "description": "Sends a question submitted from HTML question form via AWS SES. This example connects to an external AWS account",
     "code": "https://github.com/frzng/jamstack-experiments/blob/08f8a7edc014e076334a4d72e29e34ccdedcb8b1/_hooks/send-question.js",
-    "tags": ["email", "aws"]
+    "tags": [
+      "email",
+      "aws"
+    ]
   },
   {
     "name": "stripe-payment-processing",
     "description": "stripe payment processing ",
     "code": "https://github.com/alexmacarthur/netlify-lambda-function-example/blob/68a0cdc05e201d68fe80b0926b0af7ff88f15802/lambda-src/purchase.js#L43",
-    "tags": ["payment", "ecommerce"]
+    "tags": [
+      "payment",
+      "ecommerce"
+    ]
   },
   {
     "name": "form-spam-filter",
     "description": "Filter form spam and send to Zapier webhook",
     "code": "https://github.com/chrisjm/chrisjmears.com/blob/0361a03991b6a9ddd27d0514bc714b29a37908e2/js/spam-filter.js",
-    "tags": ["zapier", "spam"]
+    "tags": [
+      "zapier",
+      "spam"
+    ]
   },
   {
     "name": "send-email-via-nodemailer",
     "description": "send email via nodemailer",
     "code": "https://github.com/kicholen/makeithappen/blob/79b9c8f3a7238dc75308f9a69d769d7cda7dd522/func/sendMail.js",
-    "tags": ["email"]
+    "tags": [
+      "email"
+    ]
   },
   {
     "name": "send-email-via-sendgrid",
     "description": "send email via sendgrid",
     "code": "https://github.com/francoislesenne/Blog-joellesenne/blob/721bccce911530628d1097a192a5b9828b0032ea/src/sendgrid/app.js",
-    "tags": ["email"]
+    "tags": [
+      "email"
+    ]
   },
   {
     "name": "netlify-headless-site",
     "description": "Serve entire site via Netlify functions + dynamic serverside HTML rendering",
     "code": "https://github.com/rabbah/www/tree/56a7ce1a24df26db571719c6805242b1ff121617/src",
-    "tags": ["ssr"]
+    "tags": [
+      "ssr"
+    ]
   },
   {
     "name": "fetch-files-from-google-drive",
     "description": "List files from google drive API",
     "code": "https://github.com/JustinBeckwith/fileLister/blob/91b7af9fad934b519343d856753469744289bfbb/src/files.js",
-    "tags": ["file-storage"]
+    "tags": [
+      "file-storage"
+    ]
   },
   {
     "name": "ping-superfeedr-on-deploy",
@@ -76,19 +101,27 @@
     "description": "Handle Ajax & normal form POST submissions via functions",
     "code": "https://github.com/DavidWells/progressive-enhancement-form-functions/blob/master/functions/form-handler.js",
     "url": "https://progressive-enhancement-form.netlify.com/",
-    "tags": ["forms"]
+    "tags": [
+      "forms"
+    ]
   },
   {
     "name": "process-upload-send-to-trello-slack-mailgun",
     "description": "Process form file upload and send to results to trello, slack, & mailgun",
     "code": "https://github.com/NimbusForWork/nimbusforwork.com/blob/6641ee3d5a1faad3deb6bc5734ae05b521bb9b3b/src/lambda/form.js",
-    "tags": ["email", "file-processing"]
+    "tags": [
+      "email",
+      "file-processing"
+    ]
   },
   {
     "name": "mailchimp-landing-page",
     "description": "Landing page with mailchimp",
     "code": "https://github.com/tobilg/netlify-functions-landingpage/blob/169de175d04b165b5d4801b09cb250cd9a740da5/src/lambda/signup.js",
-    "tags": ["email", "marketing"]
+    "tags": [
+      "email",
+      "marketing"
+    ]
   },
   {
     "name": "ifttt-to-flick-instagram-make-new-github-post",
@@ -98,7 +131,10 @@
       "https://github.com/rretsiem/renem.net/blob/574b1c5091e993b520e23f993a6c46069e92cdb0/src/functions/instagram-webhook.js"
     ],
     "url": "https://renem.net/photos/",
-    "tags": ["instagram", "github"]
+    "tags": [
+      "instagram",
+      "github"
+    ]
   },
   {
     "name": "bus-schedule-tracker",
@@ -109,19 +145,27 @@
     "name": "proxy-blocked-google-analytics",
     "description": "Proxy pageviews to google analytics incase google analytics is blocked on the client side",
     "code": "https://github.com/codeniko/simple-tracker/blob/master/examples/server-examples/aws-lambda/google-analytics.js",
-    "tags": ["proxy", "marketing"]
+    "tags": [
+      "proxy",
+      "marketing"
+    ]
   },
   {
     "name": "proxy-tracking-data-to-loggly",
     "description": "proxy arbitrary tracking data to a log management service Loggly ",
     "code": "https://github.com/codeniko/simple-tracker/blob/master/examples/server-examples/aws-lambda/track.js",
-    "tags": ["proxy", "marketing"]
+    "tags": [
+      "proxy",
+      "marketing"
+    ]
   },
   {
     "name": "lookup-dns",
     "description": "DNS lookup of a site",
     "code": "https://github.com/HJGreen/who-owns/blob/master/lambda-src/dns.js",
-    "tags": ["dns"]
+    "tags": [
+      "dns"
+    ]
   },
   {
     "name": "get-items-from-cosmicjs",
@@ -132,25 +176,34 @@
     "name": "serverside-hashing",
     "description": "Serverside hashing via crypto",
     "code": "https://github.com/SquishyCat/netlify_lambda/blob/master/netlify-lambda/hash.js",
-    "tags": ["crypto"]
+    "tags": [
+      "crypto"
+    ]
   },
   {
     "name": "get-weather-via-openweathermap",
     "description": "Get the weather via openweathermap ",
     "code": "https://github.com/mattburrell/wishyouwerehere/blob/master/src/lambda/weatherHandler.js",
-    "tags": ["weather"]
+    "tags": [
+      "weather"
+    ]
   },
   {
     "name": "send-custom-netlify-build-slack-notification",
     "description": "Custom netlify build status in slack ",
     "code": "https://github.com/mirshko/netlify-status-topic",
-    "tags": ["build"]
+    "tags": [
+      "build"
+    ]
   },
   {
     "name": "contentful-authless-comments",
     "description": "Contentful authless comments ",
     "code": "https://github.com/shaunpersad/authless-comments-example",
-    "tags": ["contentful", "comments"]
+    "tags": [
+      "contentful",
+      "comments"
+    ]
   },
   {
     "name": "token-hider-via-proxy",
@@ -166,13 +219,18 @@
     "name": "url-shortening-service",
     "description": "URL shortening service ",
     "code": "https://github.com/philhawksworth/linkylinky/tree/master/src/lambda",
-    "tags": ["marketing"]
+    "tags": [
+      "marketing"
+    ]
   },
   {
     "name": "contentful-image-saver",
     "description": "Save images to contentful",
     "code": "https://github.com/mirshko/contentful-lambda/blob/master/src/lambda/createImageEntry.js",
-    "tags": ["file-storage", "contentful"]
+    "tags": [
+      "file-storage",
+      "contentful"
+    ]
   },
   {
     "name": "save-twitch-clips-save-to-postgres",
@@ -181,7 +239,11 @@
       "https://github.com/stphnchoe/twitchClips/blob/master/src/lambda/handler.js",
       "https://github.com/stphnchoe/twitchClips/blob/master/database/index.js"
     ],
-    "tags": ["database", "postgres", "twitch"]
+    "tags": [
+      "database",
+      "postgres",
+      "twitch"
+    ]
   },
   {
     "name": "swambda-openapi",
@@ -195,83 +257,122 @@
       "https://github.com/stefanjudis/stefan-judis-website/blob/020f1b005cb1fcf4da8afa4407d9514917aecda0/functions/report.js",
       "https://github.com/stefanjudis/stefan-judis-website/blob/020f1b005cb1fcf4da8afa4407d9514917aecda0/static/_headers#L2"
     ],
-    "tags": ["security", "CSP"]
+    "tags": [
+      "security",
+      "CSP"
+    ]
   },
   {
     "name": "scrape-twitter-avatars",
     "description": "Scrape mobile twitter HTML to return the URLs of a user avatar",
     "url": "https://twavatar.netlify.com/",
     "code": "https://github.com/philhawksworth/twavatar",
-    "tags": ["twitter"]
+    "tags": [
+      "twitter"
+    ]
   },
   {
     "name": "intercom-as-oauth-login",
     "description": "Oauth via intercom ",
     "code": "https://github.com/DavidWells/intercom-netlify-oauth",
-    "tags": ["auth", "oauth", "intercom"]
+    "tags": [
+      "auth",
+      "oauth",
+      "intercom"
+    ]
   },
   {
     "name": "netlify-functions-crud-app-with-fauna",
     "description": "Using faunaDB as datastore ",
     "code": "https://github.com/netlify/netlify-faunadb-example",
-    "tags": ["database", "fauna", "crud"]
+    "tags": [
+      "database",
+      "fauna",
+      "crud"
+    ]
   },
   {
     "name": "netlify-functions-express",
     "description": "Using express with netlify functions",
     "code": "https://github.com/DavidWells/netlify-functions-express",
-    "tags": ["express", "ssr"]
+    "tags": [
+      "express",
+      "ssr"
+    ]
   },
   {
     "name": "netlify-functions-gated-sites",
     "description": "Gating multiple sites with Okta ",
     "code": "https://github.com/DavidWells/netlify-gated-sites/tree/master/okta",
-    "tags": ["auth", "okta"]
+    "tags": [
+      "auth",
+      "okta"
+    ]
   },
   {
     "name": "post-a-tweet",
     "description": "Post a tweet to Twitter",
     "code": "https://github.com/colbyfayock/tweet/blob/0d22f08292bb077f2248329abe9bf37ef7d8bf89/src/tweet.js",
-    "tags": ["twitter"]
+    "tags": [
+      "twitter"
+    ]
   },
   {
     "name": "netlify-functions-as-zips",
     "description": "Functions as zips ",
     "code": "https://github.com/DavidWells/function-zips",
-    "tags": ["packaging"]
+    "tags": [
+      "packaging"
+    ]
   },
   {
     "name": "netlify-identity-whitelist-emails",
     "description": "Validate emails on Netlify identity signup",
     "code": "https://github.com/escaladesports/react-netlify-form/blob/7d28c95b709055a6fd4e4039248eff1a34af2fc0/src/functions/identity-signup.js",
-    "tags": ["auth", "identity"]
+    "tags": [
+      "auth",
+      "identity"
+    ]
   },
   {
     "name": "netlify-functions-apollo-graphql",
     "description": "Deploying Apollo graphql on netlify functions ",
     "code": "https://github.com/stubailo/apollo-netlify-lambda-app",
     "url": "https://blog.apollographql.com/deploy-a-fullstack-apollo-app-with-netlify-45a7dfd51b0b",
-    "tags": ["graphql"]
+    "tags": [
+      "graphql"
+    ]
   },
   {
     "name": "mongodb-and-functions",
     "description": "Using mongoDB + functions ",
     "url": "https://blog.elpassion.com/jam-stack-your-old-cms-into-the-closet-12cad2c7b1b3",
     "code": "https://github.com/maciejmatu/smoothielicious/tree/b7a5a76eb29af076ed228c9b5d190fb56d0df1d2/src/lambda",
-    "tags": ["database", "mongo"]
+    "tags": [
+      "database",
+      "mongo"
+    ]
   },
   {
     "name": "gatsby-and-netlify-functions",
     "description": "Handling Static Forms, Auth & Serverless Functions with Gatsby on Netlify",
     "url": "https://gatsby-netlify-snipcart.netlify.com/",
     "code": "https://github.com/snipcart/gatsby-netlify",
-    "tags": ["ecommerce", "gatsby", "auth"]
+    "tags": [
+      "ecommerce",
+      "gatsby",
+      "auth"
+    ]
   },
   {
     "name": "gatsby-stripe-store-starter",
     "description": "Gatsby & Netlify functions stripe store",
     "code": "https://github.com/raae/gatsby-stripe-store-starter/blob/07f993dc551f9a93ceac3b07e657a50dbebb9254/src/lambda/createAndPayStripeOrder.js",
-    "tags": ["ecommerce", "gatsby", "stripe"]
+    "tags": [
+      "ecommerce",
+      "gatsby",
+      "stripe"
+    ]
   },
   {
     "name": "Netlibox",
@@ -283,26 +384,36 @@
     "description": "Netlify functions + shopify for an ecommerce store",
     "repo": "https://github.com/NEsfandiari/lipslut2.0",
     "code": "https://github.com/NEsfandiari/lipslut2.0/blob/caaf5aac513e81216b82b2fe610d3da868995c4c/lambda-src/createCheckout.js",
-    "tags": ["ecommerce", "shopify"]
+    "tags": [
+      "ecommerce",
+      "shopify"
+    ]
   },
   {
     "name": "primsa-graphql-example",
     "description": "Netlify functions + primsa + graphql",
     "code": "https://github.com/auchau/crowdroar_netlify/blob/154a5e7a8f07669da6cdcf932eebdc123a3b38d8/src/lambda/graphql.js",
-    "tags": ["graphql"]
+    "tags": [
+      "graphql"
+    ]
   },
   {
     "name": "Chuck Norris quote generator",
     "description": "Fetch Chuck Norris quotes",
     "code": "https://github.com/auchau/crowdroar_netlify/blob/154a5e7a8f07669da6cdcf932eebdc123a3b38d8/src/lambda/async-chuck-norris.js",
-    "tags": ["lol"]
+    "tags": [
+      "lol"
+    ]
   },
   {
     "name": "Mailchimp signup flow",
     "description": "Netlify functions + subscribe users to mailchimp",
     "repo": "https://github.com/smkkstudios/pairity/",
     "code": "https://github.com/smkkstudios/pairity/blob/b366ec13c54f4782e16f79c18d1795e10c574102/functions/signUp.js",
-    "tags": ["email", "marketing"]
+    "tags": [
+      "email",
+      "marketing"
+    ]
   },
   {
     "name": "Check weather forcast",
@@ -313,13 +424,18 @@
     "name": "Netlify form notifications to slack",
     "description": "Ping slack on new netlify comments",
     "code": "https://github.com/vectronic/website/blob/2f248da49b63d81b142f229acabaa14291bb2fba/src/functions/comment-submitted.js",
-    "tags": ["slack"]
+    "tags": [
+      "slack"
+    ]
   },
   {
     "name": "Airtable as database",
     "description": "Using Airtable as a database",
     "code": "https://github.com/adenin-sites/NowAssistant.com/blob/b3f79c441a781a082c06e7ce27678e99fd8b1258/lambda-src/job-application.js",
-    "tags": ["database", "airtable"]
+    "tags": [
+      "database",
+      "airtable"
+    ]
   },
   {
     "name": "pusher-auth",
@@ -330,7 +446,11 @@
     "name": "using-s3-as-a-database",
     "description": "Example of using AWS s3 as a datastore",
     "code": "https://github.com/walbuc/compound/blob/41e6a60fa697d41b5965665c181827a01828925d/functions/test.js",
-    "tags": ["database", "aws", "s3"]
+    "tags": [
+      "database",
+      "aws",
+      "s3"
+    ]
   },
   {
     "name": "get-random-emoji",
@@ -342,20 +462,30 @@
     "description": "An auth service powered by lambda functions & MongoDB",
     "repo": "https://github.com/mrozilla/lambda-jwt-auth-demo",
     "code": "https://github.com/mrozilla/lambda-jwt-auth-demo/tree/master/src/lambda",
-    "tags": ["database", "mongo", "auth", "jwt"]
+    "tags": [
+      "database",
+      "mongo",
+      "auth",
+      "jwt"
+    ]
   },
   {
     "name": "Meetup Raffle",
     "description": "Draw raffle winners at your Meetup event via meetup.com API",
     "repo": "https://github.com/wKovacs64/meetup-raffle",
     "code": "https://github.com/wKovacs64/meetup-raffle/blob/bb32bc10d9bb355e252602873167339073a3f2fa/src/functions/draw.js",
-    "tags": ["meetup"]
+    "tags": [
+      "meetup"
+    ]
   },
   {
     "name": "Verify phone numbers",
     "description": "Verify phone numbers with Authy SMS",
     "code": "https://github.com/p8952/SafetyCall/blob/1da9967d4c7fb8112fca67b91f69cac8747a265f/src/functions/verifyNumber.js",
-    "tags": ["auth", "sms"]
+    "tags": [
+      "auth",
+      "sms"
+    ]
   },
   {
     "name": "BART Station Departures",
@@ -377,13 +507,20 @@
     "name": "Contact form with Airtable & Mailgun",
     "description": "Process contact form submission and store in airtable",
     "code": "https://github.com/stefanjudis/service-party/blob/e744e42b26e48a43f95a5491515a133791dab6fb/src/lambda/contact.js",
-    "tags": ["email", "mailgun", "airtable", "database"]
+    "tags": [
+      "email",
+      "mailgun",
+      "airtable",
+      "database"
+    ]
   },
   {
     "name": "GitHub Finder",
     "description": "Serverless Implementation of GitHub Finder",
     "code": "https://github.com/shayant98/GFServerless",
-    "tags": ["github"]
+    "tags": [
+      "github"
+    ]
   },
   {
     "name": "Dropbox-webhook",
@@ -405,7 +542,10 @@
     "description": "Send slack channel invites",
     "code": "https://github.com/kylemcd/marketers-chat/blob/1a2689e89bfa0277a2ae459a864751e196e73af5/src/lambda/slackSubmit.js",
     "demo": "https://marketers.chat/",
-    "tags": ["slack", "marketing"]
+    "tags": [
+      "slack",
+      "marketing"
+    ]
   },
   {
     "name": "Fetch currency rates",
@@ -416,19 +556,26 @@
     "name": "Send email via 'sendmail' pkg",
     "description": "Send email with no STMP server via 'sendmail' pkg",
     "code": "https://github.com/Urigo/graphql-modules/blob/8cb2fd7d9938a856f83e4eee2081384533771904/website/lambda/contact.js",
-    "tags": ["email"]
+    "tags": [
+      "email"
+    ]
   },
   {
     "name": "Fetch github repos graphQL",
     "description": "get github repos from graphql endpoint ",
     "code": "https://github.com/kiranbhalerao123/itsmine.ml/blob/3b02341a6ad7d68e040c794a4d8284b344c01c33/src/netlify_lambda/getrepos.js",
-    "tags": ["github", "graphql"]
+    "tags": [
+      "github",
+      "graphql"
+    ]
   },
   {
     "name": "Fetch crypto currency prices",
     "description": "Get current bitcoin prices from localbitcoins.com",
     "code": "https://github.com/iamronsuez/weekend-code/blob/83ccf96dd2506726c329b55188552bb25eae1831/src/functions/price.js",
-    "tags": ["bitcoin"]
+    "tags": [
+      "bitcoin"
+    ]
   },
   {
     "name": "Save zillow prices",
@@ -441,13 +588,21 @@
     "repo": "https://github.com/alexpriceonline/textjoy/",
     "code": "https://github.com/alexpriceonline/textjoy/blob/master/lambda-src/sms.js",
     "url": "https://textjoy.co/",
-    "tags": ["saas", "ecommerce", "stripe", "sms"]
+    "tags": [
+      "saas",
+      "ecommerce",
+      "stripe",
+      "sms"
+    ]
   },
   {
     "name": "process-stripe-payment",
     "description": "Process a stripe payment",
     "code": "https://github.com/alexpriceonline/textjoy/blob/e43098db9fe95aceb47ee72f802df69e0a9667ae/lambda-src/purchase.js",
-    "tags": ["ecommerce", "stripe"]
+    "tags": [
+      "ecommerce",
+      "stripe"
+    ]
   },
   {
     "name": "airtable-netlify-short-urls",
@@ -458,25 +613,35 @@
     "name": "scrape-parse-and-render-dynamic-html",
     "description": "Scrape url, parse with cheerio and render new html out",
     "code": "https://github.com/jamesbgl/bgl-amp/blob/e35ebadc5527543d16a6e97d9f8a54ff9771efe5/src/post.js",
-    "tags": ["ssr", "scraping"]
+    "tags": [
+      "ssr",
+      "scraping"
+    ]
   },
   {
     "name": "Create new user in firebase",
     "description": "Create new user in firebase admin",
     "code": "https://github.com/believelody/itmproject/blob/a224427f7b39dbada1ffca296349cc38b16419d8/functions/create-user.js",
-    "tags": ["database", "firebase"]
+    "tags": [
+      "database",
+      "firebase"
+    ]
   },
   {
     "name": "Fetch Instagram posts",
     "description": "Get recent instagram posts",
     "code": "https://github.com/strt/www/blob/7ade34edb0c1d11e5ec7bf4e1fbceece8ff5f078/lambda/src/instagram.js",
-    "tags": ["instagram"]
+    "tags": [
+      "instagram"
+    ]
   },
   {
     "name": "password-protected-netlify-build-trigger",
     "description": "Trigger Netlify deploy with password protected function",
     "code": "https://github.com/HeapSpace/tehnoloskidorucak/blob/d6c9bffae372aa940a0e1b117b3897408e9357f6/src/fns/build.js",
-    "tags": ["build"]
+    "tags": [
+      "build"
+    ]
   },
   {
     "name": "shorten-links-with-bitly",
@@ -497,7 +662,10 @@
     "name": "create-netlify-identity-users",
     "description": "Create Identity accounts programatically by hitting the admin endpoint",
     "code": "https://auspicus.io/post/using-netlify-identity-in-a-production-application/#abilitytocreateaccountsprogrammatically",
-    "tags": ["auth", "identity"]
+    "tags": [
+      "auth",
+      "identity"
+    ]
   },
   {
     "name": "gatsby-starter-netlify-cms",
@@ -515,7 +683,10 @@
     "name": "super-simple-start-serverless",
     "description": "A Super simple start to serverless from Kent C. Dodds",
     "code": "https://kentcdodds.com/blog/super-simple-start-to-serverless/",
-    "tags": ["functions", "serverless"]
+    "tags": [
+      "functions",
+      "serverless"
+    ]
   },
   {
     "name": "nuxt-netlify-functions-example",
@@ -536,5 +707,14 @@
       "mysql"
     ],
     "description": "Repository for OvrWatcher, Overwatch match tracking and statistical analysis.\n\nViewable at ovrwatcher.com"
+  },
+  {
+    "name": "xyz",
+    "url": "https://functions.netlify.com/add/",
+    "code": "https://functions.netlify.com/add/",
+    "tags": [
+      "identity"
+    ],
+    "description": "lol"
   }
 ]
