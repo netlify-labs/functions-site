@@ -15,78 +15,83 @@ const { name: repo, owner } = GitUrlParse('https://github.com/netlify-labs/funct
 const fileToChange = 'src/data/examples.json'
 
 /* export our lambda function as named "handler" export */
-exports.handler = (event, context, callback) => {
+exports.handler = async (event, context) => {
   const { clientContext } = context
   const claims = clientContext && clientContext.user
   console.log('claims', claims)
   console.log('REPOSITORY_URL', REPOSITORY_URL)
-  // if (!claims) {
-  //   return callback(null, {
-  //     statusCode: 401,
-  //     body: JSON.stringify({
-  //       data: 'NOT ALLOWED'
-  //     })
-  //   })
-  // }
-
+  console.log('repo, owner', repo, owner)
   const body = JSON.parse(event.body)
   console.log('body', body)
 
   if (!repo || !owner) {
-    return callback(null, {
+    return {
       statusCode: 401,
       body: JSON.stringify({
         data: 'process.env.REPOSITORY_URL malformed'
       })
-    })
+    }
   }
 
   if (!body || !body.name) {
-    return callback(null, {
+    return {
       statusCode: 401,
       body: JSON.stringify({
         data: 'request malformed'
       })
-    })
+    }
   }
 
   // Get repo file contents
-  octokit.repos.getContents({
-    owner,
-    repo,
-    path: fileToChange
-  }).then(result => {
-    if (typeof result.data === 'undefined') {
-      // createFile(octokit, config, file, content)
-      // throw file doesnt exist
-      return callback(null, {
-        statusCode: 400,
-        body: JSON.stringify({
-          error: `No ${fileToChange} found`
-        })
+  let result
+  try {
+    result = await octokit.repos.getContents({
+      owner,
+      repo,
+      path: fileToChange
+    })
+  } catch (err) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({
+        error: `${err.message}`
       })
     }
+  }
 
-    // content will be base64 encoded
-    const content = Buffer.from(result.data.content, 'base64').toString()
-
-    const allData = parseFile(fileToChange, content)
-    console.log('allData.length', allData.length)
-
-    if (alreadyHasUri(body, allData)) {
-      console.log(`${body.url} already is in the list!`)
-      return callback(null, {
-        statusCode: 422,
-        body: JSON.stringify({
-          message: `${body.url} already is in the list!`
-        })
+  if (typeof result.data === 'undefined') {
+    // createFile(octokit, config, file, content)
+    // throw file doesnt exist
+    return {
+      statusCode: 400,
+      body: JSON.stringify({
+        error: `No ${fileToChange} found`
       })
     }
+  }
 
-    const newData = allData.concat(body)
-    const newContent = JSON.stringify(newData, null, 2)
+  // content will be base64 encoded
+  const content = Buffer.from(result.data.content, 'base64').toString()
 
-    octokit.createPullRequest({
+  const allData = parseFile(fileToChange, content)
+  console.log('allData.length', allData.length)
+
+  if (alreadyHasUri(body, allData)) {
+    console.log(`${body.url} already is in the list!`)
+    return {
+      statusCode: 422,
+      body: JSON.stringify({
+        message: `${body.url} already is in the list!`
+      })
+    }
+  }
+
+  const newData = allData.concat(body)
+  const newContent = JSON.stringify(newData, null, 2)
+
+  let response = {}
+  try {
+    response = await octokit.createPullRequest({
       owner,
       repo,
       title: `Add ${body.url}`,
@@ -99,28 +104,26 @@ exports.handler = (event, context, callback) => {
         },
         commit: `updating ${fileToChange}`
       }
-    }).then((response) => {
-      console.log('data', response.data)
-      return callback(null, {
-        statusCode: 200,
+    })
+  } catch (err) {
+    if (err.status === 422) {
+      console.log('BRANCH ALREADY EXISTS!')
+      return {
+        statusCode: 400,
         body: JSON.stringify({
-          message: `pr created!`,
-          url: response.data.html_url
-        })
-      })
-    }).catch((e) => {
-      console.log('error', e)
-      if (e.status === 422) {
-        console.log('BRANCH ALREADY EXISTS!')
-        return callback(null, {
-          statusCode: 400,
-          body: JSON.stringify({
-            error: `BRANCH ALREADY EXISTS!`
-          })
+          error: `BRANCH ALREADY EXISTS!`
         })
       }
+    }
+  }
+  console.log('data', response.data)
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      message: `pr created!`,
+      url: response.data.html_url
     })
-  })
+  }
 }
 
 /**
