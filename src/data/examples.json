@@ -784,5 +784,14 @@
       ""
     ],
     "description": "Example of function that will fetch data from third party APIs"
+  },
+  {
+    "name": "Web scraping via functions",
+    "url": "https://github.com/DavidWells/netlify-functions-workshop/tree/master/lessons-code-complete/use-cases/6-scraping",
+    "code": "https://github.com/DavidWells/netlify-functions-workshop/blob/997d12180e776f6e812af630fc52a3d28c928275/lessons-code-complete/use-cases/6-scraping/functions/chrome/chrome.js",
+    "tags": [
+      "scraping"
+    ],
+    "description": "This lesson will walk through creating a function scrape websites."
   }
 ]
