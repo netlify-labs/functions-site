@@ -10,8 +10,6 @@ octokit.authenticate({
   token: process.env.GITHUB_TOKEN
 })
 
-const { name: repo, owner } = GitUrlParse('https://github.com/netlify-labs/functions-site')
-
 const fileToChange = 'src/data/examples.json'
 
 /* export our lambda function as named "handler" export */
@@ -20,6 +18,10 @@ exports.handler = async (event, context) => {
   const claims = clientContext && clientContext.user
   console.log('claims', claims)
   console.log('REPOSITORY_URL', REPOSITORY_URL)
+  const parsed = GitUrlParse('https://github.com/netlify-labs/functions-site')
+  console.log('parsed', parsed)
+  const repo = parsed.name
+  const owner = parsed.owner
   console.log('repo, owner', repo, owner)
   const body = JSON.parse(event.body)
   console.log('body', body)
@@ -51,6 +53,7 @@ exports.handler = async (event, context) => {
       path: fileToChange
     })
   } catch (err) {
+    console.log('octokit.repos.getContents err', err)
     return {
       statusCode: 400,
       body: JSON.stringify({
