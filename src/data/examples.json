@@ -717,5 +717,15 @@
       "html"
     ],
     "description": "Render custom html based on function path params"
+  },
+  {
+    "name": "Serving dynamic content via query params",
+    "url": "https://github.com/DavidWells/netlify-functions-workshop/blob/master/lessons-code-complete/core-concepts/2-dynamic-content/functions/using-query-params.js",
+    "code": "https://github.com/DavidWells/netlify-functions-workshop/blob/master/lessons-code-complete/core-concepts/2-dynamic-content/functions/using-query-params.js",
+    "tags": [
+      "ssr",
+      "html"
+    ],
+    "description": "Render custom html based on function query params"
   }
 ]
