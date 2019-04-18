@@ -737,5 +737,15 @@
       "middy"
     ],
     "description": "Using function middleware to re-use logic across multiple functions via middy.js"
+  },
+  {
+    "name": "Rest API example",
+    "url": "https://github.com/DavidWells/netlify-functions-workshop/tree/master/lessons-code-complete/use-cases/1-rest-api",
+    "code": "https://github.com/DavidWells/netlify-functions-workshop/blob/master/lessons-code-complete/use-cases/1-rest-api/functions/api.js",
+    "tags": [
+      "rest",
+      "api"
+    ],
+    "description": "Using functions as a REST backend."
   }
 ]
