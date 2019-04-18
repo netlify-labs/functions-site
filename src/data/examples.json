@@ -747,5 +747,15 @@
       "api"
     ],
     "description": "Using functions as a REST backend."
+  },
+  {
+    "name": "Using functions for GraphQL APIs",
+    "url": "https://github.com/DavidWells/netlify-functions-workshop/tree/master/lessons-code-complete/use-cases/2-graphql",
+    "code": "https://github.com/DavidWells/netlify-functions-workshop/blob/master/lessons-code-complete/use-cases/2-graphql/functions/graphql.js",
+    "tags": [
+      "graphql",
+      "api"
+    ],
+    "description": "Using functions for GraphQL APIs"
   }
 ]
