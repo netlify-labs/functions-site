@@ -193,7 +193,7 @@ const cssLoaderRe = /\/css-loader\//;
 const targetFile = '.css';
 
 const processRule = rule => {
-  console.log('rule', rule)
+  // console.log('rule', rule)
   if (rule.oneOf) {
     return {
       ...rule,
