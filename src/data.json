@@ -527,5 +527,14 @@
       "vuejs"
     ],
     "description": "Nuxt.js example for running Netlify functions locally in a dev environment and as a generated static site deployed to Netlify."
+  },
+  {
+    "name": "Overwatch match tracking",
+    "url": "https://github.com/Byroni/OvrWatcher",
+    "code": "https://github.com/Byroni/OvrWatcher/blob/master/functions/Account-authenticate.js",
+    "tags": [
+      "mysql"
+    ],
+    "description": "Repository for OvrWatcher, Overwatch match tracking and statistical analysis.\n\nViewable at ovrwatcher.com"
   }
 ]
