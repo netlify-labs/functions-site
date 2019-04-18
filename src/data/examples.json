@@ -727,5 +727,15 @@
       "html"
     ],
     "description": "Render custom html based on function query params"
+  },
+  {
+    "name": "Using Function middleware",
+    "url": "https://github.com/DavidWells/netlify-functions-workshop/tree/master/lessons-code-complete/core-concepts/7-using-middleware",
+    "code": "https://github.com/DavidWells/netlify-functions-workshop/blob/master/lessons-code-complete/core-concepts/7-using-middleware/functions/using-middleware.js",
+    "tags": [
+      "middleware",
+      "middy"
+    ],
+    "description": "Using function middleware to re-use logic across multiple functions via middy.js"
   }
 ]
