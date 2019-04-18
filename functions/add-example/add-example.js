@@ -1,5 +1,6 @@
 const url = require('url')
-const Octokit = require('@octokit/rest').plugin(require('./createPullRequest'))
+const createPullRequest = require('./utils/createPullRequest')
+const Octokit = require('@octokit/rest').plugin(createPullRequest)
 
 const octokit = new Octokit()
 octokit.authenticate({
