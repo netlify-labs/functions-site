@@ -10,7 +10,7 @@ octokit.authenticate({
   token: process.env.GITHUB_TOKEN
 })
 
-const { name: repo, owner } = GitUrlParse(REPOSITORY_URL)
+const { name: repo, owner } = GitUrlParse('https://github.com/netlify-labs/functions-site')
 
 const fileToChange = 'src/data/examples.json'
 
