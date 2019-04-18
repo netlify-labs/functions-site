@@ -820,5 +820,14 @@
       "netlify"
     ],
     "description": "Using Netlify Event Driven functions to react to Netlify events"
+  },
+  {
+    "name": "Payment Processing via Stripe",
+    "url": "https://github.com/DavidWells/netlify-functions-workshop/tree/master/lessons-code-complete/use-cases/10-payment-processing",
+    "code": "https://github.com/DavidWells/netlify-functions-workshop/blob/64427e43d61951dccd53af5e335748f9a4e1b8df/lessons-code-complete/use-cases/10-payment-processing/functions/stripe/stripe.js",
+    "tags": [
+      "ecommerce"
+    ],
+    "description": "Serverless function to process payments via Stripe."
   }
 ]
