@@ -802,5 +802,14 @@
       "email"
     ],
     "description": "Sending emails via serverless functions"
+  },
+  {
+    "name": "Sending text messages",
+    "url": "https://github.com/DavidWells/netlify-functions-workshop/tree/master/lessons-code-complete/use-cases/8-sending-sms",
+    "code": "https://github.com/DavidWells/netlify-functions-workshop/blob/64427e43d61951dccd53af5e335748f9a4e1b8df/lessons-code-complete/use-cases/8-sending-sms/functions/twilio/twilio.js",
+    "tags": [
+      "sms"
+    ],
+    "description": "Using functions for SMS sending text messages via twilio\n"
   }
 ]
