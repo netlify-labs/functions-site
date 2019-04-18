@@ -1,6 +1,8 @@
 const url = require('url')
+const GitUrlParse = require('git-url-parse')
 const createPullRequest = require('./utils/createPullRequest')
 const Octokit = require('@octokit/rest').plugin(createPullRequest)
+const { REPOSITORY_URL } = process.env
 
 const octokit = new Octokit()
 octokit.authenticate({
@@ -8,15 +10,16 @@ octokit.authenticate({
   token: process.env.GITHUB_TOKEN
 })
 
-const repo = 'functions-site'
-const owner = 'davidwells'
-const fileToChange = 'src/tutorials.json'
+const { name: repo, owner } = GitUrlParse(REPOSITORY_URL)
+
+const fileToChange = 'src/data/examples.json'
 
 /* export our lambda function as named "handler" export */
 exports.handler = (event, context, callback) => {
   const { clientContext } = context
   const claims = clientContext && clientContext.user
   console.log('claims', claims)
+  console.log('REPOSITORY_URL', REPOSITORY_URL)
   // if (!claims) {
   //   return callback(null, {
   //     statusCode: 401,
@@ -28,6 +31,15 @@ exports.handler = (event, context, callback) => {
 
   const body = JSON.parse(event.body)
   console.log('body', body)
+
+  if (!repo || !owner) {
+    return callback(null, {
+      statusCode: 401,
+      body: JSON.stringify({
+        data: 'process.env.REPOSITORY_URL malformed'
+      })
+    })
+  }
 
   if (!body || !body.name) {
     return callback(null, {

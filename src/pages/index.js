@@ -5,7 +5,6 @@ import Layout from '../layouts/Default'
 import PostListing from '../components/PostListing/PostListing'
 import SEO from '../components/SEO/SEO'
 import Grid from '../fragments/Grid'
-import data from '../data.json'
 import config from '../../_site-config'
 import styles from './Home.css'
 

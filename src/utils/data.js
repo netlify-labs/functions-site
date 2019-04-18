@@ -1,4 +1,4 @@
-import data from '../data.json'
+import data from '../data/examples.json'
 
 const tags = data.reduce((acc, curr) => {
   if (curr.tags) {

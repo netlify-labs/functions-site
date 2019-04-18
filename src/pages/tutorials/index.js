@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../../layouts/Default'
-import tutorials from '../../tutorials.json'
+import tutorials from '../../data/tutorials.json'
 import styles from './Tutorials.css'
 
 export default class Tutorials extends Component {
