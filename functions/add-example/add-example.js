@@ -135,6 +135,10 @@ exports.handler = async (event, context) => {
  */
 function alreadyHasUri(newItem, allData) {
   return allData.some((item) => {
+    console.log('item', item)
+    if (!item.url || !newItem.url) {
+      return false
+    }
     return niceUrl(item.url) === niceUrl(newItem.url)
   })
 }
