@@ -134,5 +134,11 @@
     "description": "In this article, I want to share how you can create and deploy a scalable static site on Netlify and how you can use serverless functions to send text messages using Twilio.",
     "url": "https://dev.to/twilio/how-to-send-text-messages-from-your-static-site-using-netlify-twilio-and-serverless-functions-24ci/",
     "date": "April 01, 2019"
+  },
+  {
+    "title": "CSSTricks: Netlify Functions for Sending Emails",
+    "description": "Let's say you're rocking a JAMstack-style site (no server-side languages in use), but you want to do something rather dynamic like send an email. Not a problem! That's the whole point of JAMstack.",
+    "url": "https://css-tricks.com/netlify-functions-for-sending-emails/",
+    "date": "April 23, 2019"
   }
 ]
