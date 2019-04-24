@@ -35,8 +35,8 @@ exports.onCreateWebpackConfig = (
   pluginOptions
 ) => {
   const isProduction = !stage.includes(`develop`)
-  console.log('isProduction', isProduction)
-  console.log('pluginOptions', pluginOptions)
+  // console.log('isProduction', isProduction)
+  // console.log('pluginOptions', pluginOptions)
   const isSSR = stage.includes(`html`)
   const config = getConfig()
   const cssRules = findCssRules(config)
