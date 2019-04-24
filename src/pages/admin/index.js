@@ -17,7 +17,11 @@ import './Admin.global.css'
 const url = (typeof window !== 'undefined') ? `${window.location.origin}/admin` : 'https://functions.netlify.com/admin'
 const width = 665
 const height = 739
-const bookmarklet = `javascript:(function()%7BNetlifyFunctions%3Dwindow.open("${url}%3Furl%3D"%2BencodeURIComponent(location.href)%2B"%26title%3D"%2B((document.title)%3Fescape(encodeURI(document.title)):"") %2B "%26api%3DIdbvF6muT9RZvJrFfL5urzCBxCxCoC","NetlifyFunctions","width%3D${width},height%3D${height},location,status,scrollbars,resizable,dependent%3Dyes")%3BsetTimeout("NetlifyFunctions.focus()",100)%3B%7D)()`
+const functionName = 'NetlifyFunctions'
+const param = (key, val) => `%26${key}%3D${val}`
+const ampersand = '%26'
+const questionMark = '%3F'
+const bookmarklet = `javascript:(function()%7B${functionName}%3Dwindow.open("${url}%3Furl%3D"%2BencodeURIComponent(location.href)%2B"%26title%3D"%2B((document.title)%3Fescape(encodeURI(document.title)):"") %2B "%26api%3DIdbvF6muT9RZvJrFfL5urzCBxCxCoC","${functionName}","width%3D${width},height%3D${height},location,status,scrollbars,resizable,dependent%3Dyes")%3BsetTimeout("${functionName}.focus()",100)%3B%7D)()`
 
 // Get JWT token of current user
 function generateHeaders(user) {
