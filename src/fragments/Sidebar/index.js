@@ -23,6 +23,10 @@ const defaultSidebar = () => {
       text: 'Tutorials'
     },
     {
+      url: 'https://github.com/DavidWells/netlify-functions-workshop#workshop-lessons',
+      text: 'Workshop'
+    },
+    {
       url: 'https://www.netlify.com/docs/functions/',
       text: 'Read the docs'
     }]
