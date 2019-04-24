@@ -21,6 +21,12 @@
     /*transition: transform .1s ease-out, box-shadow .1s ease-out;*/
   }
 }
+.count {
+  font-size: 14px;
+  padding-left: 5px;
+  color: $grey;
+  font-weight: 300;
+}
 .tutorial {
   max-width: 80%;
 }

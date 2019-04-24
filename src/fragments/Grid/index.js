@@ -92,7 +92,9 @@ export default class Grid extends React.Component {
       let count
       if (matchCount) {
         count = (
-          <span className={styles.count}>({matchCount})</span>
+          <span className={styles.count}>
+            ({matchCount})
+          </span>
         )
       }
       return (
