@@ -29,7 +29,12 @@ const defaultSidebar = () => {
     {
       url: 'https://www.netlify.com/docs/functions/',
       text: 'Read the docs'
-    }]
+    },
+    {
+      url: 'https://community.netlify.com/c/netlify-platform/functions',
+      text: 'Ask questions!'
+    }
+  ]
 
   return links.map((link, key) => {
     const { url, text } = link
