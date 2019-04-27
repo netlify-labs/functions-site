@@ -847,5 +847,15 @@
       "s3"
     ],
     "description": "a function to get pre-signed s3 upload urls"
+  },
+  {
+    "name": "GraphQL API Example",
+    "url": "https://github.com/netlify-labs/functions-and-graphql",
+    "code": "https://github.com/netlify-labs/functions-and-graphql/blob/master/functions/graphql.js",
+    "tags": [
+      "graphql",
+      "api"
+    ],
+    "description": "How to use Netlify functions for a GraphQL API"
   }
 ]
