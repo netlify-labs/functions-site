@@ -148,9 +148,9 @@
     "date": "April 23, 2019"
   },
   {
-    "title": "Setup Gatsby with Netlify Functions",
-    "description": "In this tutorial we’re going to build an application that submits a form with React.js and triggers an AWS Lambda function with Netlify.",
-    "url": "https://employbl.com/blog/setup-gatsby-with-netlify-functions",
-    "date": "April 24, 2019"
+    "title": "Handling Static Forms, Auth & Serverless Functions with Gatsby on Netlify",
+    "description": "Supercharge your static site with forms, password-protected authentication, and AWS Lambda functions.",
+    "url": "https://snipcart.com/blog/static-forms-serverless-gatsby-netlify",
+    "date": "April 25, 2019"
   }
 ]
