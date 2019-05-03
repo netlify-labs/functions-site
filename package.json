@@ -22,10 +22,12 @@
     "write-good": "write-good $(glob 'content/posts/**/*.md')"
   },
   "dependencies": {
+    "analytics": "^0.1.0",
+    "analytics-plugin-google-tag-manager": "^0.1.0",
     "analytics-utils": "0.0.13",
     "classnames": "^2.2.6",
-    "cssnano": "^4.1.10",
     "clipboard": "^1.7.1",
+    "cssnano": "^4.1.10",
     "gatsby": "2.2.11",
     "gatsby-image": "2.0.34",
     "gatsby-plugin-catch-links": "2.0.13",

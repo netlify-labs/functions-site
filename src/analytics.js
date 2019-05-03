@@ -1,6 +1,21 @@
+import Analytics from 'analytics'
+import gtagManager from 'analytics-plugin-google-tag-manager'
 
-const obj = {
-  'hi': 'hi'
-}
+const analytics = Analytics({
+  plugins: [
+    gtagManager({
+      containerId: 'GTM-NMKKF2M'
+    }),
+    {
+      NAMESPACE: 'test-plugin',
+      page: () => {
+        console.log('page view')
+      }
+    }
+  ]
+})
 
-export default obj
+// Set to global so analytics plugin will work
+window.Analytics = analytics
+
+export default analytics

@@ -1,6 +1,8 @@
+/* global Analytics */
 
 exports.onRouteUpdate = function({ location }, options) {
-  console.log('location')
-  console.log('lol', location)
-  console.log('options', options)
+  if (typeof Analytics !== 'undefined') {
+    // On every route change fire this
+    Analytics.page()
+  }
 }
