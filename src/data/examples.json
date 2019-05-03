@@ -857,5 +857,14 @@
       "api"
     ],
     "description": "How to use Netlify functions for a GraphQL API"
+  },
+  {
+    "name": "Using functions for returning images",
+    "url": "https://github.com/DavidWells/netlify-functions-workshop/tree/master/lessons-code-complete/use-cases/13-returning-dynamic-images",
+    "code": "https://github.com/DavidWells/netlify-functions-workshop/blob/master/lessons-code-complete/use-cases/13-returning-dynamic-images/functions/return-image.js",
+    "tags": [
+      "images"
+    ],
+    "description": "How to create a function to return an image instead of json.\n\n"
   }
 ]
