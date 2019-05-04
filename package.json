@@ -24,6 +24,7 @@
   "dependencies": {
     "analytics": "^0.1.0",
     "analytics-plugin-google-tag-manager": "^0.1.0",
+    "analytics-plugin-segment": "^0.1.0",
     "analytics-utils": "0.0.13",
     "classnames": "^2.2.6",
     "clipboard": "^1.7.1",
