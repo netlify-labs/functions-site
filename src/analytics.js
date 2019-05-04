@@ -20,6 +20,10 @@ const analytics = Analytics({
   ]
 })
 
+analytics.on('page', ({ payload }) => {
+  console.log('page', payload)
+})
+
 // Set to global so analytics plugin will work
 window.Analytics = analytics
 
