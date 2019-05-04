@@ -34,9 +34,14 @@ module.exports = {
     {
       resolve: 'gatsby-route-plugin',
       options: {
-        one: 'hi',
-        two: 'hi',
-      },
+        debug: true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-analytics',
+      options: {
+        debug: true
+      }
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-lodash',

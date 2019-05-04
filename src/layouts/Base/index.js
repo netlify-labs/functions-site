@@ -4,7 +4,6 @@ import '../index.css'
 
 export default class Base extends React.Component {
   componentDidMount () {
-    console.log('MOUNTED')
     Icon.loadSprite()
   }
   render() {

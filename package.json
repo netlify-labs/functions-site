@@ -31,6 +31,7 @@
     "cssnano": "^4.1.10",
     "gatsby": "2.2.11",
     "gatsby-image": "2.0.34",
+    "gatsby-plugin-analytics": "0.0.3",
     "gatsby-plugin-catch-links": "2.0.13",
     "gatsby-plugin-feed": "2.1.0",
     "gatsby-plugin-google-analytics": "2.0.17",
