@@ -29,6 +29,8 @@ analytics.on('track', ({ payload }) => {
 })
 
 // Set to global so analytics plugin will work
-window.Analytics = analytics
+if (typeof window !== 'undefined') {
+  window.Analytics = analytics
+}
 
 export default analytics
