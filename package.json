@@ -22,9 +22,9 @@
     "write-good": "write-good $(glob 'content/posts/**/*.md')"
   },
   "dependencies": {
-    "analytics": "^0.1.0",
+    "analytics": "^0.1.2",
     "analytics-plugin-google-tag-manager": "^0.1.0",
-    "analytics-plugin-segment": "^0.1.0",
+    "analytics-plugin-segment": "^0.1.1",
     "analytics-utils": "0.0.13",
     "classnames": "^2.2.6",
     "clipboard": "^1.7.1",
