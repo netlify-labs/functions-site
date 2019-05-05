@@ -127,6 +127,7 @@ export default class Admin extends React.Component {
     saveItem(data)
       .then((response) => {
         // {"message":"pr created!","url":"https://github.com/DavidWells/functions-site/pull/5"}
+        console.log('track exampleAdded')
         analytics.track('exampleAdded', {
           url: url
         })
@@ -137,9 +138,7 @@ export default class Admin extends React.Component {
         })
       }).catch((e) => {
         console.log('response err', e)
-        analytics.track('exampleAdditionFailed', {
-          url: url
-        })
+        analytics.track('exampleAdditionFailed')
       })
   }
   handleSettingsClick = () => {
