@@ -12,6 +12,7 @@ import CreatableSelect from 'react-select/lib/Creatable'
 import netlifyIdentity from 'netlify-identity-widget'
 import { uniqueTags } from '../../utils/data'
 import styles from './Admin.css'
+import analytics from '../../analytics'
 import './Admin.global.css'
 
 const url = (typeof window !== 'undefined') ? `${window.location.origin}/admin` : 'https://functions.netlify.com/admin'
@@ -39,6 +40,7 @@ async function saveItem(item) {
   const headers = await generateHeaders(user)
 
   const payload = Object.keys(item).reduce((acc, thing) => {
+    /* remove react-select fields */
     if (thing.match(/react-select/)) {
       return acc
     }
@@ -125,6 +127,9 @@ export default class Admin extends React.Component {
     saveItem(data)
       .then((response) => {
         // {"message":"pr created!","url":"https://github.com/DavidWells/functions-site/pull/5"}
+        analytics.track('exampleAdded', {
+          url: url
+        })
         console.log('response', response)
         this.setState({
           loading: false,
@@ -132,6 +137,9 @@ export default class Admin extends React.Component {
         })
       }).catch((e) => {
         console.log('response err', e)
+        analytics.track('exampleAdditionFailed', {
+          url: url
+        })
       })
   }
   handleSettingsClick = () => {

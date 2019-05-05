@@ -24,6 +24,10 @@ analytics.on('page', ({ payload }) => {
   console.log('page', payload)
 })
 
+analytics.on('track', ({ payload }) => {
+  console.log('track', payload)
+})
+
 // Set to global so analytics plugin will work
 window.Analytics = analytics
 
