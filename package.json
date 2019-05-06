@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "analytics": "^0.1.2",
+    "analytics-plugin-customerio": "^0.1.1",
     "analytics-plugin-google-tag-manager": "^0.1.0",
     "analytics-plugin-segment": "^0.1.1",
     "analytics-utils": "0.0.13",

@@ -373,8 +373,8 @@ class Input extends Component {
         [styles.hasIcon]: icon
       }
     )
-    console.log('isValid', isValid)
-    console.log('errorMessage', this.state.errorMessage)
+    // console.log('isValid', isValid)
+    // console.log('errorMessage', this.state.errorMessage)
 
     const props = {
       ...others,
