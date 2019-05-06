@@ -127,10 +127,12 @@ export default class Grid extends React.Component {
       // no match!
       return false
     }).map((example, i) => {
+      // get first link
+      const codeLink = (example.code) ? example.code.split(',')[0] : 'na'
       return (
         <Card key={i} className={styles.item}>
           <div className={styles.itemTitle}>
-            <a href={example.code} target='_blank' rel='noopener noreferrer'>
+            <a href={codeLink} target='_blank' rel='noopener noreferrer'>
               {example.name}
             </a>
           </div>
