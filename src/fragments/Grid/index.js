@@ -64,6 +64,12 @@ export default class Grid extends React.Component {
     setTimeout(() => {
       this.setSearch(this.props.tag)
     }, 0)
+    setTimeout(() => {
+      console.log('Force render')
+      this.setState({
+        hacks: true
+      })
+    }, 300)
   }
   componentDidUpdate (prevProps, prevState) {
     if (prevProps.tag !== this.props.tag) {
