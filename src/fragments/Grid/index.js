@@ -61,7 +61,9 @@ export default class Grid extends React.Component {
     }
   }
   componentDidMount() {
-    this.setSearch(this.props.tag)
+    setTimeout(() => {
+      this.setSearch(this.props.tag)
+    }, 0)
   }
   componentDidUpdate (prevProps, prevState) {
     if (prevProps.tag !== this.props.tag) {
