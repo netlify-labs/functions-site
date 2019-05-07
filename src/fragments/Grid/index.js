@@ -69,6 +69,7 @@ export default class Grid extends React.Component {
       this.setState({
         hacks: true
       })
+      this.setSearch(this.props.tag)
     }, 300)
   }
   componentDidUpdate (prevProps, prevState) {
@@ -137,6 +138,7 @@ export default class Grid extends React.Component {
     }).map((example, i) => {
       // get first link
       const codeLink = (Array.isArray(example.code)) ? example.code[0] : example.code
+      console.log('Show link', codeLink)
       return (
         <Card key={i} className={styles.item}>
           <div className={styles.itemTitle}>
