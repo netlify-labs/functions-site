@@ -63,9 +63,9 @@ export default class Grid extends React.Component {
   componentDidMount() {
     if (this.props.tag) {
       setTimeout(() => {
-        console.log('Empty search')
+        // Clear search
         this.setSearch('')
-        console.log('Then set search')
+        // then reset it. Fixes incorrect link issue https://bit.ly/2LtERiT
         this.setSearch(this.props.tag)
       }, 0)
     }
@@ -136,7 +136,6 @@ export default class Grid extends React.Component {
     }).map((example, i) => {
       // get first link
       const codeLink = (Array.isArray(example.code)) ? example.code[0] : example.code
-      console.log('Show link', codeLink)
       return (
         <Card key={i} className={styles.item}>
           <div className={styles.itemTitle}>

@@ -24,7 +24,7 @@ export default class Examples extends React.Component {
     super(props, context)
     const params = paramsParse()
     const search = (!params.search || params.search === true) ? '' : params.search
-    console.log('search', search)
+
     this.state = {
       tag: search
     }

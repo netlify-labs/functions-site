@@ -54,7 +54,6 @@ async function saveItem(item) {
     return acc
   }, {})
 
-  console.log('send payload', payload)
   // const payload = {
   //   ...item,
   //   userName: `${(user.user_metadata && user.user_metadata.full_name) ? user.user_metadata.full_name : 'Anon'}`
