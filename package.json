@@ -55,6 +55,7 @@
     "get-form-data": "^2.0.0",
     "icon-pipeline": "0.0.3",
     "lodash": "^4.17.11",
+    "lodash.debounce": "^4.0.8",
     "moment": "^2.24.0",
     "netlify-identity-widget": "^1.5.2",
     "postcss-cssnext": "^3.1.0",

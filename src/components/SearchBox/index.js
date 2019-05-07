@@ -9,6 +9,7 @@ const SearchBox = (props) => {
       <Input
         id={props.id}
         onChange={props.onChange}
+        onKeyDown={props.onKeyDown}
         placeholder={props.placeholder}
       />
     </div>

@@ -2,6 +2,8 @@ import React from 'react'
 import SearchBox from '../../components/SearchBox'
 import Card from '../../components/Card'
 import styles from './Grid.css'
+import debounce from 'lodash.debounce'
+import analytics from '../../analytics'
 
 const searchInputId = 'example-search'
 
@@ -45,11 +47,20 @@ export default class Grid extends React.Component {
     this.state = {
       filterText: props.tag
     }
+    this.handleKeyDown = debounce(this.trackSearch, 1500)
   }
   handleFilterInput = e => {
     this.setState({
       filterText: e.target.value
     })
+  }
+  trackSearch = (e) => {
+    const { filterText } = this.state
+    if (filterText) {
+      analytics.track('functionsSearched', {
+        query: filterText
+      })
+    }
   }
   setSearch = (value) => {
     this.setState({
@@ -185,6 +196,7 @@ export default class Grid extends React.Component {
                 id={searchInputId}
                 placeholder='Search examples'
                 onChange={this.handleFilterInput}
+                onKeyDown={this.handleKeyDown}
               />
             </div>
             <div className={styles.grid}>
