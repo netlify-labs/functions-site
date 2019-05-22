@@ -866,5 +866,14 @@
       "images"
     ],
     "description": "How to create a function to return an image instead of json.\n\n"
+  },
+  {
+    "name": "Lol",
+    "url": "https://functions.netlify.com/examples/",
+    "code": "https://functions.netlify.com/examples/",
+    "tags": [
+      "starter"
+    ],
+    "description": "this is cool"
   }
 ]
