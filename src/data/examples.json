@@ -866,5 +866,14 @@
       "images"
     ],
     "description": "How to create a function to return an image instead of json.\n\n"
+  },
+  {
+    "name": "pocket-newsletter-lambda",
+    "url": "https://github.com/HugoDF/pocket-newsletter-lambda",
+    "code": "https://github.com/HugoDF/pocket-newsletter-lambda/blob/master/src/lambda/newsletter.js",
+    "tags": [
+      "getpocket"
+    ],
+    "description": "Example Lambda to fetch all \"newsletter\" posts from Pocket."
   }
 ]
