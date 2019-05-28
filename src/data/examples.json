@@ -875,5 +875,14 @@
       "getpocket"
     ],
     "description": "Example Lambda to fetch all \"newsletter\" posts from Pocket."
+  },
+  {
+    "name": "tweet-a-dev-article-everyday",
+    "url": "https://github.com/ruphaa/twitter-bot",
+    "code": "",
+    "tags": [
+      ""
+    ],
+    "description": "Zapier and Netlify function together to build a Twitter bot which tweets a dev article everyday"
   }
 ]
