@@ -831,7 +831,7 @@
     "description": "Serverless function to process payments via Stripe."
   },
   {
-    "name": "Handing OAuth Flows",
+    "name": "Handling OAuth Flows",
     "url": "https://github.com/DavidWells/netlify-functions-workshop/tree/master/lessons-code-complete/use-cases/11-handling-oauth",
     "code": "https://github.com/netlify-labs/oauth-example",
     "tags": [
