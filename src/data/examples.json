@@ -875,5 +875,16 @@
       "getpocket"
     ],
     "description": "Example Lambda to fetch all \"newsletter\" posts from Pocket."
+  },
+  {
+    "name": "process-payment-via-stripe",
+    "url": "https://github.com/alexmacarthur/netlify-lambda-function-example",
+    "code": "",
+    "tags": [
+      "ecommerce",
+      "stripe",
+      "payment"
+    ],
+    "description": ""
   }
 ]
