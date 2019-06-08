@@ -877,6 +877,17 @@
     "description": "Example Lambda to fetch all \"newsletter\" posts from Pocket."
   },
   {
+    "name": "process-payment-via-stripe",
+    "url": "https://github.com/alexmacarthur/netlify-lambda-function-example",
+    "code": "",
+    "tags": [
+      "ecommerce",
+      "stripe",
+      "payment"
+    ],
+    "description": "Accept stripe payments"
+  },
+  {
     "name": "Fetch Airtable Records",
     "url": "https://github.com/gtalarico/aec-startups/",
     "code": "https://github.com/gtalarico/aec-startups/blob/master/lambda/airtable.js",
