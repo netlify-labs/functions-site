@@ -831,7 +831,7 @@
     "description": "Serverless function to process payments via Stripe."
   },
   {
-    "name": "Handing OAuth Flows",
+    "name": "Handling OAuth Flows",
     "url": "https://github.com/DavidWells/netlify-functions-workshop/tree/master/lessons-code-complete/use-cases/11-handling-oauth",
     "code": "https://github.com/netlify-labs/oauth-example",
     "tags": [
@@ -875,6 +875,27 @@
       "getpocket"
     ],
     "description": "Example Lambda to fetch all \"newsletter\" posts from Pocket."
+  },
+  {
+    "name": "process-payment-via-stripe",
+    "url": "https://github.com/alexmacarthur/netlify-lambda-function-example",
+    "code": "",
+    "tags": [
+      "ecommerce",
+      "stripe",
+      "payment"
+    ],
+    "description": "Accept stripe payments"
+  },
+  {
+    "name": "Fetch Airtable Records",
+    "url": "https://github.com/gtalarico/aec-startups/",
+    "code": "https://github.com/gtalarico/aec-startups/blob/master/lambda/airtable.js",
+    "tags": [
+      "airtable",
+      "fetch"
+    ],
+    "description": "This function uses Airtable as a content database and fetches the content to be rendered on aecstartups.com"
   },
   {
     "name": "tweet-a-dev-article-everyday",
