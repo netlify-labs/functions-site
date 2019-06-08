@@ -896,5 +896,14 @@
       "fetch"
     ],
     "description": "This function uses Airtable as a content database and fetches the content to be rendered on aecstartups.com"
+  },
+  {
+    "name": "tweet-a-dev-article-everyday",
+    "url": "https://github.com/ruphaa/twitter-bot",
+    "code": "",
+    "tags": [
+      ""
+    ],
+    "description": "Zapier and Netlify function together to build a Twitter bot which tweets a dev article everyday"
   }
 ]
