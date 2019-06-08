@@ -875,5 +875,15 @@
       "getpocket"
     ],
     "description": "Example Lambda to fetch all \"newsletter\" posts from Pocket."
+  },
+  {
+    "name": "Fetch Airtable Records",
+    "url": "https://github.com/gtalarico/aec-startups/",
+    "code": "https://github.com/gtalarico/aec-startups/blob/master/lambda/airtable.js",
+    "tags": [
+      "airtable",
+      "fetch"
+    ],
+    "description": "This function uses Airtable as a content database and fetches the content to be rendered on aecstartups.com"
   }
 ]
