@@ -905,5 +905,17 @@
       ""
     ],
     "description": "Zapier and Netlify function together to build a Twitter bot which tweets a dev article everyday"
+  },
+  {
+    "name": "netlify-functions-mongodb-graphql",
+    "url": "https://github.com/akshayymahajan/netlify-functions-mongodb-graphql",
+    "code": "https://github.com/akshayymahajan/netlify-functions-mongodb-graphql/blob/master/functions/mongodb-graphql/mongodb-graphql.js",
+    "tags": [
+      "graphql",
+      "apollo",
+      "mongo",
+      "database"
+    ],
+    "description": "A Netlify functions template for Apollo Server GraphQL API with MongoDB."
   }
 ]
