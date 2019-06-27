@@ -902,9 +902,20 @@
     "url": "https://github.com/ruphaa/twitter-bot",
     "code": "",
     "tags": [
-      ""
+      "zapier",
+      "twitter"
     ],
     "description": "Zapier and Netlify function together to build a Twitter bot which tweets a dev article everyday"
+  },
+  {
+    "name": "headless-chrome-puppeteer",
+    "url": "https://github.com/netlify-labs/netlify-functions-headless-chrome",
+    "code": "",
+    "tags": [
+      "headlesss chrome",
+      "puppeteer"
+    ],
+    "description": "Run headless chrome in Netlify functions"
   },
   {
     "name": "netlify-functions-mongodb-graphql",
