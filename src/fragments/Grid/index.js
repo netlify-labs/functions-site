@@ -146,7 +146,10 @@ export default class Grid extends React.Component {
       return false
     }).map((example, i) => {
       // get first link
-      const codeLink = (Array.isArray(example.code)) ? example.code[0] : example.code
+      let codeLink = (Array.isArray(example.code)) ? example.code[0] : example.code
+      if (!codeLink) {
+        codeLink = example.url;
+      }
       return (
         <Card key={i} className={styles.item}>
           <div className={styles.itemTitle}>
