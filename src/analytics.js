@@ -31,7 +31,7 @@ const analytics = Analytics({
           })
           console.log('payload', analyticsPayload)
           if (window.location.origin === 'https://functions.netlify.com') {
-            const endpoint = 'https://7i3uryo2dd.execute-api.us-west-2.amazonaws.com/prod/collect'
+            const endpoint = 'https://07z2fk5eb4.execute-api.us-west-2.amazonaws.com/prod/collect'
             fetch(endpoint, {
               method: 'POST',
               headers: new Headers({
