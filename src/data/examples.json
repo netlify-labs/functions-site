@@ -928,5 +928,15 @@
       "database"
     ],
     "description": "A Netlify functions template for Apollo Server GraphQL API with MongoDB."
+  },
+  {
+    "name": "Airtable GET request (single record response with Record ID in query string or first 20 without)",
+    "url": "https://github.com/scottbram/CinemaTron/",
+    "code": "https://github.com/scottbram/CinemaTron/blob/prod/functions/at_get_movie.js",
+    "tags": [
+      "airtable",
+      "javascript"
+    ],
+    "description": "This working sample will return a single record in the response when a query string value is present (from the key \"recid\") or will return the first 20 records when no query string value is present.\n\nNotes:\n- Performs no validation on the record ID; invalid values will meet the catch condition\n- A sort configuration (by field \"Year\") is present, which may simply be omitted or revised to your need"
   }
 ]
