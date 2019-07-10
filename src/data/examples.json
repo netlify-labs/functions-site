@@ -928,5 +928,14 @@
       "database"
     ],
     "description": "A Netlify functions template for Apollo Server GraphQL API with MongoDB."
+  },
+  {
+    "name": "test",
+    "url": "",
+    "code": "",
+    "tags": [
+      ""
+    ],
+    "description": ""
   }
 ]
