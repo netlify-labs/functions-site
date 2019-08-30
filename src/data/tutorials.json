@@ -152,5 +152,11 @@
     "description": "Supercharge your static site with forms, password-protected authentication, and AWS Lambda functions.",
     "url": "https://snipcart.com/blog/static-forms-serverless-gatsby-netlify",
     "date": "April 25, 2019"
+  },
+  {
+    "title": "How to use Netlify Functions in Elm",
+    "description": "This worked example creates a simple Netlify Function and integrates it with an Elm application.",
+    "url": "https://www.freecodecamp.org/news/how-to-use-netlify-functions-in-elm/",
+    "date": "August 28, 2019"
   }
 ]
