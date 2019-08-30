@@ -5,9 +5,21 @@ import Grid from '../../fragments/Grid'
 import tutorials from '../../data/tutorials.json'
 import styles from './Tutorials.css'
 
+function sortDate(dateType, order) {
+  return function (a, b) {
+    const timeA = new Date(a[dateType]).getTime()
+    const timeB = new Date(b[dateType]).getTime()
+    if (order === 'asc') {
+      return timeA - timeB
+    }
+    // default 'desc' descending order
+    return timeB - timeA
+  }
+}
+
 export default class Tutorials extends Component {
   renderTutorials = () => {
-    return tutorials.map((tut, i) => {
+    return tutorials.sort(sortDate('date')).map((tut, i) => {
       return (
         <a key={i} className={styles.link} href={tut.url} target='_blank' rel='noopener noreferrer'>
           <span className={styles.tutorial}>

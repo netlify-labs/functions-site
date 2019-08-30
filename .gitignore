@@ -4,9 +4,6 @@ logs
 *.log
 npm-debug.log*
 
-### Netlify ###
-.netlify
-
 # Runtime data
 pids
 *.pid
@@ -64,5 +61,7 @@ public/
 bundle-stats.json
 
 # Netlify files
-.netlify
 functions-build
+
+# Local Netlify folder
+.netlify
