@@ -958,5 +958,15 @@
       "javascript"
     ],
     "description": "hiding API tokens and parsing query strings with a practical usecase and writeup"
+  },
+  {
+    "name": "Progressive Mailchimp subscription form",
+    "url": "https://gist.github.com/skatkov/b524a6e60a5313acc4d299471a2a3902",
+    "code": "",
+    "tags": [
+      "email",
+      "forms"
+    ],
+    "description": "Progressive sign-up form for Mailchimp with Netlify "
   }
 ]
