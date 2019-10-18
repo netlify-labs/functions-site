@@ -958,5 +958,14 @@
       "javascript"
     ],
     "description": "hiding API tokens and parsing query strings with a practical usecase and writeup"
+  },
+  {
+    "name": "Lol",
+    "url": "https://functions.netlify.com/",
+    "code": "https://functions.netlify.com/",
+    "tags": [
+      "auth"
+    ],
+    "description": "lololool"
   }
 ]
