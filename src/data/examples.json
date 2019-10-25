@@ -958,5 +958,15 @@
       "javascript"
     ],
     "description": "hiding API tokens and parsing query strings with a practical usecase and writeup"
+  },
+  {
+    "name": "Slack event subscriptions",
+    "url": "https://github.com/spacehelmet/talenth",
+    "code": "https://github.com/spacehelmet/talenth/blob/master/src/lambda/slack_event_sub.js",
+    "tags": [
+      "react",
+      "slack"
+    ],
+    "description": "Subscribe to Slack `link_shared` event."
   }
 ]
