@@ -958,5 +958,16 @@
       "javascript"
     ],
     "description": "hiding API tokens and parsing query strings with a practical usecase and writeup"
+  },
+  {
+    "name": "Apollo server on FaunaDB",
+    "url": "https://github.com/spacehelmet/talenth",
+    "code": "https://github.com/spacehelmet/talenth/blob/master/src/lambda/fauna.js",
+    "tags": [
+      "react",
+      "fauna",
+      "apollo"
+    ],
+    "description": "An Apollo server in a netlify function that talks with FaunaDB"
   }
 ]
