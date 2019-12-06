@@ -97,7 +97,7 @@ export default class Examples extends React.Component {
                         <Button to='/add' onClick={() => analytics.track('exampleAdditionStarted') }>
                           Add an example
                         </Button>
-                        <a href='https://github.com/DavidWells/functions-site/' title='View the repo'>
+                        <a href='https://github.com/netlify-labs/functions-site' title='View the repo'>
                           <Icon name='github' />
                         </a>
                       </div>
