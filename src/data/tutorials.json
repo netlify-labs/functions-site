@@ -160,5 +160,11 @@
     "description": "Create a simple serverless function to collect email from your users for free without external tools",
     "url": "https://medium.com/better-programming/unlimited-email-signups-for-free-for-indie-hackers-403c20261880",
     "date": "November 6, 2019"
+  },
+  {
+    "title": "Super simple start to serverless",
+    "description": "Easily create server code without worrying about managing servers yourself",
+    "url": "https://kentcdodds.com/blog/super-simple-start-to-serverless",
+    "date": "December 7, 2019"
   }
 ]
