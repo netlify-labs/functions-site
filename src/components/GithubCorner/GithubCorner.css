@@ -1,0 +1,42 @@
+.githubCorner svg {
+  height: 80px;
+  width: 80px;
+  fill: #707070;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  border: 0;
+  right: 0;
+  z-index: 99;
+}
+.githubCorner:hover .octoArm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+  0%, 100%{
+    transform: rotate(0)
+  }
+  20%, 60%{
+    transform: rotate(-25deg)
+  }
+  40%, 80%{
+    transform: rotate(10deg)
+  }
+}
+
+@media (max-width: 768px) {
+  .githubCorner svg {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media (max-width:500px) {
+  .githubCorner:hover .octoArm {
+    animation:none
+  }
+  .githubCorner .octoArm {
+    animation: octocat-wave 560ms ease-in-out
+  }
+}

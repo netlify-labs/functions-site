@@ -76,7 +76,7 @@ export default class Tutorials extends Component {
               </span>
             </h2>
             <Button to='/add-tutorial' onClick={() => analytics.track('tutorialAdditionStarted') }>
-              Add a tutorial
+              {'Add a function tutorial'}
             </Button>
           </div>
           {this.renderTutorials()}

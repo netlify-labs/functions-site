@@ -95,11 +95,8 @@ export default class Examples extends React.Component {
                       </h1>
                       <div className={styles.actions}>
                         <Button to='/add-example' onClick={() => analytics.track('exampleAdditionStarted') }>
-                          Add an example
+                          {'Add a function example'}
                         </Button>
-                        <a href='https://github.com/netlify-labs/functions-site' title='View the repo'>
-                          <Icon name='github' />
-                        </a>
                       </div>
                     </div>
                   )
