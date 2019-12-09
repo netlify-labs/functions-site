@@ -1,8 +1,6 @@
 import Analytics from 'analytics'
 import segmentPlugin from 'analytics-plugin-segment'
-import customerIoPlugin from 'analytics-plugin-customerio'
 import gtagManagerPlugin from 'analytics-plugin-google-tag-manager'
-
 
 const analytics = Analytics({
   plugins: [
@@ -12,9 +10,6 @@ const analytics = Analytics({
     segmentPlugin({
       writeKey: 'f3W8BZ0iCGrk1STIsMZV7JXfMGB7aMiW',
       disableAnonymousTraffic: true,
-    }),
-    customerIoPlugin({
-      siteId: '4dfdba9c7f1a6d60f779'
     }),
     {
       NAMESPACE: 'custom-analytics-plugin',

@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../../layouts/Default'
 import Grid from '../../fragments/Grid'
-import tutorials from '../../data/tutorials.json'
+import Button from '../../components/Button'
+import tutorials from '../../../data/tutorials.json'
+import analytics from '../../analytics'
 import styles from './Tutorials.css'
 
 function sortDate(dateType, order) {
@@ -66,12 +68,17 @@ export default class Tutorials extends Component {
       <Layout>
         <div style={{ padding: 30 }}>
           <Helmet title={`Tutorials`} />
-          <h2>
-            Function Tutorials
-            <span className={styles.count}>
-              ({ tutorials.length })
-            </span>
-          </h2>
+          <div className={styles.header}>
+            <h2>
+              Function Tutorials
+              <span className={styles.count}>
+                ({ tutorials.length })
+              </span>
+            </h2>
+            <Button to='/add-tutorial' onClick={() => analytics.track('tutorialAdditionStarted') }>
+              Add a tutorial
+            </Button>
+          </div>
           {this.renderTutorials()}
         </div>
       </Layout>

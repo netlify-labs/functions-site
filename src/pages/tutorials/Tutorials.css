@@ -33,6 +33,12 @@
 .title {
   font-weight: 600;
 }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
 .description {
   font-size: 13px;
   color: #000;

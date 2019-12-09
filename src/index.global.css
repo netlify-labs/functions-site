@@ -153,3 +153,50 @@ pre > code.highlight {
   display: inline-block;
   width: auto;
 }
+
+
+.select__menu-list.select__menu-list--is-multi {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.select__option {
+  display: inline-block !important;
+  width: auto !important;
+  font-size: 15px !important;
+  padding: 8px 10px !important;
+}
+.select__control {
+  box-shadow: 0 0 0 2px rgba(120,130,152,.25) !important;
+  border: none !important;
+  &:hover {
+    box-shadow: 0 0 0 2px $primary !important;
+  }
+}
+.select__control--is-focused {
+  box-shadow: 0 0 0 2px $primary !important;
+}
+.select__option--is-focused, .select__multi-value {
+  background-color: #00ad9f !important;
+  color: #fff !important;
+}
+.select__multi-value__label {
+  color: #fff !important;
+}
+.select__multi-value__remove,
+.select__option--is-focused,
+.select__dropdown-indicator,
+.select__clear-indicator {
+  cursor: pointer !important;
+}
+.select__menu {
+  box-shadow: 0 0 0 2px rgba(120,130,152,.35) !important;
+  width: 102% !important;
+}
+.select__multi-value__remove {
+  &:hover {
+    background-color: $primary !important;
+    color: #DE350B;
+  }
+}

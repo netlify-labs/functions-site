@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Layout from '../../layouts/Default'
 import SEO from '../../components/SEO/SEO'
 import Grid from '../../fragments/Grid'
-import data from '../../data/examples.json'
+import data from '../../../data/examples.json'
 import { paramsParse } from 'analytics-utils'
 import Button from '../../components/Button'
 import Icon from '../../components/Icon'
@@ -94,10 +94,10 @@ export default class Examples extends React.Component {
                         {countRender}
                       </h1>
                       <div className={styles.actions}>
-                        <Button to='/add' onClick={() => analytics.track('exampleAdditionStarted') }>
+                        <Button to='/add-example' onClick={() => analytics.track('exampleAdditionStarted') }>
                           Add an example
                         </Button>
-                        <a href='https://github.com/DavidWells/functions-site/' title='View the repo'>
+                        <a href='https://github.com/netlify-labs/functions-site' title='View the repo'>
                           <Icon name='github' />
                         </a>
                       </div>

@@ -1,19 +1,17 @@
 import React from 'react'
 import { paramsParse } from 'analytics-utils'
-import Base from '../../layouts/Base'
-import Form from '../../components/Form'
-import FieldSet from '../../components/FieldSet'
-import Input from '../../components/Input'
-import TextArea from '../../components/TextArea'
-import Button from '../../components/Button'
-import Modal from '../../components/Modal'
-import Icon from '../../components/Icon'
+import Base from '../../../layouts/Base'
+import Form from '../../../components/Form'
+import FieldSet from '../../../components/FieldSet'
+import Input from '../../../components/Input'
+import TextArea from '../../../components/TextArea'
+import Button from '../../../components/Button'
+import Modal from '../../../components/Modal'
+import Icon from '../../../components/Icon'
 import CreatableSelect from 'react-select/lib/Creatable'
-import netlifyIdentity from 'netlify-identity-widget'
-import { uniqueTags } from '../../utils/data'
-import styles from './Admin.css'
-import analytics from '../../analytics'
-import './Admin.global.css'
+import { uniqueTags } from '../../../utils/data'
+import styles from '../Admin.css'
+import analytics from '../../../analytics'
 
 const url = (typeof window !== 'undefined') ? `${window.location.origin}/admin` : 'https://functions.netlify.com/admin'
 const width = 665
@@ -24,20 +22,7 @@ const ampersand = '%26'
 const questionMark = '%3F'
 const bookmarklet = `javascript:(function()%7B${functionName}%3Dwindow.open("${url}%3Furl%3D"%2BencodeURIComponent(location.href)%2B"%26title%3D"%2B((document.title)%3Fescape(encodeURI(document.title)):"") %2B "%26api%3DIdbvF6muT9RZvJrFfL5urzCBxCxCoC","${functionName}","width%3D${width},height%3D${height},location,status,scrollbars,resizable,dependent%3Dyes")%3BsetTimeout("${functionName}.focus()",100)%3B%7D)()`
 
-// Get JWT token of current user
-function generateHeaders(user) {
-  const headers = { 'Content-Type': 'application/json' }
-  if (user) {
-    return user.jwt().then((token) => {
-      return { ...headers, Authorization: `Bearer ${token}` }
-    })
-  }
-  return Promise.resolve(headers)
-}
-
 async function saveItem(item) {
-  const user = netlifyIdentity.currentUser()
-  const headers = await generateHeaders(user)
 
   const payload = Object.keys(item).reduce((acc, thing) => {
     /* remove react-select fields */
@@ -53,15 +38,9 @@ async function saveItem(item) {
     acc[thing] = item[thing]
     return acc
   }, {})
-
-  // const payload = {
-  //   ...item,
-  //   userName: `${(user.user_metadata && user.user_metadata.full_name) ? user.user_metadata.full_name : 'Anon'}`
-  // }
   // console.log('payload', payload)
   return fetch(`/.netlify/functions/add-example/`, {
     method: 'POST',
-    headers: headers,
     body: JSON.stringify(payload),
   }).then(response => {
     return response.json()
@@ -71,12 +50,9 @@ async function saveItem(item) {
 export default class Admin extends React.Component {
   constructor (props, context) {
     super(props, context)
-    if (typeof window !== 'undefined') {
-      netlifyIdentity.init()
-    }
-    const user = netlifyIdentity.currentUser()
+
     this.state = {
-      loggedIn: user || false,
+      loggedIn: false,
       settingsOpen: false,
       loading: false,
       response: {}
@@ -84,24 +60,6 @@ export default class Admin extends React.Component {
   }
   componentDidMount() {
     const params = paramsParse()
-    /* Register listeners on identity widget events */
-    netlifyIdentity.on('login', () => {
-      /* Close netlify identity modal on login */
-      netlifyIdentity.close()
-      /* Grab user data */
-      const user = netlifyIdentity.currentUser()
-      this.setState({
-        loggedIn: false
-      })
-      window.location.href = window.location.href
-    })
-    netlifyIdentity.on('logout', () => {
-      this.setState({
-        loggedIn: false
-      })
-      window.location.href = window.location.href
-    })
-
     if (params.url) {
       const url = (document.getElementsByName('url') || [{value: ''}])[0]
       url.value = params.url
@@ -110,12 +68,6 @@ export default class Admin extends React.Component {
       const title = (document.getElementsByName('name') || [{value: ''}])[0]
       title.value = decodeURI(params.title)
     }
-  }
-  handleLogIn = () => {
-    netlifyIdentity.open()
-  }
-  handleLogOut = () => {
-    netlifyIdentity.logout()
   }
   handleSubmit = (e, data) => {
     e.preventDefault()
@@ -152,14 +104,7 @@ export default class Admin extends React.Component {
   }
   renderButton() {
     const { settingsOpen, loading } = this.state
-    const user = netlifyIdentity.currentUser()
-    // if (!user) {
-    //   return (
-    //     <a href="#" onClick={ this.handleLogIn }>
-    //       Sign up | Log in
-    //     </a>
-    //   )
-    // }
+
     const options = uniqueTags.map((item) => {
       return {
         value: item,
@@ -190,11 +135,6 @@ export default class Admin extends React.Component {
             <a href={bookmarklet}>
               Drag this bookmarklet to your bookmarks bar for easier contributions
             </a>
-            {/*<div>
-              <button onClick={this.handleLogOut}>
-                Log out { user.email }
-              </button>
-            </div>*/}
           </div>
         </Modal>
         <Form name='what' onSubmit={handler}>
@@ -278,7 +218,7 @@ export default class Admin extends React.Component {
     return (
       <Base className={styles.adminWrapper}>
         <h1>
-          Add an example
+          {'Add a function example'}
           <Icon
             name='settings'
             size={28}
