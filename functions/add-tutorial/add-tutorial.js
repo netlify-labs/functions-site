@@ -10,7 +10,7 @@ octokit.authenticate({
   token: process.env.GITHUB_TOKEN
 })
 
-const FILE_TO_CHANGE = 'data/examples.json'
+const FILE_TO_CHANGE = 'data/tutorials.json'
 
 /* export our lambda function as named "handler" export */
 exports.handler = async (event, context) => {
@@ -19,7 +19,6 @@ exports.handler = async (event, context) => {
   console.log('parsed', parsed)
   const repo = parsed.name
   const owner = parsed.owner
-  console.log('repo, owner', repo, owner)
   const body = JSON.parse(event.body)
   console.log('body', body)
 
@@ -132,7 +131,6 @@ exports.handler = async (event, context) => {
  */
 function alreadyHasUri(newItem, allData) {
   return allData.some((item) => {
-    console.log('item', item)
     if (!item.url || !newItem.url) {
       return false
     }
