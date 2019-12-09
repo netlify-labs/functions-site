@@ -29,16 +29,10 @@ async function saveItem(item) {
     if (thing.match(/react-select/)) {
       return acc
     }
-    // Force tags to be array
-    if (thing === 'tags') {
-      const finalTag = (typeof item[thing] === 'string') ? [item[thing]] : item[thing]
-      acc[thing] = finalTag
-      return acc
-    }
     acc[thing] = item[thing]
     return acc
   }, {})
-  // console.log('payload', payload)
+  console.log('payload', payload)
   return fetch(`/.netlify/functions/add-tutorial/`, {
     method: 'POST',
     body: JSON.stringify(payload),
@@ -60,7 +54,6 @@ export default class Admin extends React.Component {
   }
   componentDidMount() {
     const params = paramsParse()
-    console.log('params', params)
     if (params.url) {
       const url = (document.getElementsByName('url') || [{value: ''}])[0]
       url.value = params.url
@@ -79,8 +72,8 @@ export default class Admin extends React.Component {
     saveItem(data)
       .then((response) => {
         // {"message":"pr created!","url":"https://github.com/DavidWells/functions-site/pull/5"}
-        console.log('track exampleAdded')
-        analytics.track('exampleAdded', {
+        console.log('track tutorialAdded')
+        analytics.track('tutorialAdded', {
           url: url
         })
         console.log('response', response)
@@ -90,7 +83,7 @@ export default class Admin extends React.Component {
         })
       }).catch((e) => {
         console.log('response err', e)
-        analytics.track('exampleAdditionFailed')
+        analytics.track('tutorialAdditionFailed')
       })
   }
   handleSettingsClick = () => {

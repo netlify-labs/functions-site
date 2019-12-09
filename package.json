@@ -14,7 +14,6 @@
     "dev": "npm run develop",
     "start": "npm run dev",
     "serve": "gatsby serve",
-    "prebuild": "cd functions/add-example && npm install",
     "build": "gatsby build",
     "clean": "rm -rf public && rm -rf .cache",
     "lint:js": "eslint --ext .js,.jsx .",

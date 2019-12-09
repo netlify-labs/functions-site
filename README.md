@@ -6,6 +6,8 @@ Your source for all things Netlify functions.
 - [Function examples](https://functions.netlify.com/examples)
 - [Function tutorials](https://functions.netlify.com/tutorials)
 
+[Adding examples](#-adding-an-example)
+
 ## Configuration
 
 Edit `./_site-config.js`
@@ -21,3 +23,9 @@ npm install
 ```
 npm start
 ```
+
+## Adding an example
+
+Update the [data/examples.json](./data/examples.json) to add an example.
+
+Update the [data/tutorials.json](./data/tutorials.json) to add a tutorial.
