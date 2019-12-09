@@ -14,15 +14,10 @@ const FILE_TO_CHANGE = 'data/tutorials.json'
 
 /* export our lambda function as named "handler" export */
 exports.handler = async (event, context) => {
-  console.log('REPOSITORY_URL', REPOSITORY_URL)
   const parsed = gitUrlParse('https://github.com/netlify-labs/functions-site')
-  console.log('parsed', parsed)
   const repo = parsed.name
   const owner = parsed.owner
-  console.log('event.body', event.body)
-  console.log('typeof event.body', typeof event.body)
   const body = JSON.parse(event.body)
-  console.log('body', body)
 
   if (!repo || !owner) {
     return {

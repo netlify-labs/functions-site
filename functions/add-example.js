@@ -14,14 +14,10 @@ const FILE_TO_CHANGE = 'data/examples.json'
 
 /* export our lambda function as named "handler" export */
 exports.handler = async (event, context) => {
-  console.log('REPOSITORY_URL', REPOSITORY_URL)
   const parsed = gitUrlParse('https://github.com/netlify-labs/functions-site')
-  console.log('parsed', parsed)
   const repo = parsed.name
   const owner = parsed.owner
-  console.log('repo, owner', repo, owner)
   const body = JSON.parse(event.body)
-  console.log('body', body)
 
   if (!repo || !owner) {
     return {
@@ -36,7 +32,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 401,
       body: JSON.stringify({
-        data: 'request malformed'
+        data: 'Request malformed'
       })
     }
   }
@@ -132,7 +128,6 @@ exports.handler = async (event, context) => {
  */
 function alreadyHasUri(newItem, allData) {
   return allData.some((item) => {
-    console.log('item', item)
     if (!item.url || !newItem.url) {
       return false
     }
