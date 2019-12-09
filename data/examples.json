@@ -958,5 +958,24 @@
       "javascript"
     ],
     "description": "hiding API tokens and parsing query strings with a practical usecase and writeup"
+  },
+  {
+    "name": "Capture events from Slack interactive components",
+    "url": "https://github.com/spacehelmet/talenth",
+    "code": "https://github.com/spacehelmet/talenth/blob/master/src/lambda/slack_interactive.js",
+    "tags": [
+      "react",
+      "slack"
+    ],
+    "description": "Capture events from Slack interactive components."
+  },
+  {
+    "name": "staticman-netlify-functions",
+    "url": "https://github.com/Bash2/staticman-netlify-function",
+    "code": "",
+    "tags": [
+      ""
+    ],
+    "description": "Add dynamic content (comments, email subscriptions) to your static site."
   }
 ]

@@ -148,5 +148,23 @@
     "description": "This worked example creates a simple Netlify Function and integrates it with an Elm application.",
     "url": "https://www.freecodecamp.org/news/how-to-use-netlify-functions-in-elm/",
     "date": "August 28, 2019"
+  },
+  {
+    "title": "Netlify Dev + Serverless Functions + MailChimp Subscribe Form Tutorial",
+    "description": "Create a working serverless function hosted on Netlify, automatically built and deployed every time you push to git, that you can use on your static site to add subscriber emails directly to MailChimp",
+    "url": "https://medium.com/@mattdgregg/netlify-dev-serverless-functions-mailchimp-subscribe-form-tutorial-28ffaa51ba99",
+    "date": "September 10, 2019"
+  },
+  {
+    "title": "Serverless Mailing Lists - Unlimited Email Sign-Ups for Free",
+    "description": "Create a simple serverless function to collect email from your users for free without external tools",
+    "url": "https://medium.com/better-programming/unlimited-email-signups-for-free-for-indie-hackers-403c20261880",
+    "date": "November 6, 2019"
+  },
+  {
+    "title": "Super simple start to serverless",
+    "description": "Easily create server code without worrying about managing servers yourself",
+    "url": "https://kentcdodds.com/blog/super-simple-start-to-serverless",
+    "date": "December 7, 2019"
   }
 ]
