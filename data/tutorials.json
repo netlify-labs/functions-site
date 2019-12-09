@@ -166,5 +166,11 @@
     "description": "Easily create server code without worrying about managing servers yourself",
     "url": "https://kentcdodds.com/blog/super-simple-start-to-serverless",
     "date": "December 7, 2019"
+  },
+  {
+    "title": "Functions workshop for Jamstack NYC",
+    "url": "https://functions.netlify.com/tutorials",
+    "date": "Jan 8, 2019",
+    "description": "Testing!"
   }
 ]
