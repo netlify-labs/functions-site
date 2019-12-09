@@ -1,6 +1,6 @@
 import React from 'react'
 import Icon from '../../components/Icon'
-import GitHubCorner from '../../components/GitHubCorner'
+import GitHubCorner from '../../components/GithubCorner'
 import '../index.css'
 import '../index.global.css'
 
