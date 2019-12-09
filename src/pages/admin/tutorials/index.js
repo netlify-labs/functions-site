@@ -62,6 +62,8 @@ export default class Admin extends React.Component {
       const title = (document.getElementsByName('title') || [{value: ''}])[0]
       title.value = decodeURI(params.title)
     }
+    const date = (document.getElementsByName('date') || [{value: ''}])[0]
+    date.valueAsDate = new Date()
   }
   handleSubmit = (e, data) => {
     e.preventDefault()
@@ -152,7 +154,7 @@ export default class Admin extends React.Component {
           </FieldSet>
           <FieldSet className={styles.fieldSet}>
             <label htmlFor='date'>Date</label>
-            <Input placeholder="Date" name='date' type='text' />
+            <Input placeholder="Date" name='date' type='date' />
           </FieldSet>
           <FieldSet className={styles.fieldSet}>
             <label htmlFor='description'>Description</label>

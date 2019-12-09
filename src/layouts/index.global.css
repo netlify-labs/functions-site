@@ -21,6 +21,7 @@ pre[class*="language-"] {
     color: #c5c8c6;
 }
 
+
 pre[class*="language-"]::-moz-selection,
 pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
@@ -199,4 +200,7 @@ pre > code.highlight {
     background-color: $primary !important;
     color: #DE350B;
   }
+}
+input[type="date"] {
+  font-family: Segoe UI,Roboto,Helvetica, Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
 }

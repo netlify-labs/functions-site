@@ -1,6 +1,7 @@
 import React from 'react'
 import Icon from '../../components/Icon'
 import '../index.css'
+import '../index.global.css'
 
 export default class Base extends React.Component {
   componentDidMount () {
