@@ -90,7 +90,7 @@ exports.handler = async (event, context) => {
     response = await octokit.createPullRequest({
       owner,
       repo,
-      title: `Add ${body.url}`,
+      title: `Add tutorial ${body.url}`,
       body: `Add ${body.title} at ${body.url}`,
       base: 'master', /* optional: defaults to default branch */
       head: `pull-request-branch-name-${new Date().getTime()}`,
