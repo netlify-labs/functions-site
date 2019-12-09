@@ -19,6 +19,8 @@ exports.handler = async (event, context) => {
   console.log('parsed', parsed)
   const repo = parsed.name
   const owner = parsed.owner
+  console.log('event.body', event.body)
+  console.log('typeof event.body', typeof event.body)
   const body = JSON.parse(event.body)
   console.log('body', body)
 
