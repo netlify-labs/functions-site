@@ -33,11 +33,11 @@ exports.handler = async (event, context) => {
     }
   }
 
-  if (!body || !body.name) {
+  if (!body || !body.title) {
     return {
       statusCode: 401,
       body: JSON.stringify({
-        data: 'request malformed'
+        data: 'Request malformed. Missing Title'
       })
     }
   }
@@ -96,7 +96,7 @@ exports.handler = async (event, context) => {
       owner,
       repo,
       title: `Add ${body.url}`,
-      body: `Add ${body.name} at ${body.url}`,
+      body: `Add ${body.title} at ${body.url}`,
       base: 'master', /* optional: defaults to default branch */
       head: `pull-request-branch-name-${new Date().getTime()}`,
       changes: {
