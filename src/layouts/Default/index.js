@@ -7,9 +7,9 @@ import Sidebar from '../../fragments/Sidebar'
 
 export default class MainLayout extends React.Component {
   render() {
-    const { children, sidebar } = this.props
+    const { children, sidebar, noIcon } = this.props
     return (
-      <Base className={styles.test}>
+      <Base className={styles.test} noIcon={noIcon}>
         <Helmet>
           <meta name="description" content={config.siteDescription} />
         </Helmet>

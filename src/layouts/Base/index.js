@@ -9,10 +9,16 @@ export default class Base extends React.Component {
     Icon.loadSprite()
   }
   render() {
-    const { children, className } = this.props
+    const { children, className, noIcon } = this.props
+    let corner
+    if (noIcon) {
+      corner = null
+    } else {
+      corner = <GitHubCorner url='https://github.com/netlify-labs/functions-site' />
+    }
     return (
       <div className={className}>
-        <GitHubCorner url='https://github.com/netlify-labs/functions-site' />
+        {corner}
         {children}
       </div>
     )

@@ -193,7 +193,7 @@ export default class Admin extends React.Component {
       )
     }
     return (
-      <Base className={styles.adminWrapper}>
+      <Base className={styles.adminWrapper} noIcon>
         <h1>
           {'Add a function tutorial'}
           <Icon
