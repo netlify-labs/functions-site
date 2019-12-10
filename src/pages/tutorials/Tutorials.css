@@ -60,4 +60,7 @@
   .date {
     font-size: 12px;
   }
+  .add {
+    display: none !important;
+  }
 }

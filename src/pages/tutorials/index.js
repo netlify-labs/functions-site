@@ -75,7 +75,7 @@ export default class Tutorials extends Component {
                 ({ tutorials.length })
               </span>
             </h2>
-            <Button to='/add-tutorial' onClick={() => analytics.track('tutorialAdditionStarted') }>
+            <Button className={styles.add} to='/add-tutorial' onClick={() => analytics.track('tutorialAdditionStarted') }>
               {'Add a function tutorial'}
             </Button>
           </div>
