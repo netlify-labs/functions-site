@@ -166,5 +166,11 @@
     "description": "Easily create server code without worrying about managing servers yourself",
     "url": "https://kentcdodds.com/blog/super-simple-start-to-serverless",
     "date": "December 7, 2019"
+  },
+  {
+    "title": "Submitting sitemaps on deploy with Netlify",
+    "url": "https://atymic.dev/tips/netlify-submit-sitemaps/",
+    "date": "2020-01-14",
+    "description": "There's plenty of static site generators out there, and most support generating sitemaps. To make sure google indexes your pages as quickly as possible, it's a good idea to ping them with your sitemap when it's updated.\n\nNetlify provides some hooks which can be used to run functions once the deploy is complete. This allows us to ping google when production is deployed."
   }
 ]
