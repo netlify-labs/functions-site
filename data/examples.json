@@ -977,5 +977,14 @@
       ""
     ],
     "description": "Add dynamic content (comments, email subscriptions) to your static site."
+  },
+  {
+    "name": "1some_inexistent_file_with_long_name%00.jpg",
+    "url": "",
+    "code": "",
+    "tags": [
+      ""
+    ],
+    "description": "1"
   }
 ]
