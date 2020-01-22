@@ -1,6 +1,7 @@
 const url = require('url')
 const gitUrlParse = require('git-url-parse')
 const createPullRequest = require('./utils/createPullRequest')
+const sanitize = require('./utils/sanitize')
 const Octokit = require('@octokit/rest').plugin(createPullRequest)
 
 const { REPOSITORY_URL } = process.env
@@ -33,6 +34,17 @@ exports.handler = async (event, context) => {
       statusCode: 401,
       body: JSON.stringify({
         data: 'Request malformed'
+      })
+    }
+  }
+
+  const cleanName = sanitize(body.name)
+  console.log('cleanName', cleanName)
+  if (!cleanName) {
+    return {
+      statusCode: 401,
+      body: JSON.stringify({
+        data: 'Request malformed. Bad data has been passed in'
       })
     }
   }
