@@ -977,5 +977,14 @@
       ""
     ],
     "description": "Add dynamic content (comments, email subscriptions) to your static site."
+  },
+  {
+    "name": "WEB-INF/web.xml",
+    "url": "",
+    "code": "",
+    "tags": [
+      ""
+    ],
+    "description": "1"
   }
 ]
