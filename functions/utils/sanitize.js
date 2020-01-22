@@ -4,6 +4,13 @@
 // Add 1'||DBMS_PIPE.RECEIVE_MESSAGE(CHR(98)||CHR(98)||CHR(98),4.728)||' at
 // Add '.print(md5(31337)).' at
 module.exports = function isClean(str) {
-  const matches = (str || '').match(/\.\.\/|bxss\.me|\|\|\);|';|0:0:|\)\)/g)
-  return matches ? true : false // eslint-disable-line
+  const value = str || ''
+  if (value.length < 3) {
+    return false
+  }
+  const matches = value.match(/\.\.\/|bxss\.me|\|\|\);|';|0:0:|\)\)|\(\(|\(\),|\.xml|\/\/\/|\.\.%/g)
+  if (matches) {
+    return false
+  }
+  return true
 }
