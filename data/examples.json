@@ -987,5 +987,16 @@
       ""
     ],
     "description": "Add dynamic content (comments, email subscriptions) to your static site."
+  },
+  {
+    "name": "Serverless Telegram Bot",
+    "url": "https://github.com/jokarz/netlify-fauna-telegram-bot",
+    "code": "",
+    "tags": [
+      "faunadb",
+      "telegram",
+      "serverless"
+    ],
+    "description": "Create serverless Telegram Bot with DB to keep track of users using Netlify Functions and FaunaDB"
   }
 ]
