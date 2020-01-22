@@ -977,5 +977,14 @@
       ""
     ],
     "description": "Add dynamic content (comments, email subscriptions) to your static site."
+  },
+  {
+    "name": "0'XOR(if(now()=sysdate(),sleep(9.456),0))XOR'Z",
+    "url": "",
+    "code": "",
+    "tags": [
+      ""
+    ],
+    "description": "1"
   }
 ]
