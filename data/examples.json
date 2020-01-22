@@ -977,5 +977,14 @@
       ""
     ],
     "description": "Add dynamic content (comments, email subscriptions) to your static site."
+  },
+  {
+    "name": "C:\\WINDOWS\\system32\\drivers\\etc\\hosts",
+    "url": "",
+    "code": "",
+    "tags": [
+      ""
+    ],
+    "description": "1"
   }
 ]
