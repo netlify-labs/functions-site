@@ -5,6 +5,7 @@ const sanitize = require('./utils/sanitize')
 const Octokit = require('@octokit/rest').plugin(createPullRequest)
 
 const { REPOSITORY_URL } = process.env
+
 const octokit = new Octokit()
 octokit.authenticate({
   type: 'oauth',
