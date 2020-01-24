@@ -998,5 +998,14 @@
       "serverless"
     ],
     "description": "Create serverless Telegram Bot with DB to keep track of users using Netlify Functions and FaunaDB"
+  },
+  {
+    "name": "Example post",
+    "url": "https://functions.netlify.com/add-example",
+    "code": "https://functions.netlify.com/add-example",
+    "tags": [
+      "starter"
+    ],
+    "description": "Example post"
   }
 ]
