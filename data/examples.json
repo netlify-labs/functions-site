@@ -998,5 +998,15 @@
       "serverless"
     ],
     "description": "Create serverless Telegram Bot with DB to keep track of users using Netlify Functions and FaunaDB"
+  },
+  {
+    "name": "Go microservice demo",
+    "url": "https://github.com/carlmjohnson/netlify-go-function-demo",
+    "code": "",
+    "tags": [
+      "golang",
+      "microservice"
+    ],
+    "description": "This repo shows how to use Netlify URL rewriting with functions to launch a microservice written in Go that uses the standard library http.Handler for endpoints."
   }
 ]
