@@ -1,6 +1,6 @@
 [
   {
-    "name": "create-react-app-lambda",
+    "name": "xcreate-react-app-lambda",
     "description": "Create React App with baked in Netlify functions support",
     "code": "https://github.com/netlify/create-react-app-lambda",
     "tags": [
