@@ -1,4 +1,13 @@
 [
+ {
+    "name": "test-three",
+    "description": "Create React App with baked in Netlify functions support",
+    "code": "https://github.com/netlify/create-react-app-lambda",
+    "tags": [
+      "react",
+      "starter"
+    ]
+  },
   {
     "name": "create-react-app-lambda",
     "description": "Create React App with baked in Netlify functions support",
