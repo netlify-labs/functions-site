@@ -264,8 +264,8 @@
     "name": "detect-csp-violations",
     "description": "CSP violations reporting by setting the lambda URL as the CSP report-uri",
     "code": [
-      "https://github.com/stefanjudis/stefan-judis-website/blob/020f1b005cb1fcf4da8afa4407d9514917aecda0/functions/report.js",
-      "https://github.com/stefanjudis/stefan-judis-website/blob/020f1b005cb1fcf4da8afa4407d9514917aecda0/static/_headers#L2"
+      "https://github.com/stefanjudis/stefan-judis-website/blob/03e072be1516a7d9a6c58e37d44452c8f8649dc1/functions/report.js",
+      "https://github.com/stefanjudis/stefan-judis-website/blob/03e072be1516a7d9a6c58e37d44452c8f8649dc1/static/_headers#L2"
     ],
     "tags": [
       "security",
