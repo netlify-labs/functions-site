@@ -998,5 +998,17 @@
       "serverless"
     ],
     "description": "Create serverless Telegram Bot with DB to keep track of users using Netlify Functions and FaunaDB"
+  },
+  {
+    "name": "Grey's Anatomy Themed Lorem Ipsum Generator",
+    "url": "https://github.com/M0nica/greys-anatomy-lorem-ipsum-generator",
+    "code": "https://github.com/M0nica/greys-anatomy-lorem-ipsum-generator/tree/master/src/lambda",
+    "tags": [
+      "react",
+      "netlify",
+      "javascript",
+      "lorem-ipsum"
+    ],
+    "description": "greys-anatomy-lorem-ipsum-generator is a website that generates lorem ipsum text inspired by Grey's Anatomy and medical terms. Lorem ipsum is nonsense text that can be used as place holder copy in designs. This site utilizes Netlify functions to generate the words.\n\nDeployed at: https://greysanatomyloremipsum.netlify.app/\n\nTutorial at: https://www.aboutmonica.com/blog/greys-anatomy-lorem-ipsum-generator"
   }
 ]
