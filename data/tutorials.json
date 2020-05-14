@@ -172,5 +172,11 @@
     "url": "https://atymic.dev/tips/netlify-submit-sitemaps/",
     "date": "2020-01-14",
     "description": "There's plenty of static site generators out there, and most support generating sitemaps. To make sure google indexes your pages as quickly as possible, it's a good idea to ping them with your sitemap when it's updated.\n\nNetlify provides some hooks which can be used to run functions once the deploy is complete. This allows us to ping google when production is deployed."
+  },
+  {
+    "title": "Grey's Anatomy Lorem Ipsum Generator Tutorial",
+    "url": "https://www.aboutmonica.com/blog/greys-anatomy-lorem-ipsum-generator",
+    "date": "2019-06-02",
+    "description": "This tutorial walks through how to create and deploy a Grey’s Anatomy or other-themed Lorem Ipsum generator with Netlify functions. "
   }
 ]
