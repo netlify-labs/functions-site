@@ -998,5 +998,14 @@
       "serverless"
     ],
     "description": "Create serverless Telegram Bot with DB to keep track of users using Netlify Functions and FaunaDB"
+  },
+  {
+    "name": "Capture a screenshot and return it from a Netlify Function",
+    "url": "https://gist.github.com/ChristopherBiscardi/3a0e4b83d25aaa53b9a73fd42dc19063",
+    "code": "https://gist.github.com/ChristopherBiscardi/3a0e4b83d25aaa53b9a73fd42dc19063",
+    "tags": [
+      "screenshot"
+    ],
+    "description": "from Chris Biscardi https://twitter.com/chrisbiscardi/status/1234639886105231360?s=20\n\nI'm using this to replace gatsby-plugin-printer with a \n@cloudinary\n as a write-through cache, React running in headless chromium via playwright, opengraph image generator, that runs on \n@Netlify\n:party-corgi:\n@chrisbiscardi\n·\n2m\nThe opengraph image generation is for \n@sectortools\n sites so people don't have to handle it themselves from the start."
   }
 ]
