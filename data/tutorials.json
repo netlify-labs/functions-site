@@ -172,5 +172,11 @@
     "url": "https://atymic.dev/tips/netlify-submit-sitemaps/",
     "date": "2020-01-14",
     "description": "There's plenty of static site generators out there, and most support generating sitemaps. To make sure google indexes your pages as quickly as possible, it's a good idea to ping them with your sitemap when it's updated.\n\nNetlify provides some hooks which can be used to run functions once the deploy is complete. This allows us to ping google when production is deployed."
+  },
+  {
+    "title": "Build an authentication service with Netlify Functions",
+    "url": "https://www.mathiassoeholm.com/netlify-functions-authentication-service",
+    "date": "2020-02-08",
+    "description": "Learn how to create a mini authentication service from scratch using JWT, Netlify Functions, Netlify Dev and create a demo app with React."
   }
 ]
