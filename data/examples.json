@@ -998,5 +998,15 @@
       "serverless"
     ],
     "description": "Create serverless Telegram Bot with DB to keep track of users using Netlify Functions and FaunaDB"
+  },
+  {
+    "name": "Stripe Subscriptions",
+    "url": "https://github.com/KnightWebnApps/svelte-stripe-example",
+    "code": "https://github.com/KnightWebnApps/svelte-stripe-example/blob/master/functions/stripe-charge/stripe-charge.js",
+    "tags": [
+      "ecommerce",
+      "stripe"
+    ],
+    "description": "Add a customer and create a new subscription "
   }
 ]
