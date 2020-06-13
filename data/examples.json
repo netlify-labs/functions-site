@@ -998,5 +998,14 @@
       "serverless"
     ],
     "description": "Create serverless Telegram Bot with DB to keep track of users using Netlify Functions and FaunaDB"
+  },
+  {
+    "name": "CoronaQuizMockJson",
+    "url": "",
+    "code": "",
+    "tags": [
+      ""
+    ],
+    "description": "Responds with a JSON"
   }
 ]
