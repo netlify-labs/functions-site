@@ -998,5 +998,15 @@
       "serverless"
     ],
     "description": "Create serverless Telegram Bot with DB to keep track of users using Netlify Functions and FaunaDB"
+  },
+  {
+    "name": "Netlify + Google Sheets v4 demo",
+    "url": "https://github.com/sw-yx/netlify-google-spreadsheet-demo/",
+    "code": "https://netlify-google-spreadsheet-demo.netlify.com/",
+    "tags": [
+      "google",
+      "crud"
+    ],
+    "description": "Demo for doing CRUD with Netlify Dev/Functions + Google Sheets API v4"
   }
 ]
