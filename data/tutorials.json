@@ -172,5 +172,11 @@
     "url": "https://atymic.dev/tips/netlify-submit-sitemaps/",
     "date": "2020-01-14",
     "description": "There's plenty of static site generators out there, and most support generating sitemaps. To make sure google indexes your pages as quickly as possible, it's a good idea to ping them with your sitemap when it's updated.\n\nNetlify provides some hooks which can be used to run functions once the deploy is complete. This allows us to ping google when production is deployed."
-  }
+  },
+  {
+    "title": "Automatically creating contacts & deals in Hubspot using Netlify Functions",
+    "url": "https://memories2digital.com.au/blog/automatically-creating-contacts-deals-in-hubspot-using-netlify-functions/",
+    "date": "2020-06-13",
+    "description": "Automatically create contacts and deals with static sites hosted on the Netlify Platform."
+  },
 ]
