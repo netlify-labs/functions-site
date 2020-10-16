@@ -261,18 +261,6 @@
     "code": "https://github.com/fehguy/swambda"
   },
   {
-    "name": "detect-csp-violations",
-    "description": "CSP violations reporting by setting the lambda URL as the CSP report-uri",
-    "code": [
-      "https://github.com/stefanjudis/stefan-judis-website/blob/03e072be1516a7d9a6c58e37d44452c8f8649dc1/functions/report.js",
-      "https://github.com/stefanjudis/stefan-judis-website/blob/03e072be1516a7d9a6c58e37d44452c8f8649dc1/static/_headers#L2"
-    ],
-    "tags": [
-      "security",
-      "CSP"
-    ]
-  },
-  {
     "name": "scrape-twitter-avatars",
     "description": "Scrape mobile twitter HTML to return the URLs of a user avatar",
     "url": "https://twavatar.netlify.com/",
